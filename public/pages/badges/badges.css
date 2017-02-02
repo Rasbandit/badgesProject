@@ -1,0 +1,289 @@
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	.badges-info-box {
+		width: 95%;
+		height: 150vh;
+		}
+	
+	
+	.badge-img1, .badge-img2, .badge-img3, .badge-img4, .badge-img5, .badge-img6, .badge-img7, .badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	.badges-info-box {
+		width: 95%;
+		height: 150vh;
+		}
+	
+	.badge-img1, .badge-img2, .badge-img3, .badge-img4, .badge-img5, .badge-img6, .badge-img7, .badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.badges-info-box {
+		width: 95%;
+		height: 150vh;
+		}
+	
+	.badge-img1,.badge-img2,.badge-img3,.badge-img4,.badge-img5,.badge-img6,.badge-img7,.badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 855px) and (max-width: 949px) {
+	.badges-info-box {
+		width: 95%;
+		height: 150vh;
+		}
+	
+	.badge-img1, .badge-img2, .badge-img3, .badge-img4, .badge-img5, .badge-img6, .badge-img7, .badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 950px) and (max-width: 1049px) {
+	.badges-info-box {
+		width: 50%;
+		height: 150vh;
+		}
+	
+	.badge-img1, .badge-img2, .badge-img3, .badge-img4, .badge-img5, .badge-img6, .badge-img7, .badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 1050px) and (max-width: 1199px) {
+	.badges-info-box {
+		width: 50%;
+		height: 150vh;
+		}
+	
+	.badge-img1, .badge-img2, .badge-img3, .badge-img4, .badge-img5, .badge-img6, .badge-img7, .badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+	
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.badges-info-box {
+		width: 50%;
+		height: 150vh;
+		}
+	
+	.badge-img1, .badge-img2, .badge-img3, .badge-img4, .badge-img5, .badge-img6, .badge-img7, .badge-img8 {
+		height: 100%;
+		width: 100px;
+		}
+	}
+
+
+/*CSS*/
+.background-badge {
+	background: url('http://eskipaper.com/images/mountain-peaks-wallpaper-hd-1.jpg') center no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 8vh;
+	left:0;
+	width: 100%;
+	height: 100%;
+	opacity: .8;
+	}
+
+.info-title {
+	font-size: 24px;
+	text-align: center;
+	font-weight: bold;
+	}
+
+.badge-count {
+	font-size: 18px;
+	}
+
+.flex-row-badge {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	}
+
+.badge-box {
+	position: relative;
+	background-color: white;
+	border: 1px black solid;
+	padding: 2vh 2vw;
+	border-radius: 5px;
+	width: 60vw;
+	height: 10vh;
+	}
+
+.badge-img1,.badge-img2,.badge-img3,.badge-img4,.badge-img5,.badge-img6,.badge-img7,.badge-img8 {
+	position: relative;
+	margin: 0.5vw;
+	z-index: 0;
+	}
+
+.badge-img1 {
+	background: url('../../images/HTML:CSS/css3-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img2 {
+	background: url('../../images/JavaScript/basic-Javascript-Logo-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img3 {
+	background: url('../../images/JavaScript/javascript-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img4 {
+	background: url('../../images/Angular/angularjs-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img5 {
+	background: url('../../images/Node/nodejs-logo-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img6 {
+	background: url('../../images/SQL/sql-database-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img7 {
+	background: url('../../images/project1/stars-icon-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img8 {
+	background: url('../../images/group-project/vip-gray.png') center no-repeat;
+	background-size: contain;
+	}
+	
+/*color badges*/
+.badge-img1-c,.badge-img2-c,.badge-img3-c,.badge-img4-c,.badge-img5-c,.badge-img6-c,.badge-img7-c,.badge-img8-c {
+	position: relative;
+	margin: 0.5vw;
+	height: 100%;
+	width: 100px;
+	z-index: 1;
+	}
+
+.badge-img1-c {
+	background: url('../../images/HTML:CSS/css3.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img2-c {
+	background: url('../../images/JavaScript/Javascript-Logo.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img3-c {
+	background: url('../../images/JavaScript/javascript.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img4-c {
+	background: url('../../images/Angular/angularjs.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img5-c {
+	background: url('../../images/Node/nodejs-logo.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img6-c {
+	background: url('../../images/SQL/sql-database.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img7-c {
+	background: url('../../images/project1/stars-icon.png') center no-repeat;
+	background-size: contain;
+	}
+
+.badge-img8-c {
+	background: url('../../images/group-project/vip-gray.png') center no-repeat;
+	background-size: contain;
+	}
+
+.my-badge {
+	position: relative;
+	margin-top: 10vh;
+	margin-bottom: 2vh;
+	border: 1px black solid;
+	width: auto;
+	height: 4vh;
+	border-radius: 3px;
+	background-color: white;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 0.7% 10px 0 10px;
+	}
+
+/*Badge Info Box*/
+.badge1,.badge2,.badge3,.badge4,.badge5,.badge6,.badge7,.badge8 {
+	background-color: white;
+	border: solid lightgray 1px;
+	padding: 2vh;
+	}
+
+
+.badge-text-title {
+	width: 18%;
+	height: 40%;
+	font-size: 16px;
+	text-align: center;
+	}
+
+.badges-info-box {
+	margin: 2vh 1vw 2vh 1vw;
+	padding: 3vh 1vw;
+	border: 1px black solid;
+	position: relative;
+	border-radius: 3px;
+	background-color: rgba(255, 255, 255, 0.81);
+	}
+
+.badge-text {
+	float: right;
+	width: 78%;
+	height: 100%;
+	background-color: rgba(211, 211, 211, 0.11);
+	padding: 0.2vh 0.2vw;
+	font-size: 16px;
+	text-align: center;
+	}
+
+.little-badge-box {
+	position: relative;
+	width: 9%;
+	height: 80%;
+	margin-left: 2vw;
+	}
+
+.little-badge-box-alt {
+	position: relative;
+	width: 9%;
+	height: 60%;
+	margin-left: 2vw;
+	}

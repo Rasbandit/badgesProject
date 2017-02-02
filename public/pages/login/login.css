@@ -1,0 +1,52 @@
+.background-log {
+	background: url('http://www.clipartkid.com/images/476/mountain-and-forest-blue-green-nature-purple-white-powerpoint-SmX7pC-clipart.png') center no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 8vh;
+	left:0;
+	width: 100%;
+	height: 100%;
+	opacity: .8;
+	}
+
+.login-box {
+	margin-top: 20vh;
+	width: 15%;
+	height: 40vh;
+	background-color: white;
+	border: solid black 1px;
+	border-radius: 5px;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+	}
+
+.input-box {
+	width: 9vw;
+	height: 2vh;
+	margin-bottom: 0.5vh;
+	}
+
+.login-button {
+	width: 5vw;
+	height: 3vh;
+	background-size: cover;
+	margin: 0.5vh 0;
+	cursor: pointer;
+	}
+
+.fb-button {
+	background: url('../../images/facebook-button.png') center no-repeat;
+	width: 9vw;
+	height: 4vh;
+	background-size: cover;
+	margin-bottom: 0.5vh;
+	cursor: pointer;
+	}
+
+.gh-button {
+	background: url('../../images/Github-button.png') center no-repeat;
+	width: 9vw;
+	height: 4vh;
+	background-size: contain;
+	cursor: pointer;
+	}

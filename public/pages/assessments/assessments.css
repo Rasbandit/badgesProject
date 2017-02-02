@@ -1,0 +1,253 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+		
+	}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+		
+	}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+		
+	}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+		
+	}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+		
+	}
+
+
+.background-assess {
+	background: url('https://4.bp.blogspot.com/-PUCVAEG3-ZI/VGyjsuAOoWI/AAAAAAABWuo/T_sDTn6eKFQ/s0/Mountain%2BPeaks%2BAlaska%2BSnow%2BUHD.jpg') center no-repeat;
+	background-size: cover;
+	position: fixed;
+	top: 3vh;
+	left:0;
+	width: 100%;
+	height: 100%;
+	opacity: .8;
+	}
+
+.header-box {
+	height: 50%;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.80);
+	border-radius: 5px;
+	}
+
+.header-text-box {
+	position: relative;
+	background: url('https://s3.amazonaws.com/kandipatternspatterns/misc/orig/14356_Mountain_Range.png') center;
+	background-size: contain;
+	text-align: center;
+	width: 100%;
+	height: 6vh;
+	margin-bottom: 3vh;
+	border-radius: 5px;
+	}
+
+.opacity {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.80);
+	border-radius: 5px;
+	}
+
+.header-text {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 1.5vh;
+	font-family: 'Roboto', sans-serif;
+	font-size: 26px;
+	text-align: center;
+	border-radius: 5px;
+	font-weight: bold;
+	}
+
+.practice-box {
+	position: fixed;
+	margin-top: 10vh;
+	height: 53vh;
+	width: 85%;
+	background-color: rgba(255, 255, 255, 0.8);
+	border: solid black 1px;
+	border-radius: 5px;
+	text-align: center;
+	}
+
+.link-container {
+	position: fixed;
+	margin-top: 66vh;
+	margin-bottom: 5vh;
+	height: 30vh;
+	width: 85%;
+	background-color: rgba(255, 255, 255, 0.9);
+	border: solid black 1px;
+	border-radius: 5px;
+	}
+
+.link-header {
+	background: url('https://s3.amazonaws.com/kandipatternspatterns/misc/orig/14356_Mountain_Range.png') center;
+	background-size: contain;
+	position: relative;
+	height: 6vh;
+	width: 100%;
+	border-radius: 5px;
+	text-align: center;
+	margin-bottom: 1.5vh;
+	}
+
+.link-box {
+	height: 20vh;
+	width: 50%;
+	text-align: center;
+	background: white;
+	border: solid black 1px;
+	border-radius: 5px;
+	}
+
+.link-title {
+	margin-bottom: 5px;
+	text-decoration: underline;
+	}
+
+.text-link,.text-link-bottom {
+	font-family: 'Roboto', sans-serif;
+	color: black;
+	text-decoration: none;
+	}
+
+.text-link {
+	font-size: 18px;
+	line-height: 23px;
+	}
+
+.info {
+	padding: 15px;
+	margin-top: 1vh;
+	}
+
+.text-link-bottom {
+	font-size: 20px;
+	line-height: 35px;
+	}
+
+.text-link:hover {
+	color: #3BB3E4;
+	cursor: pointer;
+	}
+
+.text-link-bottom:hover {
+	color: #3BB3E4;
+	cursor: pointer;
+	}
+
+.link-row {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	}
+
+.assess-warning {
+	float: left;
+	width: 40%;
+	height: 20vh;
+	background-color: white;
+	border: 1px black solid;
+	border-radius: 5px;
+	}
+
+.assess-warning-header {
+	width: 100%;
+	height: 4vh;
+	background-color: #b4b4b4;
+	border-bottom: solid black 1px;
+	border-radius: 5px;
+	}
+
+.column-one {
+	margin-top: 2vh;
+	width: 100%;
+	height: 20vh;
+	}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	background: white;
+	border: 1px solid black;
+	}
+
+ul li {
+	display: block;
+	position: relative;
+	float: left;
+	}
+
+li ul {
+	display: none;
+	}
+
+ul li a {
+	display: block;
+	/*padding: .6em;*/
+	padding: 6px 10px;
+	text-decoration: none;
+	white-space: nowrap;
+	color: black;
+	font-size: 14px;
+	}
+
+ul li a:hover {
+	background: #292C2F;
+	color: #3BB3E4;
+	cursor: pointer;
+	}
+
+li:hover > ul {
+	display: block;
+	position: absolute;
+	}
+
+li:hover li { float: none; }
+
+li:hover a {
+	background: #F1F1F1;
+	}
+
+li:hover li a:hover {
+	background: #292C2F; }
+
+.main-navigation li ul li {
+	border-top: 0; }
+
+ul ul ul {
+	left: 100%;
+	top: 0;
+	}
+
+ul:before,
+ul:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+	}
+
+ul:after { clear: both; }
+
+
+.button-error{
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	background: rgb(202, 60, 60); /* this is a maroon */
+	margin-left: 10px;
+	}
