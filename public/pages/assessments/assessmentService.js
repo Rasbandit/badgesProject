@@ -14,11 +14,12 @@ angular.module('badgeApp').service('assessmentService', function($http, $q) {
 	};
 	
 	//Stamp basic JS assessment start time and date to db
-	this.basicStartTime = (name, time) => {
+	this.basicStartTime = (id, name, time) => {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/basicStartTime',
 			data: {
+				'id' : id,
 				'name' : name,
 				'startTime' : time
 			}
@@ -26,11 +27,12 @@ angular.module('badgeApp').service('assessmentService', function($http, $q) {
 	};
 	
 	//Stamp Intermediate JS assessment start time and date to db
-	this.intStartTime = (name, time) => {
+	this.intStartTime = (id, name, time) => {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/intStartTime',
 			data: {
+				'id' : id,
 				'name' : name,
 				'startTime' : time
 			}
@@ -38,11 +40,12 @@ angular.module('badgeApp').service('assessmentService', function($http, $q) {
 	};
 	
 	//Stamp angular assessment start time and date to db
-	this.angularStartTime = (name, time) => {
+	this.angularStartTime = (id, name, time) => {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/angularStartTime',
 			data: {
+				'id' : id,
 				'name' : name,
 				'startTime' : time
 			}
@@ -50,11 +53,12 @@ angular.module('badgeApp').service('assessmentService', function($http, $q) {
 	};
 	
 	//Stamp node JS assessment start time and date to db
-	this.nodeStartTime = (name, time) => {
+	this.nodeStartTime = (id, name, time) => {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/nodeStartTime',
 			data: {
+				'id' : id,
 				'name' : name,
 				'startTime' : time
 			}
@@ -62,15 +66,94 @@ angular.module('badgeApp').service('assessmentService', function($http, $q) {
 	};
 	
 	//Stamp SQL assessment start time and date to db
-	this.sqlStartTime = (name, time) => {
+	this.sqlStartTime = (id, name, time) => {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/sqlStartTime',
 			data: {
+				'id' : id,
 				'name' : name,
 				'startTime' : time
 			}
 		})
 	};
+	
+	
+	// -----------------------------------
+	
+	
+	//Stamp html assessment start time and date to db
+	this.htmlStartTime = (id, time) => {
+		return $http({
+			method: 'PUT',
+			url: '/htmlEndTime',
+			data: {
+				'id' : id,
+				'startTime' : time
+			}
+		})
+	};
+	
+	//Stamp basic JS assessment start time and date to db
+	this.basicStartTime = (id, time) => {
+		return $http({
+			method: 'PUT',
+			url: '/basicEndTime',
+			data: {
+				'id' : id,
+				'startTime' : time
+			}
+		})
+	};
+	
+	//Stamp Intermediate JS assessment start time and date to db
+	this.intStartTime = (id, time) => {
+		return $http({
+			method: 'PUT',
+			url: '/intEndTime',
+			data: {
+				'id' : id,
+				'startTime' : time
+			}
+		})
+	};
+	
+	//Stamp angular assessment start time and date to db
+	this.angularStartTime = (id, time) => {
+		return $http({
+			method: 'PUT',
+			url: '/angularEndTime',
+			data: {
+				'id' : id,
+				'startTime' : time
+			}
+		})
+	};
+	
+	//Stamp node JS assessment start time and date to db
+	this.nodeStartTime = (id, time) => {
+		return $http({
+			method: 'PUT',
+			url: '/nodeEndTime',
+			data: {
+				'id' : id,
+				'startTime' : time
+			}
+		})
+	};
+	
+	//Stamp SQL assessment start time and date to db
+	this.sqlStartTime = (id, time) => {
+		return $http({
+			method: 'PUT',
+			url: '/sqlEndTime',
+			data: {
+				'id' : id,
+				'startTime' : time
+			}
+		})
+	};
+	
+	
 	
 });

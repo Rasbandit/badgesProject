@@ -37,6 +37,12 @@ const massiveInstance = massive.connectSync({connectionString: `postgres://${con
 app.set('db', massiveInstance);
 const db = app.get('db');
 
+db.init.createUsersTable([],(err, result)=>{
+	if(err){
+		console.log(err);
+	}
+});
+
 db.init.createBadgesTable([],(err, result)=>{
 	if(err){
 	  console.log(err);
@@ -49,11 +55,7 @@ db.init.createTimestampsTable([],(err, result)=>{
 	}
 });
 
-db.init.createUsersTable([],(err, result)=>{
-	if(err){
-		console.log(err);
-	}
-});
+
 
 app.get('/logout', function(req, res) {
 	req.session.destroy();
@@ -88,83 +90,83 @@ app.post('/htmlStartTime', function(req, res) {
 	});
 });
 
-app.put('/basicStartTime', function(req, res) {
+app.post('/basicStartTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startBasicStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startBasicStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/intStartTime', function(req, res) {
+app.post('/intStartTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startIntStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startIntStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/angularStartTime', function(req, res) {
+app.post('/angularStartTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startAngularStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startAngularStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		console.log(result);
 		res.send(result);
 	});
 });
 
-app.put('/nodeStartTime', function(req, res) {
+app.post('/nodeStartTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startNodeStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startNodeStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/sqlStartTime', function(req, res) {
+app.post('/sqlStartTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startSqlStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startSqlStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 
 //Assessment end time stamps
-app.post('/htmlStartTime', function(req, res) {
+app.put('/htmlEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startHtmlStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startHtmlStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/basicStartTime', function(req, res) {
+app.put('/basicEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startBasicStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startBasicStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/intStartTime', function(req, res) {
+app.put('/intEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startIntStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startIntStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/angularStartTime', function(req, res) {
+app.put('/angularEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startAngularStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startAngularStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
 		console.log(result);
 		res.send(result);
 	});
 });
 
-app.put('/nodeStartTime', function(req, res) {
+app.put('/nodeEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startNodeStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startNodeStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
-app.put('/sqlStartTime', function(req, res) {
+app.put('/sqlEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startSqlStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
+	db.timeStamps.startSqlStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });

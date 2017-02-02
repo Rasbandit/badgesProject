@@ -2,6 +2,7 @@ CREATE TABLE if not exists timestamps
 (
     id serial PRIMARY KEY,
     user_id int references users(id),
+    user_name varchar(255),
     htmlStartTime TIMESTAMP WITH TIME ZONE,
     htmlEndTime TIMESTAMP WITH TIME ZONE,
     basicJsStartTime TIMESTAMP WITH TIME ZONE,

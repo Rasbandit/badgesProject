@@ -79,11 +79,12 @@ angular.module('badgeApp').service('assessmentService', function ($http, $q) {
 	};
 
 	//Stamp basic JS assessment start time and date to db
-	this.basicStartTime = function (name, time) {
+	this.basicStartTime = function (id, name, time) {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/basicStartTime',
 			data: {
+				'id': id,
 				'name': name,
 				'startTime': time
 			}
@@ -91,11 +92,12 @@ angular.module('badgeApp').service('assessmentService', function ($http, $q) {
 	};
 
 	//Stamp Intermediate JS assessment start time and date to db
-	this.intStartTime = function (name, time) {
+	this.intStartTime = function (id, name, time) {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/intStartTime',
 			data: {
+				'id': id,
 				'name': name,
 				'startTime': time
 			}
@@ -103,11 +105,12 @@ angular.module('badgeApp').service('assessmentService', function ($http, $q) {
 	};
 
 	//Stamp angular assessment start time and date to db
-	this.angularStartTime = function (name, time) {
+	this.angularStartTime = function (id, name, time) {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/angularStartTime',
 			data: {
+				'id': id,
 				'name': name,
 				'startTime': time
 			}
@@ -115,11 +118,12 @@ angular.module('badgeApp').service('assessmentService', function ($http, $q) {
 	};
 
 	//Stamp node JS assessment start time and date to db
-	this.nodeStartTime = function (name, time) {
+	this.nodeStartTime = function (id, name, time) {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/nodeStartTime',
 			data: {
+				'id': id,
 				'name': name,
 				'startTime': time
 			}
@@ -127,11 +131,12 @@ angular.module('badgeApp').service('assessmentService', function ($http, $q) {
 	};
 
 	//Stamp SQL assessment start time and date to db
-	this.sqlStartTime = function (name, time) {
+	this.sqlStartTime = function (id, name, time) {
 		return $http({
-			method: 'PUT',
+			method: 'POST',
 			url: '/sqlStartTime',
 			data: {
+				'id': id,
 				'name': name,
 				'startTime': time
 			}
@@ -173,129 +178,27 @@ angular.module('badgeApp').controller('assessmentsCtrl', function ($scope, userS
 				window.open('https://github.com/DevMountain/html-css-assessment', '_blank');
 				$scope.stop1 = true;
 			} else if (lang === 'jsb') {
-				assessmentService.basicStartTime(user.display_name, date);
+				assessmentService.basicStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/javascript-basic-assessment', '_blank');
 				$scope.stop2 = true;
 			} else if (lang === 'jsi') {
-				assessmentService.intStartTime(user.id, date);
+				assessmentService.intStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/intermediate-javascript-assessment', '_blank');
 				$scope.stop3 = true;
 			} else if (lang === 'ang') {
-				assessmentService.angularStartTime(user.display_name, date);
+				assessmentService.angularStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/angular-assessment', '_blank');
 				$scope.stop4 = true;
 			} else if (lang === 'node') {
-				assessmentService.nodeStartTime(user.display_name, date);
+				assessmentService.nodeStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/node-assessment', '_blank');
 				$scope.stop5 = true;
 			} else if (lang === 'sql') {
-				assessmentService.sqlStartTime(user.display_name, date);
+				assessmentService.sqlStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/sql-assessment', '_blank');
 				$scope.stop6 = true;
 			}
 		});
-	};
-});
-'use strict';
-
-angular.module('badgeApp').service('badgeService', function ($http, $q) {
-
-	//Api call to get user badge info
-	this.getBadges = function (id) {
-		return $http({
-			method: 'GET',
-			url: '/badges/' + id
-		});
-	};
-});
-'use strict';
-
-angular.module('badgeApp').controller('badgesCtrl', function ($scope, userService, badgeService, $state) {
-
-	$scope.user = userService.currentUser;
-	var user = userService.currentUser;
-
-	//If user is not logged in, redirect to login page
-	if (!user) {
-		$state.go('login');
-		return;
-	}
-
-	//Api call to get user's badge info --> badgeService
-	var getBadges = function getBadges() {
-		if (user) {
-			badgeService.getBadges(user.id).then(function (response) {
-				$scope.badges = response.data;
-				displayBadges(response.data.badges);
-			});
-		}
-	};
-	getBadges();
-
-	//Default Color badge icons
-	$scope.html_c = false;
-	$scope.bjs_c = false;
-	$scope.ijs_c = false;
-	$scope.angular_c = false;
-	$scope.node_c = false;
-	$scope.sql_c = false;
-	$scope.pp_c = false;
-	$scope.gp_c = false;
-
-	//Default Gray badge icons
-	$scope.html_g = true;
-	$scope.bjs_g = true;
-	$scope.ijs_g = true;
-	$scope.angular_g = true;
-	$scope.node_g = true;
-	$scope.sql_g = true;
-	$scope.pp_g = true;
-	$scope.gp_g = true;
-
-	//Test which badges user has completed
-	var displayBadges = function displayBadges(badges) {
-		var count = 0;
-		if (badges[0].html_badge === true) {
-			$scope.html_c = true;
-			$scope.html_g = false;
-			count++;
-			if (badges[0].basic_js_badge === true) {
-				$scope.bjs_c = true;
-				$scope.bjs_g = false;
-				count++;
-				if (badges[0].int_js_badge === true) {
-					$scope.ijs_c = true;
-					$scope.ijs_g = false;
-					count++;
-					if (badges[0].angular_badge === true) {
-						$scope.angular_c = true;
-						$scope.angular_g = false;
-						count++;
-						if (badges[0].node_badge === true) {
-							$scope.node_c = true;
-							$scope.node_g = false;
-							count++;
-							if (badges[0].sql_badge === true) {
-								$scope.sql_c = true;
-								$scope.sql_g = false;
-								count++;
-								if (badges[0].pproj_badge === true) {
-									$scope.pp_c = true;
-									$scope.pp_g = false;
-									count++;
-									if (badges[0].gproj_badge === true) {
-										$scope.gp_c = true;
-										$scope.gp_g = false;
-										count++;
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-		$scope.finalCount = count;
 	};
 });
 'use strict';
@@ -379,6 +282,111 @@ angular.module('badgeApp').controller('calendarCtrl', function ($scope, userServ
 			}
 		});
 	});
+});
+'use strict';
+
+angular.module('badgeApp').service('badgeService', function ($http, $q) {
+
+	//Api call to get user badge info
+	this.getBadges = function (id) {
+		console.log('service', id);
+		return $http({
+			method: 'GET',
+			url: '/badges/' + id
+		});
+	};
+});
+'use strict';
+
+angular.module('badgeApp').controller('badgesCtrl', function ($scope, userService, badgeService, $state) {
+
+	$scope.user = userService.currentUser;
+	var user = userService.currentUser;
+
+	//If user is not logged in, redirect to login page
+	if (!user) {
+		$state.go('login');
+		return;
+	}
+
+	//Api call to get user's badge info --> badgeService
+	var getBadges = function getBadges() {
+		if (user) {
+			console.log('ctrl1', user.id);
+			badgeService.getBadges(user.id).then(function (response) {
+				console.log('ctrl2 then', response.data);
+				$scope.badges = response.data;
+				displayBadges(response.data.badges);
+			});
+		}
+	};
+	getBadges();
+
+	//Default Color badge icons
+	$scope.html_c = false;
+	$scope.bjs_c = false;
+	$scope.ijs_c = false;
+	$scope.angular_c = false;
+	$scope.node_c = false;
+	$scope.sql_c = false;
+	$scope.pp_c = false;
+	$scope.gp_c = false;
+
+	//Default Gray badge icons
+	$scope.html_g = true;
+	$scope.bjs_g = true;
+	$scope.ijs_g = true;
+	$scope.angular_g = true;
+	$scope.node_g = true;
+	$scope.sql_g = true;
+	$scope.pp_g = true;
+	$scope.gp_g = true;
+
+	//Test which badges user has completed
+	var displayBadges = function displayBadges(badges) {
+		var count = 0;
+		if (badges[0].html_badge === true) {
+			$scope.html_c = true;
+			$scope.html_g = false;
+			count++;
+			if (badges[0].basic_js_badge === true) {
+				$scope.bjs_c = true;
+				$scope.bjs_g = false;
+				count++;
+				if (badges[0].int_js_badge === true) {
+					$scope.ijs_c = true;
+					$scope.ijs_g = false;
+					count++;
+					if (badges[0].angular_badge === true) {
+						$scope.angular_c = true;
+						$scope.angular_g = false;
+						count++;
+						if (badges[0].node_badge === true) {
+							$scope.node_c = true;
+							$scope.node_g = false;
+							count++;
+							if (badges[0].sql_badge === true) {
+								$scope.sql_c = true;
+								$scope.sql_g = false;
+								count++;
+								if (badges[0].pproj_badge === true) {
+									$scope.pp_c = true;
+									$scope.pp_g = false;
+									count++;
+									if (badges[0].gproj_badge === true) {
+										$scope.gp_c = true;
+										$scope.gp_g = false;
+										count++;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		$scope.finalCount = count;
+	};
 });
 'use strict';
 

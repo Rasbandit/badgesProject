@@ -1,3 +1,3 @@
-UPDATE timeStamps
-SET nodeStartTime = $2
-WHERE display_name = $1;
+INSERT INTO timestamps
+(user_id, user_name, nodeStartTime)
+VALUES ($1, $2, $3);

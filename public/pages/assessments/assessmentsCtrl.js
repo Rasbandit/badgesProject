@@ -33,32 +33,43 @@ angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userSe
 				$scope.stop1 = true;
 			}
 			else if (lang === 'jsb') {
-				assessmentService.basicStartTime(user.display_name, date);
+				assessmentService.basicStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/javascript-basic-assessment', '_blank');
 				$scope.stop2 = true;
 			}
 			else if (lang === 'jsi') {
-				assessmentService.intStartTime(user.id, date);
+				assessmentService.intStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/intermediate-javascript-assessment', '_blank');
 				$scope.stop3 = true;
 			}
 			else if (lang === 'ang') {
-				assessmentService.angularStartTime(user.display_name, date);
+				assessmentService.angularStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/angular-assessment', '_blank');
 				$scope.stop4 = true;
 			}
 			else if (lang === 'node') {
-				assessmentService.nodeStartTime(user.display_name, date);
+				assessmentService.nodeStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/node-assessment', '_blank');
 				$scope.stop5 = true;
 			}
 			else if (lang === 'sql') {
-				assessmentService.sqlStartTime(user.display_name, date);
+				assessmentService.sqlStartTime(user.id, user.display_name, date);
 				window.open('https://github.com/DevMountain/sql-assessment', '_blank');
 				$scope.stop6 = true;
 			}
 			});
 	};
+	
+	
+	htmlEndTime () => {
+		assessmentService.sqlStartTime(user.id, user.display_name, date);
+	}
+	
+	
+	
+	
+	
+	
 	
 });
 	

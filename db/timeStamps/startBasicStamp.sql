@@ -1,3 +1,3 @@
-UPDATE timeStamps
-SET basicJsStartTime = $2
-WHERE display_name = $1;
+INSERT INTO timestamps
+(user_id, user_name, basicjsstarttime)
+VALUES ($1, $2, $3);

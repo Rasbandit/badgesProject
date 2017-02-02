@@ -1,4 +1,4 @@
-INSERT INTO timeStamps
-(id, display_name, htmlStartTime)
+INSERT INTO timestamps
+(user_id, user_name, htmlStartTime)
 VALUES ($1, $2, $3);
 

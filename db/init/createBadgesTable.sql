@@ -1,6 +1,7 @@
 create table if not exists badges (
   id serial primary key,
-  user_id int references user(id),
+  user_id int references users(id),
+  user_name varchar(255),
   html_badge boolean,
   basic_js_badge boolean,
   int_js_badge boolean,
