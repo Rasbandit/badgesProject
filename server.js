@@ -258,9 +258,8 @@ app.get('/auth/github/callback',
 		res.status(200).redirect('/');
 	});
 
-const port = 3000;
-app.listen(port, function() {
-	console.log('Listening to port:', port)
+app.listen(config.port, function() {
+	console.log('Listening to port:', config.port)
 });
 
 
