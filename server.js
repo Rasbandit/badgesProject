@@ -1,18 +1,18 @@
-const express = require('express'),
-	bodyParser = require('body-parser'),
-	massive = require('massive'),
-	passport = require('passport'),
-	LocalStrategy = require('passport-local').Strategy,
-	FacebookStrategy = require('passport-facebook').Strategy,
-	githubStrategy = require('passport-github').Strategy,
-	config = require('./config.js'),
-	cors = require('cors'),
-	jwt = require('jsonwebtoken'),
-	cookieParser = require('cookie-parser'),
-	session = require('express-session');
+const express = require('express');
+const bodyParser = require('body-parser');
+const massive = require('massive');
+const passport = require('passport');
+const LocalStrategy = require('passport-local').Strategy;
+const FacebookStrategy = require('passport-facebook').Strategy;
+const githubStrategy = require('passport-github').Strategy;
+const config = require('./config.js');
+const cors = require('cors');
+const jwt = require('jsonwebtoken');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 
-const app = express();
+const app = module.exports =express();
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -29,6 +29,31 @@ app.use(passport.session());
 
 app.use(express.static(__dirname + '/dist'));
 
+/////////////
+// DATABASE //
+/////////////
+const massiveInstance = massive.connectSync({connectionString: `postgres://${config.postgresUser}:${config.postgresPass}@localhost/TheBadges`});
+
+app.set('db', massiveInstance);
+const db = app.get('db');
+
+db.init.createBadgesTable([],(err, result)=>{
+	if(err){
+	  console.log(err);
+	}
+});
+
+db.init.createTimestampsTable([],(err, result)=>{
+	if(err){
+		console.log(err);
+	}
+});
+
+db.init.createUsersTable([],(err, result)=>{
+	if(err){
+		console.log(err);
+	}
+});
 
 app.get('/logout', function(req, res) {
 	req.session.destroy();
@@ -57,28 +82,28 @@ app.get('/loggedIn', function(req, res){
 
 //Assessment start time stamps
 app.post('/htmlStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startHtmlStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/basicStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startBasicStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/intStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startIntStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/angularStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startAngularStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		console.log(result);
 		res.send(result);
@@ -86,14 +111,14 @@ app.put('/angularStartTime', function(req, res) {
 });
 
 app.put('/nodeStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startNodeStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/sqlStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startSqlStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
@@ -102,28 +127,28 @@ app.put('/sqlStartTime', function(req, res) {
 
 //Assessment end time stamps
 app.post('/htmlStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startHtmlStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/basicStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startBasicStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/intStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startIntStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/angularStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startAngularStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		console.log(result);
 		res.send(result);
@@ -131,27 +156,20 @@ app.put('/angularStartTime', function(req, res) {
 });
 
 app.put('/nodeStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startNodeStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/sqlStartTime', function(req, res) {
-	var timeStamp = req.body;
+	let timeStamp = req.body;
 	db.timeStamps.startSqlStamp([timeStamp.name, timeStamp.startTime], function(err, result) {
 		res.send(result);
 	});
 });
 
 
-/////////////
-// DATABASE //
-/////////////
-const massiveInstance = massive.connectSync({connectionString: 'postgres://postgres:testing123@localhost/TheBadges'});
-
-app.set('db', massiveInstance);
-const db = app.get('db');
 
 
 /**

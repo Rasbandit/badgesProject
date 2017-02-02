@@ -1,3 +1,3 @@
 UPDATE timeStamps
 SET angularStartTime = $2
-WHERE display_name = $1;
+WHERE user_id = $1;

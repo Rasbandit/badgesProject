@@ -177,7 +177,7 @@ angular.module('badgeApp').controller('assessmentsCtrl', function ($scope, userS
 				window.open('https://github.com/DevMountain/javascript-basic-assessment', '_blank');
 				$scope.stop2 = true;
 			} else if (lang === 'jsi') {
-				assessmentService.intStartTime(user.display_name, date);
+				assessmentService.intStartTime(user.id, date);
 				window.open('https://github.com/DevMountain/intermediate-javascript-assessment', '_blank');
 				$scope.stop3 = true;
 			} else if (lang === 'ang') {
