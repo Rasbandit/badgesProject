@@ -61,7 +61,7 @@ angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userSe
 	};
 	
 	
-	htmlEndTime () => {
+	htmlEndTime =() => {
 		assessmentService.sqlStartTime(user.id, user.display_name, date);
 	}
 	

@@ -11,14 +11,15 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 	
 	//Api call to get user's badge info --> badgeService
 	let getBadges = () => {
-		if (user)
+		if (user) {
 			badgeService.getBadges(user.id)
 			.then(function(response) {
 				$scope.badges = response.data;
 				displayBadges(response.data.badges);
 			})
 		}
-	});
+	};
+	
 	getBadges();
 	
 	//Default Color badge icons
