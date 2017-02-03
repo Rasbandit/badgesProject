@@ -293,7 +293,7 @@ passport.use('facebook', new FacebookStrategy({
 passport.use('github', new githubStrategy({
 		clientID: config.github.clientID,
 		clientSecret: config.github.clientSecret,
-		callbackURL: "/auth/github/callback",
+		callbackURL: config.callbackUrl,
 		profileFields: ['id', 'displayName']
 	},
 	function(accessToken, refreshToken, profile, done) {
