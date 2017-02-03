@@ -1,4 +1,4 @@
-angular.module('badgeApp').controller('loginCtrl', function($scope, loginService, $state, $stateParams) {
+angular.module('badgeApp').controller('loginCtrl', function($scope, userService, loginService, $state, $stateParams) {
 	
 	if(!userService.currentUser){
 		$state.go('login')
