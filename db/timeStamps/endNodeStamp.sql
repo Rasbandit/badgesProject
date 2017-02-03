@@ -1,3 +1,3 @@
 UPDATE timeStamps
 SET nodeEndTime = $2
-WHERE user_id = $1;
+WHERE timestamps.id = $3 AND user_id = $1;

@@ -12,7 +12,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
 
-const app = module.exports =express();
+const app = module.exports = express();
 
 app.use(bodyParser.json());
 app.use(cookieParser());
@@ -37,19 +37,19 @@ const massiveInstance = massive.connectSync({connectionString: `postgres://${con
 app.set('db', massiveInstance);
 const db = app.get('db');
 
-db.init.createUsersTable([],(err, result)=>{
+db.init.createUsersTable([],(err, result) => {
 	if(err){
 		console.log(err);
 	}
 });
 
-db.init.createBadgesTable([],(err, result)=>{
+db.init.createBadgesTable([],(err, result) => {
 	if(err){
 	  console.log(err);
 	}
 });
 
-db.init.createTimestampsTable([],(err, result)=>{
+db.init.createTimestampsTable([],(err, result) => {
 	if(err){
 		console.log(err);
 	}
@@ -86,6 +86,7 @@ app.get('/loggedIn', function(req, res){
 app.post('/htmlStartTime', function(req, res) {
 	let timeStamp = req.body;
 	db.timeStamps.startHtmlStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
+		req.session.currentAssessmentStart = result;
 		res.send(result);
 	});
 });
@@ -93,6 +94,7 @@ app.post('/htmlStartTime', function(req, res) {
 app.post('/basicStartTime', function(req, res) {
 	let timeStamp = req.body;
 	db.timeStamps.startBasicStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
+		req.session.currentAssessmentStart = result;
 		res.send(result);
 	});
 });
@@ -100,6 +102,7 @@ app.post('/basicStartTime', function(req, res) {
 app.post('/intStartTime', function(req, res) {
 	let timeStamp = req.body;
 	db.timeStamps.startIntStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
+		req.session.currentAssessmentStart = result;
 		res.send(result);
 	});
 });
@@ -107,7 +110,7 @@ app.post('/intStartTime', function(req, res) {
 app.post('/angularStartTime', function(req, res) {
 	let timeStamp = req.body;
 	db.timeStamps.startAngularStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
-		console.log(result);
+		req.session.currentAssessmentStart = result;
 		res.send(result);
 	});
 });
@@ -115,6 +118,7 @@ app.post('/angularStartTime', function(req, res) {
 app.post('/nodeStartTime', function(req, res) {
 	let timeStamp = req.body;
 	db.timeStamps.startNodeStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
+		req.session.currentAssessmentStart = result;
 		res.send(result);
 	});
 });
@@ -122,6 +126,7 @@ app.post('/nodeStartTime', function(req, res) {
 app.post('/sqlStartTime', function(req, res) {
 	let timeStamp = req.body;
 	db.timeStamps.startSqlStamp([timeStamp.id, timeStamp.name, timeStamp.startTime], function(err, result) {
+		req.session.currentAssessmentStart = result;
 		res.send(result);
 	});
 });
@@ -130,28 +135,28 @@ app.post('/sqlStartTime', function(req, res) {
 //Assessment end time stamps
 app.put('/htmlEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startHtmlStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
+	db.timeStamps.endHtmlStamp([timeStamp.id, timeStamp.endTime, req.session.currentAssessmentStart[0].id], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/basicEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startBasicStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
+	db.timeStamps.endBasicStamp([timeStamp.id, timeStamp.endTime, req.session.currentAssessmentStart[0].id], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/intEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startIntStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
+	db.timeStamps.endIntStamp([timeStamp.id, timeStamp.endTime, req.session.currentAssessmentStart[0].id], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/angularEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startAngularStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
+	db.timeStamps.endAngularStamp([timeStamp.id, timeStamp.endTime, req.session.currentAssessmentStart[0].id], function(err, result) {
 		console.log(result);
 		res.send(result);
 	});
@@ -159,14 +164,67 @@ app.put('/angularEndTime', function(req, res) {
 
 app.put('/nodeEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startNodeStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
+	db.timeStamps.endNodeStamp([timeStamp.id, timeStamp.endTime, req.session.currentAssessmentStart[0].id], function(err, result) {
 		res.send(result);
 	});
 });
 
 app.put('/sqlEndTime', function(req, res) {
 	let timeStamp = req.body;
-	db.timeStamps.startSqlStamp([timeStamp.id, timeStamp.startTime], function(err, result) {
+	db.timeStamps.endSqlStamp([timeStamp.id, timeStamp.endTime, req.session.currentAssessmentStart[0].id], function(err, result) {
+		res.send(result);
+	});
+});
+
+
+
+
+
+app.put('/htmlPass', function(req, res) {
+	db.badgeQueries.htmlPassFail([req.body.id, req.body.answer], function(err, result) {
+		console.log('fired 3');
+		res.send(result);
+	});
+});
+
+app.put('/bjsPass', function(req, res) {
+	db.badgeQueries.bjsPassFail([req.body.id, req.body.answer], function(err, result) {
+		res.send(result);
+	});
+});
+
+app.put('/ijsPass', function(req, res) {
+	db.badgeQueries.ijsPassFail([req.body.id, req.body.answer], function(err, result) {
+		res.send(result);
+	});
+});
+
+app.put('/angPass', function(req, res) {
+	db.badgeQueries.angPassFail([req.body.id, req.body.answer], function(err, result) {
+		res.send(result);
+	});
+});
+
+app.put('/nodePass', function(req, res) {
+	db.badgeQueries.nodePassFail([req.body.id, req.body.answer], function(err, result) {
+		res.send(result);
+	});
+});
+
+app.put('/sqlPass', function(req, res) {
+	db.badgeQueries.sqlPassFail([req.body.id, req.body.answer], function(err, result) {
+		res.send(result);
+	});
+});
+
+app.put('/ppPass', function(req, res) {
+	db.badgeQueries.ppPassFail([req.body.id, req.body.answer], function(err, result) {
+		res.send(result);
+	});
+});
+
+app.put('/gpPass', function(req, res) {
+	db.badgeQueries.gpPassFail([req.body.id, req.body.answer], function(err, result) {
 		res.send(result);
 	});
 });

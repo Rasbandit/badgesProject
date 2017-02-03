@@ -16,21 +16,47 @@
 			<div ng-if="ijs_c" class="badge-img3-c"></div>
 			
 			<div ng-if="angular_g" class="badge-img4"></div>
-			<div ng-if="angular_c" class="badge-img4"></div>
+			<div ng-if="angular_c" class="badge-img4-c"></div>
 			
 			<div ng-if="node_g" class="badge-img5"></div>
-			<div ng-if="node_c" class="badge-img5"></div>
+			<div ng-if="node_c" class="badge-img5-c"></div>
 			
 			<div ng-if="sql_g" class="badge-img6"></div>
-			<div ng-if="sql_c" class="badge-img6"></div>
+			<div ng-if="sql_c" class="badge-img6-c"></div>
 			
 			<div ng-if="pp_g" class="badge-img7"></div>
-			<div ng-if="pp_c" class="badge-img7"></div>
+			<div ng-if="pp_c" class="badge-img7-c"></div>
 			
 			<div ng-if="gp_g" class="badge-img8"></div>
-			<div ng-if="gp_c" class="badge-img8"></div>
+			<div ng-if="gp_c" class="badge-img8-c"></div>
 		</div>
 	</div>
+	
+	<div>
+		<div class="badge-button-box1 flex-row-badge">
+			<div>Passed:  </div>
+			<button ng-click="pass('html')" class="button-success pure-button">HTML/CSS</button>
+			<button ng-click="pass('jsb')" class="button-success pure-button">Basic JS</button>
+			<button ng-click="pass('isb')" class="button-success pure-button">Intermediate JS</button>
+			<button ng-click="pass('ang')" class="button-success pure-button">Angular</button>
+			<button ng-click="pass('node')" class="button-success pure-button">Node</button>
+			<button ng-click="pass('sql')" class="button-success pure-button">SQL</button>
+			<button ng-click="pass('pp')" class="button-success pure-button">Personal Project</button>
+			<button ng-click="pass('gp')" class="button-success pure-button">Group Project</button>
+		</div>
+		<div class="badge-button-box2 flex-row-badge">
+			<div>Not Passed:</div>
+			<button ng-click="fail('html')" class="button-error pure-button">HTML/CSS</button>
+			<button ng-click="fail('jsb')" class="button-error pure-button">Basic JS</button>
+			<button ng-click="fail('isb')" class="button-error pure-button">Intermediate JS</button>
+			<button ng-click="fail('ang')" class="button-error pure-button">Angular</button>
+			<button ng-click="fail('node')" class="button-error pure-button">Node</button>
+			<button ng-click="fail('sql')" class="button-error pure-button">SQL</button>
+			<button ng-click="fail('pp')" class="button-error pure-button">Personal Project</button>
+			<button ng-click="fail('gp')" class="button-error pure-button">Group Project</button>
+		</div>
+	</div>
+	
 	<div class="badges-info-box flex-column">
 		<div>
 				<div class="info-title">Badge Info</div><hr>

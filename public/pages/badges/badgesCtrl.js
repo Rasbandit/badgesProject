@@ -19,7 +19,6 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 			})
 		}
 	};
-	
 	getBadges();
 	
 	//Default Color badge icons
@@ -87,5 +86,76 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 		}
 		$scope.finalCount = count;
 	};
+	
+	// $scope.pass = () => {
+	// 	badgeService.passFail(user.id, true);
+	// };
+	//
+	// $scope.fail = () => {
+	// 	badgeService.passFail(user.id, false);
+	// };
+	
+	
+	$scope.pass = (ans) => {
+		console.log('piiiii');
+		if (ans === 'html') {
+			console.log('fired 1');
+			badgeService.htmlPass(user.id, true);
+		}
+		else if (ans === 'jsb') {
+			badgeService.bjsPass(user.id, true);
+		}
+		else if (ans === 'jsi') {
+			badgeService.ijsPass(user.id, true);
+		}
+		else if (ans === 'ang') {
+			badgeService.angPass(user.id, true);
+		}
+		else if (ans === 'node') {
+			badgeService.nodePass(user.id, true);
+		}
+		else if (ans === 'sql') {
+			badgeService.sqlPass(user.id, true);
+		}
+		else if (ans === 'pp') {
+			badgeService.ppPass(user.id, true);
+		}
+		else if (ans === 'gp') {
+			badgeService.gpPass(user.id, true);
+		}
+	};
+	
+	
+	$scope.fail = (ans) => {
+		if (ans === 'html') {
+			badgeService.htmlPass(user.id, false);
+		}
+		else if (ans === 'jsb') {
+			badgeService.bjsPass(user.id, false);
+		}
+		else if (ans === 'jsi') {
+			badgeService.ijsPass(user.id, false);
+		}
+		else if (ans === 'ang') {
+			badgeService.angPass(user.id, false);
+		}
+		else if (ans === 'node') {
+			badgeService.nodePass(user.id, false);
+		}
+		else if (ans === 'sql') {
+			badgeService.sqlPass(user.id, false);
+		}
+		else if (ans === 'pp') {
+			badgeService.ppPass(user.id, false);
+		}
+		else if (ans === 'gp') {
+			badgeService.gpPass(user.id, false);
+		}
+	};
+	
+	
+	
+	
+	
 });
 

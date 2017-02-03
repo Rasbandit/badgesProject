@@ -1,5 +1,5 @@
 .background-log {
-	background: url('http://www.clipartkid.com/images/476/mountain-and-forest-blue-green-nature-purple-white-powerpoint-SmX7pC-clipart.png') center no-repeat;
+	background: url('http://www.freshuu.com/i/2017/01/mountain-wallpaper-phone-1.jpg') center no-repeat;
 	background-size: cover;
 	position: fixed;
 	top: 8vh;
@@ -39,7 +39,6 @@
 	width: 9vw;
 	height: 4vh;
 	background-size: cover;
-	margin-bottom: 0.5vh;
 	cursor: pointer;
 	}
 
@@ -47,6 +46,7 @@
 	background: url('../../images/Github-button.png') center no-repeat;
 	width: 9vw;
 	height: 4vh;
+	margin-bottom: 0.5vh;
 	background-size: contain;
 	cursor: pointer;
 	}

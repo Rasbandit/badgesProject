@@ -1,3 +1,3 @@
 UPDATE timeStamps
-SET htmlEndTime = $2
-WHERE user_id = $1;
+SET htmlendtime = $2
+WHERE timestamps.id = $3 AND user_id = $1;

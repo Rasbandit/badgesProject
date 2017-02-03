@@ -60,14 +60,42 @@ angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userSe
 			});
 	};
 	
+
+	$scope.htmlEndTime = () => {
+		let date = new Date();
+		assessmentService.htmlEndTime(user.id, date);
+		$scope.stop1 = false;
+	};
 	
-	htmlEndTime =() => {
-		assessmentService.sqlStartTime(user.id, user.display_name, date);
-	}
+	$scope.basicEndTime = () => {
+		let date = new Date();
+		assessmentService.basicEndTime(user.id, date);
+		$scope.stop2 = false;
+	};
 	
+	$scope.intEndTime = () => {
+		let date = new Date();
+		assessmentService.intEndTime(user.id, date);
+		$scope.stop3 = false;
+	};
 	
+	$scope.angularEndTime = () => {
+		let date = new Date();
+		assessmentService.angularEndTime(user.id, date);
+		$scope.stop4 = false;
+	};
 	
+	$scope.nodeEndTime = () => {
+		let date = new Date();
+		assessmentService.nodeEndTime(user.id, date);
+		$scope.stop5 = false;
+	};
 	
+	$scope.sqlEndTime = () => {
+		let date = new Date();
+		assessmentService.sqlEndTime(user.id, date);
+		$scope.stop6 = false;
+	};
 	
 	
 	

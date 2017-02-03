@@ -63,146 +63,6 @@ angular.module('badgeApp').controller('indexCtrl', function ($scope, userService
 "use strict";
 'use strict';
 
-angular.module('badgeApp').service('assessmentService', function ($http, $q) {
-
-	//Stamp html assessment start time and date to db
-	this.htmlStartTime = function (id, name, time) {
-		return $http({
-			method: 'POST',
-			url: '/htmlStartTime',
-			data: {
-				'id': id,
-				'name': name,
-				'startTime': time
-			}
-		});
-	};
-
-	//Stamp basic JS assessment start time and date to db
-	this.basicStartTime = function (id, name, time) {
-		return $http({
-			method: 'POST',
-			url: '/basicStartTime',
-			data: {
-				'id': id,
-				'name': name,
-				'startTime': time
-			}
-		});
-	};
-
-	//Stamp Intermediate JS assessment start time and date to db
-	this.intStartTime = function (id, name, time) {
-		return $http({
-			method: 'POST',
-			url: '/intStartTime',
-			data: {
-				'id': id,
-				'name': name,
-				'startTime': time
-			}
-		});
-	};
-
-	//Stamp angular assessment start time and date to db
-	this.angularStartTime = function (id, name, time) {
-		return $http({
-			method: 'POST',
-			url: '/angularStartTime',
-			data: {
-				'id': id,
-				'name': name,
-				'startTime': time
-			}
-		});
-	};
-
-	//Stamp node JS assessment start time and date to db
-	this.nodeStartTime = function (id, name, time) {
-		return $http({
-			method: 'POST',
-			url: '/nodeStartTime',
-			data: {
-				'id': id,
-				'name': name,
-				'startTime': time
-			}
-		});
-	};
-
-	//Stamp SQL assessment start time and date to db
-	this.sqlStartTime = function (id, name, time) {
-		return $http({
-			method: 'POST',
-			url: '/sqlStartTime',
-			data: {
-				'id': id,
-				'name': name,
-				'startTime': time
-			}
-		});
-	};
-});
-'use strict';
-
-angular.module('badgeApp').controller('assessmentsCtrl', function ($scope, userService, assessmentService, $state) {
-
-	var user = userService.currentUser;
-	$scope.stop1 = false;
-	$scope.stop2 = false;
-	$scope.stop3 = false;
-	$scope.stop4 = false;
-	$scope.stop5 = false;
-	$scope.stop6 = false;
-
-	//If user is not logged in, redirect to login page
-	if (!user) {
-		$state.go('login');
-		return;
-	}
-
-	//Sweet alerts logic and settings
-	$scope.sweet = function (lang) {
-		sweetAlert({
-			title: "Are you sure?",
-			text: "Are you ready to begin the assessment? Proceeding will begin your time limit of 3 hours and 10 minutes.",
-			type: "warning",
-			showCancelButton: true,
-			confirmButtonColor: "#00a82d",
-			confirmButtonText: "Yes, I'm ready!",
-			closeOnConfirm: true
-		}, function () {
-			var date = new Date();
-			if (lang === 'html') {
-				assessmentService.htmlStartTime(user.id, user.display_name, date);
-				window.open('https://github.com/DevMountain/html-css-assessment', '_blank');
-				$scope.stop1 = true;
-			} else if (lang === 'jsb') {
-				assessmentService.basicStartTime(user.id, user.display_name, date);
-				window.open('https://github.com/DevMountain/javascript-basic-assessment', '_blank');
-				$scope.stop2 = true;
-			} else if (lang === 'jsi') {
-				assessmentService.intStartTime(user.id, user.display_name, date);
-				window.open('https://github.com/DevMountain/intermediate-javascript-assessment', '_blank');
-				$scope.stop3 = true;
-			} else if (lang === 'ang') {
-				assessmentService.angularStartTime(user.id, user.display_name, date);
-				window.open('https://github.com/DevMountain/angular-assessment', '_blank');
-				$scope.stop4 = true;
-			} else if (lang === 'node') {
-				assessmentService.nodeStartTime(user.id, user.display_name, date);
-				window.open('https://github.com/DevMountain/node-assessment', '_blank');
-				$scope.stop5 = true;
-			} else if (lang === 'sql') {
-				assessmentService.sqlStartTime(user.id, user.display_name, date);
-				window.open('https://github.com/DevMountain/sql-assessment', '_blank');
-				$scope.stop6 = true;
-			}
-		});
-	};
-});
-'use strict';
-
 angular.module('badgeApp').controller('calendarCtrl', function ($scope, userService, $state) {
 	var _this = this;
 
@@ -285,14 +145,353 @@ angular.module('badgeApp').controller('calendarCtrl', function ($scope, userServ
 });
 'use strict';
 
+angular.module('badgeApp').service('assessmentService', function ($http, $q) {
+
+	//Stamp html assessment start time and date to db
+	this.htmlStartTime = function (id, name, time) {
+		return $http({
+			method: 'POST',
+			url: '/htmlStartTime',
+			data: {
+				'id': id,
+				'name': name,
+				'startTime': time
+			}
+		});
+	};
+
+	//Stamp basic JS assessment start time and date to db
+	this.basicStartTime = function (id, name, time) {
+		return $http({
+			method: 'POST',
+			url: '/basicStartTime',
+			data: {
+				'id': id,
+				'name': name,
+				'startTime': time
+			}
+		});
+	};
+
+	//Stamp Intermediate JS assessment start time and date to db
+	this.intStartTime = function (id, name, time) {
+		return $http({
+			method: 'POST',
+			url: '/intStartTime',
+			data: {
+				'id': id,
+				'name': name,
+				'startTime': time
+			}
+		});
+	};
+
+	//Stamp angular assessment start time and date to db
+	this.angularStartTime = function (id, name, time) {
+		return $http({
+			method: 'POST',
+			url: '/angularStartTime',
+			data: {
+				'id': id,
+				'name': name,
+				'startTime': time
+			}
+		});
+	};
+
+	//Stamp node JS assessment start time and date to db
+	this.nodeStartTime = function (id, name, time) {
+		return $http({
+			method: 'POST',
+			url: '/nodeStartTime',
+			data: {
+				'id': id,
+				'name': name,
+				'startTime': time
+			}
+		});
+	};
+
+	//Stamp SQL assessment start time and date to db
+	this.sqlStartTime = function (id, name, time) {
+		return $http({
+			method: 'POST',
+			url: '/sqlStartTime',
+			data: {
+				'id': id,
+				'name': name,
+				'startTime': time
+			}
+		});
+	};
+
+	// -----------------------------------
+
+
+	//Stamp html assessment start time and date to db
+	this.htmlEndTime = function (id, time) {
+		return $http({
+			method: 'PUT',
+			url: '/htmlEndTime',
+			data: {
+				'id': id,
+				'endTime': time
+			}
+		});
+	};
+
+	//Stamp basic JS assessment start time and date to db
+	this.basicEndTime = function (id, time) {
+		return $http({
+			method: 'PUT',
+			url: '/basicEndTime',
+			data: {
+				'id': id,
+				'endTime': time
+			}
+		});
+	};
+
+	//Stamp Intermediate JS assessment start time and date to db
+	this.intEndTime = function (id, time) {
+		return $http({
+			method: 'PUT',
+			url: '/intEndTime',
+			data: {
+				'id': id,
+				'endTime': time
+			}
+		});
+	};
+
+	//Stamp angular assessment start time and date to db
+	this.angularEndTime = function (id, time) {
+		return $http({
+			method: 'PUT',
+			url: '/angularEndTime',
+			data: {
+				'id': id,
+				'endTime': time
+			}
+		});
+	};
+
+	//Stamp node JS assessment start time and date to db
+	this.nodeEndTime = function (id, time) {
+		return $http({
+			method: 'PUT',
+			url: '/nodeEndTime',
+			data: {
+				'id': id,
+				'endTime': time
+			}
+		});
+	};
+
+	//Stamp SQL assessment start time and date to db
+	this.sqlEndTime = function (id, time) {
+		return $http({
+			method: 'PUT',
+			url: '/sqlEndTime',
+			data: {
+				'id': id,
+				'endTime': time
+			}
+		});
+	};
+});
+'use strict';
+
+angular.module('badgeApp').controller('assessmentsCtrl', function ($scope, userService, assessmentService, $state) {
+
+	var user = userService.currentUser;
+	$scope.stop1 = false;
+	$scope.stop2 = false;
+	$scope.stop3 = false;
+	$scope.stop4 = false;
+	$scope.stop5 = false;
+	$scope.stop6 = false;
+
+	//If user is not logged in, redirect to login page
+	if (!user) {
+		$state.go('login');
+		return;
+	}
+
+	//Sweet alerts logic and settings
+	$scope.sweet = function (lang) {
+		sweetAlert({
+			title: "Are you sure?",
+			text: "Are you ready to begin the assessment? Proceeding will begin your time limit of 3 hours and 10 minutes.",
+			type: "warning",
+			showCancelButton: true,
+			confirmButtonColor: "#00a82d",
+			confirmButtonText: "Yes, I'm ready!",
+			closeOnConfirm: true
+		}, function () {
+			var date = new Date();
+			if (lang === 'html') {
+				assessmentService.htmlStartTime(user.id, user.display_name, date);
+				window.open('https://github.com/DevMountain/html-css-assessment', '_blank');
+				$scope.stop1 = true;
+			} else if (lang === 'jsb') {
+				assessmentService.basicStartTime(user.id, user.display_name, date);
+				window.open('https://github.com/DevMountain/javascript-basic-assessment', '_blank');
+				$scope.stop2 = true;
+			} else if (lang === 'jsi') {
+				assessmentService.intStartTime(user.id, user.display_name, date);
+				window.open('https://github.com/DevMountain/intermediate-javascript-assessment', '_blank');
+				$scope.stop3 = true;
+			} else if (lang === 'ang') {
+				assessmentService.angularStartTime(user.id, user.display_name, date);
+				window.open('https://github.com/DevMountain/angular-assessment', '_blank');
+				$scope.stop4 = true;
+			} else if (lang === 'node') {
+				assessmentService.nodeStartTime(user.id, user.display_name, date);
+				window.open('https://github.com/DevMountain/node-assessment', '_blank');
+				$scope.stop5 = true;
+			} else if (lang === 'sql') {
+				assessmentService.sqlStartTime(user.id, user.display_name, date);
+				window.open('https://github.com/DevMountain/sql-assessment', '_blank');
+				$scope.stop6 = true;
+			}
+		});
+	};
+
+	$scope.htmlEndTime = function () {
+		var date = new Date();
+		assessmentService.htmlEndTime(user.id, date);
+		$scope.stop1 = false;
+	};
+
+	$scope.basicEndTime = function () {
+		var date = new Date();
+		assessmentService.basicEndTime(user.id, date);
+		$scope.stop2 = false;
+	};
+
+	$scope.intEndTime = function () {
+		var date = new Date();
+		assessmentService.intEndTime(user.id, date);
+		$scope.stop3 = false;
+	};
+
+	$scope.angularEndTime = function () {
+		var date = new Date();
+		assessmentService.angularEndTime(user.id, date);
+		$scope.stop4 = false;
+	};
+
+	$scope.nodeEndTime = function () {
+		var date = new Date();
+		assessmentService.nodeEndTime(user.id, date);
+		$scope.stop5 = false;
+	};
+
+	$scope.sqlEndTime = function () {
+		var date = new Date();
+		assessmentService.sqlEndTime(user.id, date);
+		$scope.stop6 = false;
+	};
+});
+'use strict';
+
 angular.module('badgeApp').service('badgeService', function ($http, $q) {
 
 	//Api call to get user badge info
 	this.getBadges = function (id) {
-		console.log('service', id);
 		return $http({
 			method: 'GET',
 			url: '/badges/' + id
+		});
+	};
+
+	this.htmlPass = function (id, answer) {
+		console.log('fired 2');
+		return $http({
+			method: 'PUT',
+			url: '/htmlPass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.bjsPass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/bjsPass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.ijsPass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/ijsPass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.angPass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/angPass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.nodePass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/nodePass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.sqlPass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/sqlPass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.ppPass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/ppPass',
+			data: {
+				id: id,
+				answer: answer
+			}
+		});
+	};
+
+	this.gpPass = function (id, answer) {
+		return $http({
+			method: 'PUT',
+			url: '/gpPass',
+			data: {
+				id: id,
+				answer: answer
+			}
 		});
 	};
 });
@@ -312,9 +511,7 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 	//Api call to get user's badge info --> badgeService
 	var getBadges = function getBadges() {
 		if (user) {
-			console.log('ctrl1', user.id);
 			badgeService.getBadges(user.id).then(function (response) {
-				console.log('ctrl2 then', response.data);
 				$scope.badges = response.data;
 				displayBadges(response.data.badges);
 			});
@@ -386,6 +583,57 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 			}
 		}
 		$scope.finalCount = count;
+	};
+
+	// $scope.pass = () => {
+	// 	badgeService.passFail(user.id, true);
+	// };
+	//
+	// $scope.fail = () => {
+	// 	badgeService.passFail(user.id, false);
+	// };
+
+
+	$scope.pass = function (ans) {
+		console.log('piiiii');
+		if (ans === 'html') {
+			console.log('fired 1');
+			badgeService.htmlPass(user.id, true);
+		} else if (ans === 'jsb') {
+			badgeService.bjsPass(user.id, true);
+		} else if (ans === 'jsi') {
+			badgeService.ijsPass(user.id, true);
+		} else if (ans === 'ang') {
+			badgeService.angPass(user.id, true);
+		} else if (ans === 'node') {
+			badgeService.nodePass(user.id, true);
+		} else if (ans === 'sql') {
+			badgeService.sqlPass(user.id, true);
+		} else if (ans === 'pp') {
+			badgeService.ppPass(user.id, true);
+		} else if (ans === 'gp') {
+			badgeService.gpPass(user.id, true);
+		}
+	};
+
+	$scope.fail = function (ans) {
+		if (ans === 'html') {
+			badgeService.htmlPass(user.id, false);
+		} else if (ans === 'jsb') {
+			badgeService.bjsPass(user.id, false);
+		} else if (ans === 'jsi') {
+			badgeService.ijsPass(user.id, false);
+		} else if (ans === 'ang') {
+			badgeService.angPass(user.id, false);
+		} else if (ans === 'node') {
+			badgeService.nodePass(user.id, false);
+		} else if (ans === 'sql') {
+			badgeService.sqlPass(user.id, false);
+		} else if (ans === 'pp') {
+			badgeService.ppPass(user.id, false);
+		} else if (ans === 'gp') {
+			badgeService.gpPass(user.id, false);
+		}
 	};
 });
 'use strict';

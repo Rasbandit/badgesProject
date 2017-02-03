@@ -131,6 +131,28 @@
 	height: 10vh;
 	}
 
+.badge-button-box1 {
+	position: relative;
+	background-color: white;
+	border: 1px black solid;
+	padding: 1vh 1vw;
+	border-radius: 5px;
+	width: 45vw;
+	height: 2vh;
+	margin: 2vh 0 0.5vh 0;
+	}
+
+.badge-button-box2 {
+	position: relative;
+	background-color: white;
+	border: 1px black solid;
+	padding: 1vh 1vw;
+	border-radius: 5px;
+	width: 45vw;
+	height: 2vh;
+	margin: 0 0 2vh 0;
+	}
+
 .badge-img1,.badge-img2,.badge-img3,.badge-img4,.badge-img5,.badge-img6,.badge-img7,.badge-img8 {
 	position: relative;
 	margin: 0.5vw;
@@ -212,7 +234,7 @@
 	}
 
 .badge-img6-c {
-	background: url('../../images/SQL/sql-database.png') center no-repeat;
+	background: url('../../images/SQL/sql.png') center no-repeat;
 	background-size: contain;
 	}
 
@@ -256,7 +278,7 @@
 	}
 
 .badges-info-box {
-	margin: 2vh 1vw 2vh 1vw;
+	margin: 0 1vw 2vh 1vw;
 	padding: 3vh 1vw;
 	border: 1px black solid;
 	position: relative;
@@ -286,4 +308,11 @@
 	width: 9%;
 	height: 60%;
 	margin-left: 2vw;
+	}
+
+.button-success {
+	color: white;
+	border-radius: 4px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	background: rgb(28, 184, 65); /* this is a green */
 	}
