@@ -32,7 +32,7 @@ app.use(express.static(__dirname + '/dist'));
 /////////////
 // DATABASE //
 /////////////
-const massiveInstance = massive.connectSync({connectionString: `postgres://${config.postgresUser}:${config.postgresPass}@localhost/TheBadges`});
+const massiveInstance = massive.connectSync({connectionString: `postgres://${config.postgresUser}:${config.postgresPass}@localhost/thebadges`});
 
 app.set('db', massiveInstance);
 const db = app.get('db');
