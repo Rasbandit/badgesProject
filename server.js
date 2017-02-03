@@ -272,7 +272,7 @@ app.put('/gpPass', function(req, res) {
 passport.use('facebook', new FacebookStrategy({
 		clientID: config.facebook.clientID,
 		clientSecret: config.facebook.clientSecret,
-		callbackURL: "http://localhost:3000/auth/facebook/callback",
+		callbackURL: "/auth/facebook/callback",
 		profileFields: ['id', 'displayName', 'email']
 	},
 	function(accessToken, refreshToken, profile, done) {
@@ -293,7 +293,7 @@ passport.use('facebook', new FacebookStrategy({
 passport.use('github', new githubStrategy({
 		clientID: config.github.clientID,
 		clientSecret: config.github.clientSecret,
-		callbackURL: "http://localhost:3000/auth/github/callback",
+		callbackURL: "/auth/github/callback",
 		profileFields: ['id', 'displayName']
 	},
 	function(accessToken, refreshToken, profile, done) {
