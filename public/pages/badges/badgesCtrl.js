@@ -9,6 +9,10 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 		return
 	}
 	
+	$scope.reload= function(){
+		$state.reload()
+	};
+	
 	//Api call to get user's badge info --> badgeService
 	let getBadges = () => {
 		if (user) {
@@ -16,6 +20,14 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 			.then(function(response) {
 				$scope.badges = response.data;
 				displayBadges(response.data.badges);
+				displayBadge1(response.data.badges);
+				displayBadge2(response.data.badges);
+				displayBadge3(response.data.badges);
+				displayBadge4(response.data.badges);
+				displayBadge5(response.data.badges);
+				displayBadge6(response.data.badges);
+				displayBadge7(response.data.badges);
+				displayBadge8(response.data.badges);
 			})
 		}
 	};
@@ -40,41 +52,84 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 	$scope.sql_g = true;
 	$scope.pp_g = true;
 	$scope.gp_g = true;
-
+	
+	
+	let displayBadge1 = (badges) => {
+		if (badges[0].html_badge === true) {
+			$scope.html_c = true;
+			$scope.html_g = false;
+		}
+	};
+	
+	let displayBadge2 = (badges) => {
+		if (badges[0].basic_js_badge === true) {
+			$scope.bjs_c = true;
+			$scope.bjs_g = false;
+		}
+	};
+	
+	let displayBadge3 = (badges) => {
+		if (badges[0].int_js_badge === true) {
+			$scope.ijs_c = true;
+			$scope.ijs_g = false;
+		}
+	};
+	
+	let displayBadge4 = (badges) => {
+		if (badges[0].angular_badge === true) {
+			$scope.angular_c = true;
+			$scope.angular_g = false;
+		}
+	};
+	
+	let displayBadge5 = (badges) => {
+		if (badges[0].node_badge === true) {
+			$scope.node_c = true;
+			$scope.node_g = false;
+		}
+	};
+	
+	let displayBadge6 = (badges) => {
+		if (badges[0].sql_badge === true) {
+			$scope.sql_c = true;
+			$scope.sql_g = false;
+		}
+	};
+	
+	let displayBadge7 = (badges) => {
+		if (badges[0].pproj_badge === true) {
+			$scope.pp_c = true;
+			$scope.pp_g = false;
+		}
+	};
+	
+	let displayBadge8 = (badges) => {
+		if (badges[0].gproj_badge === true) {
+			$scope.gp_c = true;
+			$scope.gp_g = false;
+		}
+	};
+	
+	
+	
 	//Test which badges user has completed
 	let displayBadges = (badges) => {
 		let count = 0;
 		if (badges[0].html_badge === true) {
-			$scope.html_c = true;
-			$scope.html_g = false;
 			count++;
 			if (badges[0].basic_js_badge === true) {
-				$scope.bjs_c = true;
-				$scope.bjs_g = false;
 				count++;
 				if (badges[0].int_js_badge === true) {
-						$scope.ijs_c = true;
-						$scope.ijs_g = false;
 					count++;
 					if (badges[0].angular_badge === true) {
-						$scope.angular_c = true;
-						$scope.angular_g = false;
 						count++;
 						if (badges[0].node_badge === true) {
-							$scope.node_c = true;
-							$scope.node_g = false;
 							count++;
 							if (badges[0].sql_badge === true) {
-								$scope.sql_c = true;
-								$scope.sql_g = false;
 								count++;
 								if (badges[0].pproj_badge === true) {
-									$scope.pp_c = true;
-									$scope.pp_g = false;
 									count++;
 									if (badges[0].gproj_badge === true) {
-										$scope.gp_c = true;
-										$scope.gp_g = false;
 										count++;
 									}
 								}
@@ -97,15 +152,13 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 	
 	
 	$scope.pass = (ans) => {
-		console.log('piiiii');
 		if (ans === 'html') {
-			console.log('fired 1');
 			badgeService.htmlPass(user.id, true);
 		}
 		else if (ans === 'jsb') {
 			badgeService.bjsPass(user.id, true);
 		}
-		else if (ans === 'jsi') {
+		else if (ans === 'ijs') {
 			badgeService.ijsPass(user.id, true);
 		}
 		else if (ans === 'ang') {
@@ -133,7 +186,7 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 		else if (ans === 'jsb') {
 			badgeService.bjsPass(user.id, false);
 		}
-		else if (ans === 'jsi') {
+		else if (ans === 'ijs') {
 			badgeService.ijsPass(user.id, false);
 		}
 		else if (ans === 'ang') {

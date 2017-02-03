@@ -63,88 +63,6 @@ angular.module('badgeApp').controller('indexCtrl', function ($scope, userService
 "use strict";
 'use strict';
 
-angular.module('badgeApp').controller('calendarCtrl', function ($scope, userService, $state) {
-	var _this = this;
-
-	//If user is not logged in, redirect to login page
-	if (!userService.currentUser) {
-		$state.go('login');
-		return;
-	}
-
-	$(document).ready(function () {
-
-		$('#external-events .fc-event').each(function () {
-
-			// store data so the calendar knows to render an event upon drop,
-			$(_this).data('event', {
-				title: $.trim($(_this).text()), // use the element's text as the event title
-				stick: true // maintain when user navigates (see docs on the renderEvent method)
-			});
-
-			// make the event draggable using jQuery UI
-			$(_this).draggable({
-				zIndex: 999,
-				revert: true, // will cause the event to go back to its
-				revertDuration: 0 //  original position after the drag
-			});
-		});
-
-		$('#calendar').fullCalendar({
-			googleCalendarApiKey: 'AIzaSyAFcks9Xx01nvniP3PTml4hTithgQIsiN8',
-			eventSources: [{
-				googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
-				color: '#58bc79'
-			}, {
-				googleCalendarId: 'dmcalendarproject@gmail.com'
-			}, {
-				googleCalendarId: 'devmounta.in_861odqeu3oqimb7t8939om6mlg@group.calendar.google.com'
-			}],
-			eventColor: '#3BB3E4',
-			theme: true,
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			navLinks: true, // can click day/week names to navigate views
-			selectable: true,
-			selectHelper: true,
-			droppable: false, // this allows things to be dropped onto the calendar
-			select: function select(start, end) {
-				var title = prompt('Event Title:');
-				var eventData;
-				console.log('hello');
-
-				if (title) {
-					eventData = {
-						title: title,
-						start: start,
-						end: end
-					};
-					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
-				}
-				$('#calendar').fullCalendar('unselect');
-			},
-			drop: function drop() {
-				// is the "remove after drop" checkbox checked?
-				if ($('#drop-remove').is(':checked')) {
-					// if so, remove the element from the "Draggable Events" list
-					$(_this).remove();
-				}
-			},
-			editable: false,
-			eventLimit: true,
-			eventClick: function eventClick(event) {
-				if (event.url) {
-					return false;
-				}
-			}
-		});
-	});
-});
-'use strict';
-
 angular.module('badgeApp').service('assessmentService', function ($http, $q) {
 
 	//Stamp html assessment start time and date to db
@@ -407,7 +325,6 @@ angular.module('badgeApp').service('badgeService', function ($http, $q) {
 	};
 
 	this.htmlPass = function (id, answer) {
-		console.log('fired 2');
 		return $http({
 			method: 'PUT',
 			url: '/htmlPass',
@@ -508,12 +425,24 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 		return;
 	}
 
+	$scope.reload = function () {
+		$state.reload();
+	};
+
 	//Api call to get user's badge info --> badgeService
 	var getBadges = function getBadges() {
 		if (user) {
 			badgeService.getBadges(user.id).then(function (response) {
 				$scope.badges = response.data;
 				displayBadges(response.data.badges);
+				displayBadge1(response.data.badges);
+				displayBadge2(response.data.badges);
+				displayBadge3(response.data.badges);
+				displayBadge4(response.data.badges);
+				displayBadge5(response.data.badges);
+				displayBadge6(response.data.badges);
+				displayBadge7(response.data.badges);
+				displayBadge8(response.data.badges);
 			});
 		}
 	};
@@ -539,40 +468,80 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 	$scope.pp_g = true;
 	$scope.gp_g = true;
 
+	var displayBadge1 = function displayBadge1(badges) {
+		if (badges[0].html_badge === true) {
+			$scope.html_c = true;
+			$scope.html_g = false;
+		}
+	};
+
+	var displayBadge2 = function displayBadge2(badges) {
+		if (badges[0].basic_js_badge === true) {
+			$scope.bjs_c = true;
+			$scope.bjs_g = false;
+		}
+	};
+
+	var displayBadge3 = function displayBadge3(badges) {
+		if (badges[0].int_js_badge === true) {
+			$scope.ijs_c = true;
+			$scope.ijs_g = false;
+		}
+	};
+
+	var displayBadge4 = function displayBadge4(badges) {
+		if (badges[0].angular_badge === true) {
+			$scope.angular_c = true;
+			$scope.angular_g = false;
+		}
+	};
+
+	var displayBadge5 = function displayBadge5(badges) {
+		if (badges[0].node_badge === true) {
+			$scope.node_c = true;
+			$scope.node_g = false;
+		}
+	};
+
+	var displayBadge6 = function displayBadge6(badges) {
+		if (badges[0].sql_badge === true) {
+			$scope.sql_c = true;
+			$scope.sql_g = false;
+		}
+	};
+
+	var displayBadge7 = function displayBadge7(badges) {
+		if (badges[0].pproj_badge === true) {
+			$scope.pp_c = true;
+			$scope.pp_g = false;
+		}
+	};
+
+	var displayBadge8 = function displayBadge8(badges) {
+		if (badges[0].gproj_badge === true) {
+			$scope.gp_c = true;
+			$scope.gp_g = false;
+		}
+	};
+
 	//Test which badges user has completed
 	var displayBadges = function displayBadges(badges) {
 		var count = 0;
 		if (badges[0].html_badge === true) {
-			$scope.html_c = true;
-			$scope.html_g = false;
 			count++;
 			if (badges[0].basic_js_badge === true) {
-				$scope.bjs_c = true;
-				$scope.bjs_g = false;
 				count++;
 				if (badges[0].int_js_badge === true) {
-					$scope.ijs_c = true;
-					$scope.ijs_g = false;
 					count++;
 					if (badges[0].angular_badge === true) {
-						$scope.angular_c = true;
-						$scope.angular_g = false;
 						count++;
 						if (badges[0].node_badge === true) {
-							$scope.node_c = true;
-							$scope.node_g = false;
 							count++;
 							if (badges[0].sql_badge === true) {
-								$scope.sql_c = true;
-								$scope.sql_g = false;
 								count++;
 								if (badges[0].pproj_badge === true) {
-									$scope.pp_c = true;
-									$scope.pp_g = false;
 									count++;
 									if (badges[0].gproj_badge === true) {
-										$scope.gp_c = true;
-										$scope.gp_g = false;
 										count++;
 									}
 								}
@@ -595,13 +564,11 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 
 
 	$scope.pass = function (ans) {
-		console.log('piiiii');
 		if (ans === 'html') {
-			console.log('fired 1');
 			badgeService.htmlPass(user.id, true);
 		} else if (ans === 'jsb') {
 			badgeService.bjsPass(user.id, true);
-		} else if (ans === 'jsi') {
+		} else if (ans === 'ijs') {
 			badgeService.ijsPass(user.id, true);
 		} else if (ans === 'ang') {
 			badgeService.angPass(user.id, true);
@@ -621,7 +588,7 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 			badgeService.htmlPass(user.id, false);
 		} else if (ans === 'jsb') {
 			badgeService.bjsPass(user.id, false);
-		} else if (ans === 'jsi') {
+		} else if (ans === 'ijs') {
 			badgeService.ijsPass(user.id, false);
 		} else if (ans === 'ang') {
 			badgeService.angPass(user.id, false);
@@ -635,6 +602,88 @@ angular.module('badgeApp').controller('badgesCtrl', function ($scope, userServic
 			badgeService.gpPass(user.id, false);
 		}
 	};
+});
+'use strict';
+
+angular.module('badgeApp').controller('calendarCtrl', function ($scope, userService, $state) {
+	var _this = this;
+
+	//If user is not logged in, redirect to login page
+	if (!userService.currentUser) {
+		$state.go('login');
+		return;
+	}
+
+	$(document).ready(function () {
+
+		$('#external-events .fc-event').each(function () {
+
+			// store data so the calendar knows to render an event upon drop,
+			$(_this).data('event', {
+				title: $.trim($(_this).text()), // use the element's text as the event title
+				stick: true // maintain when user navigates (see docs on the renderEvent method)
+			});
+
+			// make the event draggable using jQuery UI
+			$(_this).draggable({
+				zIndex: 999,
+				revert: true, // will cause the event to go back to its
+				revertDuration: 0 //  original position after the drag
+			});
+		});
+
+		$('#calendar').fullCalendar({
+			googleCalendarApiKey: 'AIzaSyAFcks9Xx01nvniP3PTml4hTithgQIsiN8',
+			eventSources: [{
+				googleCalendarId: 'en.usa#holiday@group.v.calendar.google.com',
+				color: '#58bc79'
+			}, {
+				googleCalendarId: 'dmcalendarproject@gmail.com'
+			}, {
+				googleCalendarId: 'devmounta.in_861odqeu3oqimb7t8939om6mlg@group.calendar.google.com'
+			}],
+			eventColor: '#3BB3E4',
+			theme: true,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			navLinks: true, // can click day/week names to navigate views
+			selectable: true,
+			selectHelper: true,
+			droppable: false, // this allows things to be dropped onto the calendar
+			select: function select(start, end) {
+				var title = prompt('Event Title:');
+				var eventData;
+				console.log('hello');
+
+				if (title) {
+					eventData = {
+						title: title,
+						start: start,
+						end: end
+					};
+					$('#calendar').fullCalendar('renderEvent', eventData, true); // stick? = true
+				}
+				$('#calendar').fullCalendar('unselect');
+			},
+			drop: function drop() {
+				// is the "remove after drop" checkbox checked?
+				if ($('#drop-remove').is(':checked')) {
+					// if so, remove the element from the "Draggable Events" list
+					$(_this).remove();
+				}
+			},
+			editable: false,
+			eventLimit: true,
+			eventClick: function eventClick(event) {
+				if (event.url) {
+					return false;
+				}
+			}
+		});
+	});
 });
 'use strict';
 

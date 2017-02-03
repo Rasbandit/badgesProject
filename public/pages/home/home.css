@@ -290,7 +290,7 @@
 
 .welcome,.email,.joined,.badges {
 	position: absolute;
-	left: 35%;
+	left: 40%;
 	}
 
 .welcome {
@@ -318,7 +318,7 @@
 	}
 
 .profile-text {
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: normal;
 	}
 

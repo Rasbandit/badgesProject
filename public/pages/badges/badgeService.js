@@ -10,7 +10,6 @@ angular.module('badgeApp').service('badgeService', function($http, $q) {
 
 
 	this.htmlPass = (id, answer) => {
-		console.log('fired 2');
 		return $http({
 			method: 'PUT',
 			url: '/htmlPass',

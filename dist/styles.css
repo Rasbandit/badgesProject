@@ -1,105 +1,5 @@
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width: 320px) {
-  #external-events {
-    display: none; }
-  #calendar {
-    width: 90%; } }
-
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  #external-events {
-    display: none; }
-  #calendar {
-    width: 90%; } }
-
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
-  #external-events {
-    display: none; }
-  #calendar {
-    width: 95%; } }
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-  #external-events {
-    display: block;
-    left: 1%;
-    top: 10vh;
-    width: 150px; }
-  #calendar {
-    width: 55%; } }
-
-/* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
-  #external-events {
-    left: 12%;
-    top: 10vh;
-    width: 200px; }
-  #calendar {
-    width: 55%; } }
-
-.background-cal {
-  background: url("https://wallpaperscraft.com/image/mountain_peak_stars_sky_night_light_snow_46057_2560x1440.jpg") center no-repeat;
-  background-size: cover;
-  position: fixed;
-  top: 8vh;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: .8; }
-
-#calendar {
-  position: fixed;
-  top: 10vh;
-  background-color: white;
-  padding: 10px 10px 10px 10px;
-  border-radius: 3px; }
-
-#external-events {
-  position: fixed;
-  padding: 0 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #eee;
-  text-align: left; }
-
-#external-events h4 {
-  font-size: 16px;
-  margin-top: 0;
-  padding-top: 1em; }
-
-#external-events .fc-event {
-  margin: 10px 0;
-  cursor: pointer;
-  text-align: center; }
-
-#external-events p {
-  margin: 1.5em 0;
-  font-size: 11px;
-  color: #666; }
-
-#external-events p input {
-  margin: 0;
-  vertical-align: middle; }
-
-.fc-event-container {
-  position: relative; }
-
-.delete {
-  font-size: 12px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  background-color: #FFF; }
-
-.g-cal {
-  width: 100%;
-  height: 100vh;
-  margin-top: 30vh; }
-
-/* Custom, iPhone Retina */
 /* Extra Small Devices, Phones */
 /* Small Devices, Tablets */
 /* Medium Devices, Desktops */
@@ -199,8 +99,8 @@
   line-height: 23px; }
 
 .info {
-  padding: 15px;
-  margin-top: 1vh; }
+  padding: 10px 15px 0 15px;
+  font-size: 15px; }
 
 .text-link-bottom {
   font-size: 20px;
@@ -497,7 +397,7 @@ ul:after {
   background-size: contain; }
 
 .badge-img8-c {
-  background: url("../../images/group-project/vip-gray.png") center no-repeat;
+  background: url("../../images/group-project/vip.png") center no-repeat;
   background-size: contain; }
 
 .my-badge {
@@ -560,6 +460,106 @@ ul:after {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   background: #1cb841;
   /* this is a green */ }
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  #external-events {
+    display: none; }
+  #calendar {
+    width: 90%; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  #external-events {
+    display: none; }
+  #calendar {
+    width: 90%; } }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #external-events {
+    display: none; }
+  #calendar {
+    width: 95%; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  #external-events {
+    display: block;
+    left: 1%;
+    top: 10vh;
+    width: 150px; }
+  #calendar {
+    width: 55%; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  #external-events {
+    left: 12%;
+    top: 10vh;
+    width: 200px; }
+  #calendar {
+    width: 55%; } }
+
+.background-cal {
+  background: url("https://wallpaperscraft.com/image/mountain_peak_stars_sky_night_light_snow_46057_2560x1440.jpg") center no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 8vh;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: .8; }
+
+#calendar {
+  position: fixed;
+  top: 10vh;
+  background-color: white;
+  padding: 10px 10px 10px 10px;
+  border-radius: 3px; }
+
+#external-events {
+  position: fixed;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  text-align: left; }
+
+#external-events h4 {
+  font-size: 16px;
+  margin-top: 0;
+  padding-top: 1em; }
+
+#external-events .fc-event {
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center; }
+
+#external-events p {
+  margin: 1.5em 0;
+  font-size: 11px;
+  color: #666; }
+
+#external-events p input {
+  margin: 0;
+  vertical-align: middle; }
+
+.fc-event-container {
+  position: relative; }
+
+.delete {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  background-color: #FFF; }
+
+.g-cal {
+  width: 100%;
+  height: 100vh;
+  margin-top: 30vh; }
 
 .main-container {
   position: relative;
@@ -797,7 +797,7 @@ p {
 
 .welcome, .email, .joined, .badges {
   position: absolute;
-  left: 35%; }
+  left: 40%; }
 
 .welcome {
   top: 28%;
@@ -820,7 +820,7 @@ p {
   font-weight: bolder; }
 
 .profile-text {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: normal; }
 
 /*Badge Box*/

@@ -182,7 +182,6 @@ app.put('/sqlEndTime', function(req, res) {
 
 app.put('/htmlPass', function(req, res) {
 	db.badgeQueries.htmlPassFail([req.body.id, req.body.answer], function(err, result) {
-		console.log('fired 3');
 		res.send(result);
 	});
 });
