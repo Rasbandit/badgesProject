@@ -15,5 +15,12 @@ angular.module('badgeApp')
 			url: '/badge/' + id
 		})
 	};
+	
+	this.getMessages = function() {
+		return $http ({
+			method: 'GET',
+			url: '/getHomeMsg'
+		})
+	};
 
 });

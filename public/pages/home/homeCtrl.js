@@ -57,6 +57,18 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 		}
 		$scope.finalCountHome = count;
 	};
+	
+	
+	let getMessages = () => {
+		homeService.getMessages().then(function(r){
+			$scope.messages = r.data;
+		});
+	};
+	getMessages();
+	
+	
+	
+	
 
 	//Api pull for weather info
 	

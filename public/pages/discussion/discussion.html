@@ -15,16 +15,17 @@
 								<div class="date">{{message.time_stamp | date:"MM/dd/yyyy 'at' h:mma"}}</div>
 							</div>
 						</div>
-						<div class="message-pos">
+						<div class="message-box">
 							<div class="message">{{message.message}}</div>
 						</div>
+						
 					</div>
 				</div>
 				</div>
 			</div>
 			<form class="search">
-				<input class="form-control text-box" type="text" ng-model="msg" placeholder="Message">
-				<button ng-click="postMessage(msg)"> Submit </button>
+				<input class="form-control text-box" type="text" ng-model="msg" placeholder="Enter text here...">
+				<button class="chat-btn" ng-click="postMessage(msg)"> Submit </button>
 			</form>
 		</div>
 	</div>

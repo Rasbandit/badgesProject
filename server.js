@@ -78,7 +78,11 @@ app.get('/getMsg', function(req, res) {
 	})
 });
 
-
+app.get('/getHomeMsg', function(req, res) {
+	db.getHomeMsg(function(err, messages) {
+		res.send(messages);
+	})
+});
 
 
 

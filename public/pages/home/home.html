@@ -121,7 +121,27 @@
 		<div class="disc-box">
 			<div class="cal-header">
 				<div class="cal-text">
-					<div class="home-title-text">Discussion</div>
+					<div class="home-title-text">Chat</div>
+				</div>
+			</div>
+			<div class="hm-lg-chat">
+				<div class="hm-chat-col">
+					<div class="hm-chat-text" ng-repeat="message in messages">
+						<div class="hm-sm-chat">
+							<div class="hm-chat-info">
+								<div class="hm-sm-profile-img-pos"><img class="hm-sm-profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
+								<div class="hm-name-pos">
+									<div class="hm-name">{{message.user_name}}</div>
+								</div>
+								<div class="date-pos">
+									<div class="hm-date">{{message.time_stamp | date:"MM/dd/yyyy 'at' h:mma"}}</div>
+								</div>
+							</div>
+							<div class="hm-message-box">
+								<div>{{message.message}}</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

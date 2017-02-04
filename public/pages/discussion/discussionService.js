@@ -5,7 +5,7 @@ angular.module('badgeApp').service('discussionService', function($http){
 			method: 'GET',
 			url: '/getMsg'
 		})
-	}
+	};
 	
 	
 	this.postMessage = (function(id, name, message, time) {
