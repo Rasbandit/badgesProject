@@ -9,12 +9,29 @@
 	opacity: .8;
 	}
 
+.chat-title {
+	color: white;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 1vh;
+	}
+
+.search {
+	position: fixed;
+	width: 50vw;
+	height: 4vh;
+	top: 94vh;
+	padding: 5px;
+	font-size: 12px;
+	}
+
 .main-container {
 	position: relative;
-	margin-top: 4vh;
-	width: 50%;
-	height: 83vh;
-	background: rgba(255, 255, 255, 0.86);
+	margin-top: 2vh;
+	width: 50vw;
+	height: 87vh;
+
+	background-color: #292C2F;
 	padding: 5px;
 	border-radius: 5px;
 	border: solid black 1px;
@@ -26,12 +43,83 @@
 
 .text-box {
 	margin: 0px auto;
-	width: 80%;
+	width: 45vw;
 	}
 
 .chat-text {
-	text-align: center;
 	margin: 3px 0;
-	font-size: 17px;
+	font-size: 15px;
 	color: black;
+	}
+
+.lg-chat {
+	position: absolute;
+	top: 7vh;
+	width: 48.8vw;
+	height: 74vh;
+	background: rgba(255, 255, 255, 0.86);
+	display: flex;
+	justify-content: flex-start;
+	padding: 10px;
+	}
+
+.sm-chat {
+	background-color: #F1F1F1;
+	width: 48.5vw;
+	height: 5.8vh;
+	/*border: solid gray 1px;*/
+	padding: 5px;
+	max-width: 48.5vw;
+	}
+
+.chat-col {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	}
+
+/*.sm-profile-img-pos {*/
+	/*display: flex;*/
+	/*justify-content: flex-start;*/
+	/*}*/
+
+.chat-info {
+	position: relative;
+	float: left;
+	width: 13vw;
+	height: 100%;
+	}
+
+.sm-profile-img {
+	width: 25px;
+	height: 25px;
+	background-size: contain;
+	border-radius: 50%;
+	border: 1px solid black;
+	}
+
+.message-pos {
+	display: flex;
+	flex-flow: wrap;
+	padding-left: 12vw;
+	}
+
+.name-pos {
+	display: flex;
+	justify-content: flex-start;
+	}
+
+.name {
+	position: relative;
+	font-size: 12px;
+	}
+
+.date-pos {
+	display: flex;
+	justify-content: flex-start;
+	}
+
+.date-pos {
+	position: relative;
+	font-size: 12px;
 	}

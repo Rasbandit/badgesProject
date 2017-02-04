@@ -1,14 +1,37 @@
 <section class="disc-bg">
 	<div class="flex-column">
 		<div class="main-container">
-			<h1> DevMountain Chat Room </h1>
-			<div class="messages-container">
-				<p class="chat-text" ng-repeat="message in messages"> {{message.message}}<br> -{{message.user_name}} </p>
+			<div class="chat-title"> DevMountain Chat Room </div>
+			<div class="lg-chat">
+				<div class="chat-col">
+				<div class="chat-text" ng-repeat="message in messages">
+					<div class="sm-chat">
+						<div class="chat-info">
+							<div class="sm-profile-img-pos"><img class="sm-profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
+							<div class="name-pos">
+								<div class="name">{{message.user_name}}</div>
+							</div>
+							<div class="date-pos">
+								<div class="date">{{message.time_stamp | date:"MM/dd/yyyy 'at' h:mma"}}</div>
+							</div>
+						</div>
+						<div class="message-pos">
+							<div class="message">{{message.message}}</div>
+						</div>
+					</div>
+				</div>
+				</div>
 			</div>
-			<form>
+			<form class="search">
 				<input class="form-control text-box" type="text" ng-model="msg" placeholder="Message">
 				<button ng-click="postMessage(msg)"> Submit </button>
 			</form>
 		</div>
 	</div>
 </section>
+
+
+
+
+
+<!--<img class="profile-img" ng-src="{{user.profileimg}}" alt="Description" />-->

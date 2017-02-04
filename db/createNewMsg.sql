@@ -1,3 +1,3 @@
 INSERT INTO messages
-(user_id, user_name, message)
-VALUES ($1, $2, $3);
+(user_id, user_name, message, time_stamp)
+VALUES ($1, $2, $3, $4);

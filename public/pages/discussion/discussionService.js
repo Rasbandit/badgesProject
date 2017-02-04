@@ -8,14 +8,15 @@ angular.module('badgeApp').service('discussionService', function($http){
 	}
 	
 	
-	this.postMessage = (function(id, name, message) {
+	this.postMessage = (function(id, name, message, time) {
 		return $http({
 			method: 'POST',
 			url: '/postMsg',
 			data: {
 					id: id,
 					name: name,
-					message: message
+					message: message,
+					time : time
 				}
 		});
 	});

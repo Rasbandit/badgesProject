@@ -1,2 +1,3 @@
-select * from messages;
-LIMIT 20;
+select * from messages
+ORDER BY time_stamp desc
+LIMIT 10;
