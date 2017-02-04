@@ -10,6 +10,8 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
+// const http = require('http').Server(express);
+// const io = require('socket.io')(http);
 
 
 const app = module.exports = express();
@@ -28,6 +30,31 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(__dirname + '/dist'));
+
+
+////////////////SocketIo
+
+
+// app.get('/', function(req, res){
+// 	res.sendfile('index.html');
+// });
+//
+// io.on('connection', function(socket){
+// 	console.log('a user connected');
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /////////////
 // DATABASE //
@@ -54,6 +81,30 @@ db.init.createTimestampsTable([],(err, result) => {
 		console.log(err);
 	}
 });
+
+db.init.createMessageTable([],(err, result) => {
+	if(err){
+		console.log(err);
+	}
+});
+
+
+
+app.post('/postMsg', function(req, res) {
+	db.createNewMsg([req.body.id, req.body.name, req.body.message], function(err, result) {
+		res.send(result)
+	});
+});
+
+
+app.get('/getMsg', function(req, res) {
+	db.getMsg(function(err, messages) {
+		res.send(messages);
+	})
+});
+
+
+
 
 
 

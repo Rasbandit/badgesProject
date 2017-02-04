@@ -1,33 +1,28 @@
-angular.module('badgeApp').controller('discussionCtrl', function($scope,  userService, $state) {
+angular.module('badgeApp').controller('discussionCtrl', function($scope,  userService, discussionService, $state) {
+	
+	$scope.user = userService.currentUser;
+	const user = userService.currentUser;
 	
 	if(!userService.currentUser){
-		$state.go('login')
+		$state.go('login');
 		return
 	}
 	
 	
-	$scope.currentPage = 1;
-	$scope.maxPages = 4;
-	
-	$scope.getUsers = function(pageNum) {
-		$scope.users = mainService.getUsers(pageNum).then(function (response){
-			$scope.users = response.data;
-			$scope.maxPages = response.total_pages;
+	let getMessages = () => {
+		discussionService.getMessages().then(function(r){
+			$scope.messages = r.data;
 		});
 	};
+	getMessages();
 	
 	
-	$scope.postMessage = function(message) {
-		messageService.postMessage(message)
-		.then(function(res) {
-			if (res.data === 'success') {
-				getMessages()
-			}
+	
+	$scope.postMessage = (message) => {
+		discussionService.postMessage(user.id, user.display_name, message).then(function(res) {
+			getMessages();
 		})
 	};
-	
-	
-	$scope.getUsers();
 	
 });
 

@@ -1,4 +1,4 @@
-angular.module('badgeApp').service('badgeService', function($http, $q) {
+angular.module('badgeApp').service('badgeService', function($http) {
 	
 	//Api call to get user badge info
 	this.getBadges = (id) => {

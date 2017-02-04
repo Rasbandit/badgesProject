@@ -142,14 +142,6 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 		$scope.finalCount = count;
 	};
 	
-	// $scope.pass = () => {
-	// 	badgeService.passFail(user.id, true);
-	// };
-	//
-	// $scope.fail = () => {
-	// 	badgeService.passFail(user.id, false);
-	// };
-	
 	
 	$scope.pass = (ans) => {
 		if (ans === 'html') {
