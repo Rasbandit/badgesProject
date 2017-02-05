@@ -124,7 +124,7 @@ html {
 	}
 
 .logo-right {
-	background: url('https://avatars3.githubusercontent.com/u/5432151?v=3&s=200') center no-repeat;
+	/*background: url('https://avatars3.githubusercontent.com/u/5432151?v=3&s=200') center no-repeat;*/
 	width: 6vw;
 	height: 6vh;
 	background-size: contain;

@@ -1,3 +1,135 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	.login-box {
+		width: 50%;
+		height: 46vh;
+		}
+	
+	.gh-button {
+		width: 32vw;
+		}
+	
+	.login-button {
+		width: 19vw;
+		height: 4vh;
+		}
+	
+	.fb-button {
+		width: 32vw;
+		}
+	
+	.input-box {
+		width: 14vw;
+		height: 2vh;
+		}
+	}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	.login-box {
+		width: 50%;
+		height: 46vh;
+		}
+	
+	.gh-button {
+		width: 32vw;
+		}
+	
+	.login-button {
+		width: 19vw;
+		height: 4vh;
+		}
+	
+	.fb-button {
+		width: 32vw;
+		}
+	
+	.input-box {
+		width: 14vw;
+		height: 2vh;
+		}
+	}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.login-box {
+		width: 50%;
+		height: 46vh;
+		}
+	
+	.gh-button {
+		width: 32vw;
+		}
+	
+	.login-button {
+		width: 19vw;
+		height: 4vh;
+		}
+	
+	.fb-button {
+		width: 9vw;
+		}
+	
+	.input-box {
+		width: 14vw;
+		height: 2vh;
+		}
+	}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.login-box {
+		width: 15%;
+		height: 40vh;
+		}
+	
+	.gh-button {
+		width: 9vw;
+		}
+	
+	.login-button {
+		width: 5vw;
+		height: 3vh;
+		}
+	
+	.fb-button {
+		width: 9vw;
+		}
+	
+	.input-box {
+		width: 9vw;
+		height: 2vh;
+		}
+	}
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.login-box {
+		width: 15%;
+		height: 40vh;
+		}
+	
+	.gh-button {
+		width: 9vw;
+		}
+	
+	.login-button {
+		width: 5vw;
+		height: 3vh;
+		}
+	
+	.fb-button {
+		width: 9vw;
+		}
+	
+	.input-box {
+		width: 9vw;
+		height: 2vh;
+		}
+	}
+
+
 .background-log {
 	background: url('http://www.freshuu.com/i/2017/01/mountain-wallpaper-phone-1.jpg') center no-repeat;
 	background-size: cover;
@@ -11,8 +143,6 @@
 
 .login-box {
 	margin-top: 20vh;
-	width: 15%;
-	height: 40vh;
 	background-color: white;
 	border: solid black 1px;
 	border-radius: 5px;
@@ -21,14 +151,10 @@
 	}
 
 .input-box {
-	width: 9vw;
-	height: 2vh;
 	margin-bottom: 0.5vh;
 	}
 
 .login-button {
-	width: 5vw;
-	height: 3vh;
 	background-size: cover;
 	margin: 0.5vh 0;
 	cursor: pointer;
@@ -36,7 +162,6 @@
 
 .fb-button {
 	background: url('../../images/facebook-button.png') center no-repeat;
-	width: 9vw;
 	height: 4vh;
 	background-size: cover;
 	cursor: pointer;
@@ -44,7 +169,6 @@
 
 .gh-button {
 	background: url('../../images/Github-button.png') center no-repeat;
-	width: 9vw;
 	height: 4vh;
 	margin-bottom: 0.5vh;
 	background-size: contain;
