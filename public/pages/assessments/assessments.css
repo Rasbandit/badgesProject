@@ -1,26 +1,151 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
-		
+	.info {
+		font-size: 6px;
+		}
+	
+	.text-link-bottom {
+		font-size: 7px;
+		line-height: 9px;
+		}
+	
+	.practice-box {
+		width: 98%;
+		}
+	
+	.link-container {
+		width: 98%;
+		}
+	
+	.text-link {
+		font-size: 8px;
+		line-height: 10px;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		padding: 5px 3px;
+		}
 	}
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
-		
+	.info {
+		font-size: 6px;
+		}
+	
+	.text-link-bottom {
+		font-size: 7px;
+		line-height: 9px;
+		}
+	
+	.practice-box {
+		width: 98%;
+		}
+	
+	.link-container {
+		width: 98%;
+		}
+	
+	.text-link {
+		font-size: 8px;
+		line-height: 10px;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		padding: 5px 3px;
+		}
 	}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
-		
+	.info {
+		font-size: 15px;
+		}
+	
+	.text-link-bottom {
+		font-size: 20px;
+		line-height: 35px;
+		}
+	
+	.practice-box {
+		width: 85%;
+		}
+	
+	.link-container {
+		width: 85%;
+		}
+	
+	.text-link {
+		font-size: 18px;
+		line-height: 23px;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		padding: 6px 10px;
+		}
 	}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
-		
+	.info {
+		font-size: 15px;
+		}
+	
+	.text-link-bottom {
+		font-size: 20px;
+		line-height: 35px;
+		}
+	
+	.practice-box {
+		width: 85%;
+		}
+	
+	.link-container {
+		width: 85%;
+		}
+	
+	.text-link {
+		font-size: 18px;
+		line-height: 23px;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		padding: 6px 10px;
+		}
 	}
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
-		
+	.info {
+		font-size: 15px;
+		}
+	
+	.text-link-bottom {
+		font-size: 20px;
+		line-height: 35px;
+		}
+	
+	.practice-box {
+		width: 85%;
+		}
+	
+	.link-container {
+		width: 85%;
+		}
+	
+	.text-link {
+		font-size: 18px;
+		line-height: 23px;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		padding: 6px 10px;
+		}
 	}
 
 
@@ -76,7 +201,6 @@
 	position: fixed;
 	margin-top: 10vh;
 	height: 53vh;
-	width: 85%;
 	background-color: rgba(255, 255, 255, 0.8);
 	border: solid black 1px;
 	border-radius: 5px;
@@ -88,7 +212,6 @@
 	margin-top: 66vh;
 	margin-bottom: 5vh;
 	height: 30vh;
-	width: 85%;
 	background-color: rgba(255, 255, 255, 0.9);
 	border: solid black 1px;
 	border-radius: 5px;
@@ -125,19 +248,8 @@
 	text-decoration: none;
 	}
 
-.text-link {
-	font-size: 18px;
-	line-height: 23px;
-	}
-
 .info {
 	padding: 10px 15px 0 15px;
-	font-size: 15px;
-	}
-
-.text-link-bottom {
-	font-size: 20px;
-	line-height: 35px;
 	}
 
 .text-link:hover {
@@ -200,11 +312,9 @@ li ul {
 ul li a {
 	display: block;
 	/*padding: .6em;*/
-	padding: 6px 10px;
 	text-decoration: none;
 	white-space: nowrap;
 	color: black;
-	font-size: 14px;
 	}
 
 ul li a:hover {

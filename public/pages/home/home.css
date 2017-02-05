@@ -1,5 +1,72 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+	.profile-img {
+		width: 30%;
+		height: 50%;
+		}
+	
+	.img2 {
+		left: 32%;
+		}
+	
+	.img3 {
+		right: 34%;
+		}
+	
+	.img6 {
+		left: 32%;
+		}
+	
+	.img7 {
+		right: 34%;
+		}
+	
+	.home-badge-text {
+		font-size: 12px;
+		}
+	
+	.hm-chat-info {
+		width: 33vw;
+		}
+	
+	.hm-message-box {
+		width: 50vw;
+		}
+	
+	.hm-sm-chat {
+		width: 83vw;
+		height: 9vh;
+		}
+	
+	ul li a {
+		font-size: 9.49px;
+		}
+	
+	.home-title-text {
+		font-size: 20px;
+		padding-top: 8px;
+		}
+	
+	.welcome {
+		top: 28%;
+		font-size: 19px;
+		}
+	
+	.email {
+		top: 47%;
+		font-size: 12px;
+		}
+	
+	.badges {
+		top: 61%;
+		font-size: 12px;
+		}
+	
+	.joined {
+		top: 54%;
+		font-size: 12px;
+		}
+	
 	.cal-box {
 		margin: 0 1vw 2vh 1vw;
 		width: 95%;
@@ -32,6 +99,73 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+	.profile-img {
+		width: 30%;
+		height: 50%;
+		}
+	
+	.img2 {
+		left: 32%;
+		}
+	
+	.img3 {
+		right: 34%;
+		}
+	
+	.img6 {
+		left: 32%;
+		}
+	
+	.img7 {
+		right: 34%;
+		}
+	
+	.home-badge-text {
+		font-size: 12px;
+		}
+	
+	.hm-chat-info {
+		width: 13vw;
+		}
+	
+	.hm-message-box {
+		width: 50vw;
+		}
+	
+	.hm-sm-chat {
+		width: 83vw;
+		height: 9vh;
+		}
+	
+	ul li a {
+		font-size: 7.49px;
+		}
+	
+	.home-title-text {
+		font-size: 20px;
+		padding-top: 8px;
+		}
+	
+	.welcome {
+		top: 28%;
+		font-size: 19px;
+		}
+	
+	.email {
+		top: 47%;
+		font-size: 12px;
+		}
+	
+	.badges {
+		top: 61%;
+		font-size: 12px;
+		}
+	
+	.joined {
+		top: 54%;
+		font-size: 12px;
+		}
+	
 	.cal-box {
 		margin: 0 1vw 0 3vw;
 		width: 95%;
@@ -64,6 +198,73 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.profile-img {
+		width: 30%;
+		height: 60%;
+		}
+	
+	.img2 {
+		left: 32%;
+		}
+	
+	.img3 {
+		right: 34%;
+		}
+	
+	.img6 {
+		left: 32%;
+		}
+	
+	.img7 {
+		right: 34%;
+		}
+	
+	.home-badge-text {
+		font-size: 14px;
+		}
+	
+	.hm-chat-info {
+		width: 13vw;
+		}
+	
+	.hm-message-box {
+		width: 50vw;
+		}
+	
+	.hm-sm-chat {
+		width: 83vw;
+		height: 9vh;
+		}
+	
+	ul li a {
+		font-size: 7.49px;
+		}
+	
+	.home-title-text {
+		font-size: 20px;
+		padding-top: 8px;
+		}
+	
+	.welcome {
+		top: 28%;
+		font-size: 19px;
+		}
+	
+	.email {
+		top: 47%;
+		font-size: 12px;
+		}
+	
+	.badges {
+		top: 61%;
+		font-size: 12px;
+		}
+	
+	.joined {
+		top: 54%;
+		font-size: 12px;
+		}
+	
 	.cal-box {
 		margin: 0 1vw 2vh 1vw;
 		width: 95%;
@@ -96,6 +297,73 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	.profile-img {
+		width: 30%;
+		height: 60%;
+		}
+	
+	.img2 {
+		left: 34%;
+		}
+	
+	.img3 {
+		right: 35%;
+		}
+	
+	.img6 {
+		left: 34%;
+		}
+	
+	.img7 {
+		right: 35%;
+		}
+	
+	.home-badge-text {
+		font-size: 14px;
+		}
+	
+	.hm-chat-info {
+		width: 13vw;
+		}
+	
+	.hm-message-box {
+		width: 19vw;
+		}
+	
+	.hm-sm-chat {
+		width: 48.5vw;
+		height: 5.8vh;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		}
+	
+	.home-title-text {
+		font-size: 26px;
+		padding-top: 14px;
+		}
+	
+	.welcome {
+		top: 28%;
+		font-size: 24px;
+		}
+	
+	.email {
+		top: 47%;
+		font-size: 16px;
+		}
+	
+	.badges {
+		top: 61%;
+		font-size: 16px;
+		}
+	
+	.joined {
+		top: 54%;
+		font-size: 16px;
+		}
+	
 	.cal-box {
 		margin: 0 1vw 0 1vw;
 		width: 35%;
@@ -125,10 +393,76 @@
 		width: 35%;
 		}
 	}
-	
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	.profile-img {
+		width: 30%;
+		height: 60%;
+		}
+	
+	.img2 {
+		left: 34%;
+		}
+	
+	.img3 {
+		right: 35%;
+		}
+	
+	.img6 {
+		left: 34%;
+		}
+	
+	.img7 {
+		right: 35%;
+		}
+	
+	.home-badge-text {
+		font-size: 14px;
+		}
+	
+	.hm-chat-info {
+		width: 13vw;
+		}
+	
+	.hm-message-box {
+		width: 19vw;
+		}
+	
+	.hm-sm-chat {
+		width: 33vw;
+		height: 5.8vh;
+		}
+	
+	ul li a {
+		font-size: 14px;
+		}
+	
+	.home-title-text {
+		font-size: 26px;
+		padding-top: 14px;
+		}
+	
+	.welcome {
+		top: 28%;
+		font-size: 24px;
+		}
+	
+	.email {
+		top: 47%;
+		font-size: 16px;
+		}
+	
+	.badges {
+		top: 61%;
+		font-size: 16px;
+		}
+	
+	.joined {
+		top: 54%;
+		font-size: 16px;
+		}
+	
 	.cal-box {
 		margin: 0 1vw 0 1vw;
 		width: 35%;
@@ -159,6 +493,10 @@
 		width: 35%;
 		}
 	}
+
+
+
+
 
 .text {
 	font-size: 12px;
@@ -211,14 +549,11 @@
 
 .home-title-text {
 	text-align: center;
-	font-size: 26px;
 	font-weight: 800;
-	padding-top: 14px;
 	}
 
 .home-badge-text{
 	text-align: center;
-	font-size: 14px;
 	font-weight: 800;
 	margin-top: 52px;
 	}
@@ -279,10 +614,8 @@
 /*Profile Box*/
 .profile-img {
 	position: absolute;
-	top: 28%;
-	left: 3%;
-	width: 180px;
-	height: 180px;
+	top: 26%;
+	left: 5%;
 	/*background: url('../../images/profile Img.png') center no-repeat;*/
 	background-size: contain;
 	border-radius: 20px;
@@ -296,30 +629,25 @@
 
 .welcome {
 	top: 28%;
-	font-size: 24px;
 	font-weight: bolder;
 	}
 
 .email {
 	top: 47%;
-	font-size: 16px;
 	font-weight: bolder;
 	}
 
 .badges {
 	top: 61%;
-	font-size: 16px;
 	font-weight: bolder;
 	}
 
 .joined {
 	top: 54%;
-	font-size: 16px;
 	font-weight: bolder;
 	}
 
 .profile-text {
-	font-size: 15px;
 	font-weight: normal;
 	}
 
@@ -331,12 +659,10 @@
 
 .img2 {
 	top: 27%;
-	left: 34%;
 	}
 
 .img3 {
 	top: 27%;
-	right: 35%;
 	}
 
 .img4 {
@@ -351,12 +677,10 @@
 
 .img6 {
 	top:63%;
-	left: 34%;
 	}
 
 .img7 {
 	top:63%;
-	right: 35%;
 	}
 
 .img8 {
@@ -540,12 +864,6 @@
 
 
 
-
-
-
-
-
-
 .hm-search {
 	position: fixed;
 	width: 50vw;
@@ -595,10 +913,7 @@
 
 .hm-sm-chat {
 	background-color: #F1F1F1;
-	width: 48.5vw;
-	height: 5.8vh;
 	padding: 5px;
-	max-width: 32.5vw;
 	}
 
 .hm-chat-col {
@@ -610,7 +925,6 @@
 .hm-chat-info {
 	position: relative;
 	float: left;
-	width: 13vw;
 	height: 100%;
 	}
 
@@ -619,7 +933,6 @@
 	position: relative;
 	display: inline-block;
 	float: right;
-	width: 19vw;
 	height: 100%;
 	}
 

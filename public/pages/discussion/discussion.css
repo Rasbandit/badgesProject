@@ -1,3 +1,85 @@
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+	.main-container {
+		width: 97vw;
+		}
+	
+	.lg-chat {
+		width: 90.8vw;
+		}
+	
+	.sm-chat {
+		width: 88vw;
+		}
+	}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+	.main-container {
+		width: 97vw;
+		}
+	
+	.lg-chat {
+		width: 90.8vw;
+		}
+	
+	.sm-chat {
+		width: 88vw;
+		}
+	}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.main-container {
+		width: 50vw;
+		}
+	
+	.lg-chat {
+		width: 48.8vw;
+		}
+	
+	.sm-chat {
+		width: 48.5vw;
+		}
+
+	}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.main-container {
+		width: 50vw;
+		}
+	
+	.lg-chat {
+		width: 48.8vw;
+		}
+	
+	.sm-chat {
+		width: 48.5vw;
+		}
+
+	}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+	.main-container {
+		width: 50vw;
+		}
+	
+	.lg-chat {
+		width: 48.8vw;
+		}
+	
+	.sm-chat {
+		width: 48.5vw;
+		}
+
+	}
+
+
+
+
+
 .disc-bg {
 	background: url('http://www.amazingwallpaperz.com/wp-content/uploads/Scenic-Mountain-Widescreen-Background-Wallpapers.jpg') center no-repeat;
 	background-size: cover;
@@ -27,7 +109,6 @@
 .main-container {
 	position: relative;
 	margin-top: 2vh;
-	width: 50vw;
 	height: 87vh;
 	background-color: #292C2F;
 	padding: 5px;
@@ -58,7 +139,6 @@
 .lg-chat {
 	position: absolute;
 	top: 7vh;
-	width: 48.8vw;
 	height: 74vh;
 	background: rgba(255, 255, 255, 0.86);
 	display: flex;
@@ -68,11 +148,8 @@
 
 .sm-chat {
 	background-color: #F1F1F1;
-	width: 48.5vw;
 	height: 5.8vh;
-	/*border: solid gray 1px;*/
 	padding: 5px;
-	max-width: 48.5vw;
 	}
 
 .chat-col {
