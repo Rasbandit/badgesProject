@@ -30,7 +30,6 @@ app.use(passport.session());
 app.use(express.static(__dirname + '/dist'));
 
 
-
 /////////////
 // DATABASE //
 /////////////
@@ -39,6 +38,8 @@ const massiveInstance = massive.connectSync({connectionString: `postgres://${con
 app.set('db', massiveInstance);
 const db = app.get('db');
 
+
+//Create all db tables
 db.init.createUsersTable([],(err, result) => {
 	if(err){
 		console.log(err);
@@ -64,13 +65,12 @@ db.init.createMessageTable([],(err, result) => {
 });
 
 
-
+//GET and POST for chat app
 app.post('/postMsg', function(req, res) {
 	db.createNewMsg([req.body.id, req.body.name, req.body.message, req.body.time], function(err, result) {
 		res.send(result)
 	});
 });
-
 
 app.get('/getMsg', function(req, res) {
 	db.getMsg(function(err, messages) {
@@ -85,25 +85,21 @@ app.get('/getHomeMsg', function(req, res) {
 });
 
 
-
-
-app.get('/logout', function(req, res) {
-	req.session.destroy();
-	res.redirect('/');
-});
-
+//GET badges for logged in user (Badge Page)
 app.get('/badges/:id', function(req, res) {
 	db.getUserBadges([req.params.id], function(err, badges) {
 		res.send({badges : badges});
 	})
 });
 
+//GET badges for logged in user (Home Page)
 app.get('/badge/:id', function(req, res) {
 	db.getUserBadges([req.params.id], function(err, badges) {
 		res.send({badges : badges});
 	})
 });
 
+//Check if user is logged in
 app.get('/loggedIn', function(req, res){
 	if(!req.session.passport){
 		res.json(false);
@@ -111,6 +107,13 @@ app.get('/loggedIn', function(req, res){
 	}
 	res.json(req.session.passport.user)
 });
+
+//Logout
+app.get('/logout', function(req, res) {
+	req.session.destroy();
+	res.redirect('/');
+});
+
 
 //Assessment start time stamps
 app.post('/htmlStartTime', function(req, res) {
@@ -161,7 +164,6 @@ app.post('/sqlStartTime', function(req, res) {
 	});
 });
 
-
 //Assessment end time stamps
 app.put('/htmlEndTime', function(req, res) {
 	let timeStamp = req.body;
@@ -206,10 +208,7 @@ app.put('/sqlEndTime', function(req, res) {
 	});
 });
 
-
-
-
-
+//User Pass/Fail db data
 app.put('/htmlPass', function(req, res) {
 	db.badgeQueries.htmlPassFail([req.body.id, req.body.answer], function(err, result) {
 		res.send(result);
@@ -259,43 +258,6 @@ app.put('/gpPass', function(req, res) {
 });
 
 
-
-
-/**
- * Local Auth
- */
-// passport.use('local', new LocalStrategy(
-// 	function(username, password, done) {
-// 		db.getUserByUsername({username: username}, function(err, user) {
-// 			if (err) { return done(err); }
-// 			if (!user) {
-// 				return done(null, false);
-// 			}
-// 			if (!user.password != password) {
-// 				return done(null, false);
-// 			}
-// 			return done(null, user);
-// 		});
-// 	}
-// ));
-
-// passport.use('local', new LocalStrategy(
-// app.post('/auth/local', passport.authenticate('local'), function(req, res) {
-// 	res.status(200).redirect('/#/');
-// 	})));
-//
-//
-// app.post('/auth/me', function(req, res) {
-// 	console.log('reached auth/me');
-// 	if (req.user) {
-// 		console.log(req.user);
-// 		res.status(200).send(req.user);
-// 	} else {
-// 		console.log('No user!');
-// 		res.status(200).send();
-// 	}
-// });
-
 /**
  * Facebook Auth
  */
@@ -340,6 +302,42 @@ passport.use('github', new githubStrategy({
 			}
 		})
 	}));
+
+/**
+ * Local Auth
+ */
+// passport.use('local', new LocalStrategy(
+// 	function(username, password, done) {
+// 		db.getUserByUsername({username: username}, function(err, user) {
+// 			if (err) { return done(err); }
+// 			if (!user) {
+// 				return done(null, false);
+// 			}
+// 			if (!user.password != password) {
+// 				return done(null, false);
+// 			}
+// 			return done(null, user);
+// 		});
+// 	}
+// ));
+
+// passport.use('local', new LocalStrategy(
+// app.post('/auth/local', passport.authenticate('local'), function(req, res) {
+// 	res.status(200).redirect('/#/');
+// 	})));
+//
+//
+// app.post('/auth/me', function(req, res) {
+// 	console.log('reached auth/me');
+// 	if (req.user) {
+// 		console.log(req.user);
+// 		res.status(200).send(req.user);
+// 	} else {
+// 		console.log('No user!');
+// 		res.status(200).send();
+// 	}
+// });
+
 
 passport.serializeUser(function(user, done) {
 	return done(null, user);

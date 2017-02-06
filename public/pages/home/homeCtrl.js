@@ -18,6 +18,7 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	};
 	isLoggedIn();
 	
+	//GET users badge db info
 	let getBadge = () => {
 		if (userService.currentUser) {
 			homeService.getBadge(userService.currentUser.id)
@@ -29,36 +30,18 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	};
 	getBadge();
 	
+	//Count users completed badges
 	let displayBadge = (badges) => {
 		let count = 0;
-		if (badges[0].html_badge === true) {
-			count++;
-			if (badges[0].basic_js_badge === true) {
+		for (let key in badges[0]) {
+			if (badges[0][key] === true) {
 				count++;
-				if (badges[0].int_js_badge === true) {
-					count++;
-					if (badges[0].angular_badge === true) {
-						count++;
-						if (badges[0].node_badge === true) {
-							count++;
-							if (badges[0].sql_badge === true) {
-								count++;
-								if (badges[0].pproj_badge === true) {
-									count++;
-									if (badges[0].gproj_badge === true) {
-										count++;
-									}
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 		$scope.finalCountHome = count;
 	};
 	
-	
+	//GET users message db info
 	let getMessages = () => {
 		homeService.getMessages().then(function(r){
 			$scope.messages = r.data;
@@ -66,12 +49,7 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	};
 	getMessages();
 	
-	
-	
-	
-
 	//Api pull for weather info
-	
 	$scope.getWeather = homeService.getWeather();
 	var getWeather = function() {
 		homeService.getWeather().then(function(response) {
@@ -80,7 +58,6 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 		});
 	};
 	getWeather();
-
 	
 	//Mini calendar on home page
 	$(document).ready(() => {

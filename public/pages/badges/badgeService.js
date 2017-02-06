@@ -8,7 +8,7 @@ angular.module('badgeApp').service('badgeService', function($http) {
 		})
 	};
 
-
+	//Alter user badge db based on btn selection
 	this.htmlPass = (id, answer) => {
 		return $http({
 			method: 'PUT',

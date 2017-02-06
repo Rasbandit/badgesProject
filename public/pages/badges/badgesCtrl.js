@@ -9,6 +9,7 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 		return
 	}
 	
+	//Reload badge to update badge graphics
 	$scope.reload= function(){
 		$state.reload()
 	};
@@ -53,7 +54,7 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 	$scope.pp_g = true;
 	$scope.gp_g = true;
 	
-	
+	//Determine if gray or color badge based on db data
 	let displayBadge1 = (badges) => {
 		if (badges[0].html_badge === true) {
 			$scope.html_c = true;
@@ -110,33 +111,12 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 		}
 	};
 	
-	
-	
-	//Test which badges user has completed
+	//Check total number of badges user has completed
 	let displayBadges = (badges) => {
 		let count = 0;
-		if (badges[0].html_badge === true) {
-			count++;
-			if (badges[0].basic_js_badge === true) {
+		for (let key in badges[0]) {
+			if (badges[0][key] === true) {
 				count++;
-				if (badges[0].int_js_badge === true) {
-					count++;
-					if (badges[0].angular_badge === true) {
-						count++;
-						if (badges[0].node_badge === true) {
-							count++;
-							if (badges[0].sql_badge === true) {
-								count++;
-								if (badges[0].pproj_badge === true) {
-									count++;
-									if (badges[0].gproj_badge === true) {
-										count++;
-									}
-								}
-							}
-						}
-					}
-				}
 			}
 		}
 		$scope.finalCount = count;
@@ -197,10 +177,6 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 			badgeService.gpPass(user.id, false);
 		}
 	};
-	
-	
-	
-	
 	
 });
 
