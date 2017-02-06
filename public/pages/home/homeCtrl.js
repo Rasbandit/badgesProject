@@ -24,17 +24,17 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 			homeService.getBadge(userService.currentUser.id)
 			.then(function(response) {
 				$scope.badges = response.data;
-				displayBadge(response.data.badges);
+				displayBadge(response.data.badge);
 			})
 		}
 	};
 	getBadge();
 	
 	//Count users completed badges
-	let displayBadge = (badges) => {
+	let displayBadge = (badge) => {
 		let count = 0;
-		for (let key in badges[0]) {
-			if (badges[0][key] === true) {
+		for (let key in badge[0]) {
+			if (badge[0][key] === true) {
 				count++;
 			}
 		}
@@ -43,8 +43,8 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	
 	//GET users message db info
 	let getMessages = () => {
-		homeService.getMessages().then(function(r){
-			$scope.messages = r.data;
+		homeService.getMessages().then(function(res){
+			$scope.messages = res.data;
 		});
 	};
 	getMessages();

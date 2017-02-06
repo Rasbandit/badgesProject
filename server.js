@@ -94,8 +94,8 @@ app.get('/badges/:id', function(req, res) {
 
 //GET badges for logged in user (Home Page)
 app.get('/badge/:id', function(req, res) {
-	db.getUserBadges([req.params.id], function(err, badges) {
-		res.send({badges : badges});
+	db.getUserBadges([req.params.id], function(err, badge) {
+		res.send({badge : badge});
 	})
 });
 
