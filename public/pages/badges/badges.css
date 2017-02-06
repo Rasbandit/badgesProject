@@ -291,7 +291,7 @@
 	}
 
 .background-badge {
-	background: url('http://cdn.pcwallart.com/images/mountain-sunrise-wallpaper-3.jpg') center no-repeat;
+	background: url('../../images/backgrounds/mountain-sunrise-wallpaper-3.jpg') center no-repeat;
 	background-size: cover;
 	position: fixed;
 	top: 8vh;

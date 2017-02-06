@@ -547,7 +547,7 @@
 
 .background {
 	position: fixed;
-	background: url('https://upload.wikimedia.org/wikipedia/commons/8/8c/K2,_Mount_Godwin_Austen,_Chogori,_Savage_Mountain.jpg') center no-repeat;
+	background: url('../../images/backgrounds/K2,_Mount_Godwin_Austen,_Chogori,_Savage_Mountain.jpg') center no-repeat;
 	background-size: cover;
 	top: 6vh;
 	left:0;
