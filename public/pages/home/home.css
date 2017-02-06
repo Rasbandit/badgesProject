@@ -1,5 +1,14 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+	.weather-img {
+		height: 80px;
+		width: 80px;
+		}
+	
+	.weather-title {
+		font-size: 12px;
+		}
+	
 	.profile-img {
 		width: 30%;
 		height: 50%;
@@ -99,6 +108,15 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+	.weather-img {
+		height: 80px;
+		width: 80px;
+		}
+	
+	.weather-title {
+		font-size: 12px;
+		}
+	
 	.profile-img {
 		width: 30%;
 		height: 50%;
@@ -198,6 +216,15 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.weather-img {
+		height: 100px;
+		width: 100px;
+		}
+	
+	.weather-title {
+		font-size: 16px;
+		}
+	
 	.profile-img {
 		width: 30%;
 		height: 60%;
@@ -297,6 +324,15 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	.weather-img {
+		height: 100px;
+		width: 100px;
+		}
+	
+	.weather-title {
+		font-size: 16px;
+		}
+	
 	.profile-img {
 		width: 30%;
 		height: 60%;
@@ -396,6 +432,15 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	.weather-img {
+		height: 100px;
+		width: 100px;
+		}
+	
+	.weather-title {
+		font-size: 16px;
+		}
+	
 	.profile-img {
 		width: 30%;
 		height: 60%;
@@ -495,9 +540,7 @@
 	}
 
 
-
-
-
+/*CSS*/
 .text {
 	font-size: 12px;
 	}
@@ -706,10 +749,6 @@
 	transition: opacity .5s ease-in-out;
 	}
 
-/*#cf img.top:hover {*/
-	/*opacity:0;*/
-	/*}*/
-
 @keyframes cf3FadeInOut {
 	0% {
 		opacity:1;
@@ -734,7 +773,6 @@
 	}
 
 /*Calender*/
-
 #calendar1 {
 	width: 90%;
 	margin: 0 auto;
@@ -745,7 +783,6 @@
 
 /*Weather*/
 .weather-title {
-	font-size: 16px;
 	font-weight: bold;
 	}
 
@@ -753,11 +790,6 @@
 	margin: 40px 0 10px 20px;
 	line-height: 25px;
 	font-size: 14px;
-	}
-
-.weather-img {
-	height: 100px;
-	width: 100px;
 	}
 
 .img-pos {
@@ -861,8 +893,6 @@
 .sub-menu li a:hover, .sub-menu .current-item a {
 	background:#3e3436;
 	}
-
-
 
 .hm-search {
 	position: fixed;
