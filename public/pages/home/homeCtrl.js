@@ -24,7 +24,7 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 			homeService.getBadge(userService.currentUser.id)
 			.then(function(response) {
 				$scope.badges = response.data;
-				displayBadge(response.data.badge);
+				displayBadge(response.data.badges);
 			})
 		}
 	};
