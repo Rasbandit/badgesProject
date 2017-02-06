@@ -126,7 +126,7 @@
 			</div>
 			<div class="hm-lg-chat">
 				<div class="hm-chat-col">
-					<div class="hm-chat-text" ng-repeat="message in messages">
+					<div class="hm-chat-text" ng-repeat="message in messages | orderBy: 'time_stamp'">
 						<div class="hm-sm-chat">
 							<div class="hm-chat-info">
 								<div class="hm-sm-profile-img-pos"><img class="hm-sm-profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
