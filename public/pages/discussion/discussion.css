@@ -1,5 +1,30 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+	.sm-chat {
+		height: 5.1vh;
+		}
+	
+	.date-pos {
+		font-size: 8px;
+		}
+	
+	.name {
+		font-size: 9px;
+		}
+	
+	.sm-profile-img {
+		width: 10px;
+		height: 10px;
+		}
+	
+	.chat-text {
+		font-size: 13px;
+		}
+	
+	.message-box {
+		width: 60vw;
+		}
+	
 	.main-container {
 		width: 97vw;
 		}
@@ -15,6 +40,31 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+	.sm-chat {
+		height: 5.1vh;
+		}
+	
+	.date-pos {
+		font-size: 8px;
+		}
+	
+	.name {
+		font-size: 9px;
+		}
+	
+	.sm-profile-img {
+		width: 10px;
+		height: 10px;
+		}
+	
+	.chat-text {
+		font-size: 13px;
+		}
+	
+	.message-box {
+		width: 60vw;
+		}
+	
 	.main-container {
 		width: 97vw;
 		}
@@ -30,6 +80,31 @@
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.sm-chat {
+		height: 5.8vh;
+		}
+	
+	.date-pos {
+		font-size: 12px;
+		}
+	
+	.name {
+		font-size: 12px;
+		}
+	
+	.sm-profile-img {
+		width: 25px;
+		height: 25px;
+		}
+	
+	.chat-text {
+		font-size: 15px;
+		}
+	
+	.message-box {
+		width: 35vw;
+		}
+	
 	.main-container {
 		width: 50vw;
 		}
@@ -46,6 +121,31 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	.sm-chat {
+		height: 5.8vh;
+		}
+	
+	.date-pos {
+		font-size: 12px;
+		}
+	
+	.name {
+		font-size: 12px;
+		}
+	
+	.sm-profile-img {
+		width: 25px;
+		height: 25px;
+		}
+	
+	.chat-text {
+		font-size: 15px;
+		}
+	
+	.message-box {
+		width: 35vw;
+		}
+	
 	.main-container {
 		width: 50vw;
 		}
@@ -62,6 +162,31 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	.sm-chat {
+		height: 5.8vh;
+		}
+	
+	.date-pos {
+		font-size: 12px;
+		}
+	
+	.name {
+		font-size: 12px;
+		}
+	
+	.sm-profile-img {
+		width: 25px;
+		height: 25px;
+		}
+	
+	.chat-text {
+		font-size: 15px;
+		}
+	
+	.message-box {
+		width: 35vw;
+		}
+	
 	.main-container {
 		width: 50vw;
 		}
@@ -132,7 +257,6 @@
 
 .chat-text {
 	margin: 3px 0;
-	font-size: 15px;
 	color: black;
 	}
 
@@ -148,7 +272,6 @@
 
 .sm-chat {
 	background-color: #F1F1F1;
-	height: 5.8vh;
 	padding: 5px;
 	}
 
@@ -169,13 +292,10 @@
 	position: relative;
 	display: inline-block;
 	float: right;
-	width: 35vw;
 	height: 100%;
 	}
 
 .sm-profile-img {
-	width: 25px;
-	height: 25px;
 	background-size: contain;
 	border-radius: 50%;
 	border: 1px solid black;
@@ -188,7 +308,6 @@
 
 .name {
 	position: relative;
-	font-size: 12px;
 	}
 
 .date-pos {
@@ -198,5 +317,4 @@
 
 .date-pos {
 	position: relative;
-	font-size: 12px;
 	}

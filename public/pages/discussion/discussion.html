@@ -4,7 +4,7 @@
 			<div class="chat-title"> DevMountain Chat Room </div>
 			<div class="lg-chat">
 				<div class="chat-col">
-				<div class="chat-text" ng-repeat="message in messages">
+				<div class="chat-text" ng-repeat="message in messages | orderBy: 'time_stamp'">
 					<div class="sm-chat">
 						<div class="chat-info">
 							<div class="sm-profile-img-pos"><img class="sm-profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
