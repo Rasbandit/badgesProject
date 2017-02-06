@@ -31,10 +31,10 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	getBadge();
 	
 	//Count users completed badges
-	let displayBadge = (badge) => {
+	let displayBadge = (badges) => {
 		let count = 0;
-		for (let key in badge[0]) {
-			if (badge[0][key] === true) {
+		for (let key in badges[0]) {
+			if (badges[0][key] === true) {
 				count++;
 			}
 		}
