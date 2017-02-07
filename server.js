@@ -294,9 +294,9 @@ passport.use('github', new githubStrategy({
 			if (!user.length) {
 				console.log('Creating User');
 				let date = new Date();
-				db.createUserGithub([profile.displayName, profile.id, profile.emails[0].value, profile.photos[0].value, date], function(err, u) {
+				db.createUserGithub([profile.displayName, profile.id, date], function(err, u) {
 					return done(err, u, {scope: 'all'});
-				})
+				});
 			} else {
 				return done(err, user[0]);
 			}
@@ -310,6 +310,7 @@ app.get('/auth/github', passport.authenticate('github'));
 app.get('/auth/github/callback',
 	passport.authenticate('github', { failureRedirect: '/'}),
 	function(req, res) {
+	
 		res.status(200).redirect('/');
 	});
 

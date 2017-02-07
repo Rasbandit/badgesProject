@@ -10,4 +10,4 @@ create table if not exists badges (
   sql_badge boolean,
   pproj_badge boolean,
   gproj_badge boolean 
-)
+);

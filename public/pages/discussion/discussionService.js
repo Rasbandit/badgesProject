@@ -16,7 +16,7 @@ angular.module('badgeApp').service('discussionService', function($http){
 					id: id,
 					name: name,
 					message: message,
-					time : time
+					time: time
 				}
 		});
 	});
