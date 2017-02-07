@@ -361,7 +361,7 @@ passport.deserializeUser(function(user, done) {
 app.get('/auth/facebook', passport.authenticate('facebook', {scope: ['email']}));
 
 app.get('/auth/facebook/callback',
-	passport.authenticate('facebook', {failureRedirect: '/'}), function(req, res) {
+	passport.authenticate('facebook', {failureRedirect: '/login'}), function(req, res) {
 		res.status(200).redirect('/');
 	});
 
