@@ -294,7 +294,7 @@ passport.use('github', new githubStrategy({
 			if (!user.length) {
 				console.log('Creating User');
 				let date = new Date();
-				db.createUserGithub([profile.displayName, profile.id, profile.emails, profile.photos, date], function(err, u) {
+				db.createUserGithub([profile.displayName, profile.id, profile.emails[0].value, profile.photos[0].value, date], function(err, u) {
 					return done(err, u, {scope: 'all'});
 				})
 			} else {
@@ -307,7 +307,7 @@ passport.use('github', new githubStrategy({
 //github callback
 app.get('/auth/github', passport.authenticate('github'));
 
-app.get('/http://dmbadges.com/auth/github/callback',
+app.get('/auth/github/callback',
 	passport.authenticate('github', { failureRedirect: '/'}),
 	function(req, res) {
 		res.status(200).redirect('/');
