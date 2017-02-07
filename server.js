@@ -4,7 +4,7 @@ const massive = require('massive');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const FacebookStrategy = require('passport-facebook').Strategy;
-const githubStrategy = require('passport-github').Strategy;
+const githubStrategy = require('passport-github2').Strategy;
 const config = require('./config.js');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
@@ -303,6 +303,16 @@ passport.use('github', new githubStrategy({
 		})
 	}));
 
+
+//github callback
+app.get('/auth/github', passport.authenticate('github', { scope: [ 'user:email' ] }));
+
+app.get('/auth/github/callback',
+	passport.authenticate('github', { failureRedirect: '/'}),
+	function(req, res) {
+		res.status(200).redirect('/');
+	});
+
 /**
  * Local Auth
  */
@@ -355,13 +365,6 @@ app.get('/auth/facebook/callback',
 		res.status(200).redirect('/');
 	});
 
-//github callback
-app.get('/auth/github', passport.authenticate('github'));
-
-app.get('/auth/github/callback',
-	passport.authenticate('github', {failureRedirect: '/'}), function(req, res) {
-		res.status(200).redirect('/');
-	});
 
 app.listen(config.port, function() {
 	console.log('Listening to port:', config.port)
