@@ -307,7 +307,7 @@ passport.use('github', new githubStrategy({
 //github callback
 app.get('/auth/github', passport.authenticate('github'));
 
-app.get('/auth/github/callback',
+app.get('/http://dmbadges.com/auth/github/callback',
 	passport.authenticate('github', { failureRedirect: '/'}),
 	function(req, res) {
 		res.status(200).redirect('/');
