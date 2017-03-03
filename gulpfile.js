@@ -2,7 +2,7 @@
 
 var gulp = require('gulp'),
 	concat = require('gulp-concat'),
-	sass = require('gulp-sass'),
+	// sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
 	print = require('gulp-print'),
 	babel = require('gulp-babel');
@@ -19,7 +19,7 @@ gulp.task('hello', function() {
 gulp.task('build-css', [], function() {
 	return gulp.src('./public/pages/**/*.css')
 	.pipe(sourcemaps.init())
-	.pipe(sass())
+	// .pipe(sass())
 	// .pipe(cachebust.resources())
 	.pipe(concat('styles.css'))
 	.pipe(sourcemaps.write('./maps'))
