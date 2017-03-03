@@ -14,8 +14,7 @@ const session = require('express-session');
 
 const app = module.exports = express();
 
-app.use(bodyParser.json());
-app.use(cookieParser());
+ 
 
 app.use(session({
 	secret: config.secret,
