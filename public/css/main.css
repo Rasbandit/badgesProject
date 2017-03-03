@@ -89,7 +89,7 @@ html {
 	position: absolute;
 	top: 85px;
 	height: 60vh;
-	width: 90%;
+	width: 100%;
 	font-size: 18px;
 	}
 
@@ -98,13 +98,13 @@ html {
 	}
 
 .nav-item {
-	width: 99%;
+	width: 86%;
 	height: 4vh;
 	cursor: pointer;
 	vertical-align: middle;
-	padding: 1.4vh 0 0 1vw;
+	padding: 8% 0 0 14%;
 	text-decoration: none;
-	color: white;;
+	color: white;
 	}
 
 .hamburger-menu {
