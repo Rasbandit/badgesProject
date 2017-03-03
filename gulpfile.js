@@ -19,7 +19,6 @@ gulp.task('hello', function() {
 gulp.task('build-css', [], function() {
 	return gulp.src('./public/pages/**/*.css')
 	.pipe(sourcemaps.init())
-	// .pipe(sass())
 	// .pipe(cachebust.resources())
 	.pipe(concat('styles.css'))
 	.pipe(sourcemaps.write('./maps'))

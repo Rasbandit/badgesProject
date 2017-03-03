@@ -7,7 +7,6 @@
 				<div class="chat-text" ng-repeat="message in messages | orderBy: 'time_stamp'">
 					<div class="sm-chat">
 						<div class="chat-info">
-							<div class="sm-profile-img-pos"><img class="sm-profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
 							<div class="name-pos">
 								<div class="name">{{message.user_name}}</div>
 							</div>
@@ -18,7 +17,6 @@
 						<div class="message-box">
 							<div class="message">{{message.message}}</div>
 						</div>
-						
 					</div>
 				</div>
 				</div>

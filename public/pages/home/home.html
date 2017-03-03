@@ -1,176 +1,176 @@
-<section>
-	<div class="background"></div>
-	<div class="flex-column-one">
-		<div class="profile-box">
-			<div class="cal-header">
-				<div class="cal-text">
-					<div class="home-title-text">My Profile</div>
-				</div>
-			</div>
-			<div><img class="profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
-			<div class="welcome">Welcome {{user.display_name}}!</div>
-			<div class="badges">Badges Completed: <span class="profile-text">{{finalCountHome}}</span></div>
-			<div class="email">Email: <span class="profile-text">{{user.ghemail}}</span></div>
-			<div class="joined">Date Joined: <span class="profile-text">{{user.joindate | date:'MM/dd/yyyy'}}</span></div>
-		</div>
-		<div class="badges-box">
-			<div class="cal-header">
-				<div class="cal-text">
-					<div class="home-title-text">Badges</div>
-				</div>
-				
-			</div>
-			<div id="cf" class="img1 flex-column">
-				<img class="bottom" alt="" src="../../images/HTML:CSS/css3-50px.png">
-				<img class="top" src = "../../images/HTML:CSS/html5.png">
-				<div class="home-badge-text flex-column">HTML/CSS</div>
-			</div>
-			<div id="cf" class="img2">
-				<img class="bottom" alt = "" src = "../../images/JavaScript/Javascript-Logo-50px.png">
-				<div class="home-badge-text flex-column">Basic Javascript</div>
-			</div>
-			<div id="cf" class="img3">
-				<img class="bottom" alt = "" src = "../../images/JavaScript/javascript-50px.png">
-				<div class="home-badge-text flex-column">Intermediate Javascript</div>
-			</div>
-			<div id="cf" class="img4">
-				<img class="bottom" alt = "" src = "../../images/Angular/angularjs-50px.png">
-				<div class="home-badge-text flex-column">Angular</div>
-			</div>
-			<div id="cf" class="img5">
-				<img class="bottom" alt = "" src = "../../images/Node/nodejs-logo-50px.png">
-				<div class="home-badge-text flex-column">Node JS</div>
-			</div>
-			<div id="cf" class="img6">
-				<img class="bottom" alt = "" src = "../../images/SQL/sql-database-50px.png">
-				<div class="home-badge-text flex-column">SQL</div>
-			</div>
-			<div id="cf" class="img7">
-				<img class="bottom" alt = "" src = "../../images/project1/stars-icon-50px.png">
-				<div class="home-badge-text flex-column">Personal Project</div>
-			</div>
-			<div id="cf" class="img8">
-				<img class="bottom" alt = "" src = "../../images/group-project/crown-50px.png">
-				<div class="home-badge-text flex-column">Group Project</div>
-			</div>
-		</div>
-		
-		<div class="cal-box">
-			<div class="cal-header">
-				<div class="cal-text">
-					<div class="home-title-text">Calendar</div>
-				</div>
-			</div>
-			<div id='calendar1'></div>
-		</div>
-		
-		<div class="assess-box">
-			<div class="cal-header">
-				<div class="cal-text">
-					<div class="home-title-text">Resources</div>
+<section class="background">
+	<div class="home-container">
+		<div class="col-left">
+			<div class="profile-box">
+				<div class="cal-header">
+					<div class="cal-text">
+						<div class="home-title-text">My Profile</div>
 					</div>
 				</div>
-			<div class="text flex-column">
-				<ul class="main-navigation">
-					<li><a href="#">Developer Tools ▾ </a>
-						<ul>
-							<li><a href="http://www.w3schools.com/" target="_blank">w3schools</a></li>
-							<li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a></li>
-							<li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
-							<li><a href="https://repl.it/languages/javascript" target="_blank">Repl.it</a></li>
-							<li><a href="https://github.com/" target="_blank">Github</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Learn ▾ </a>
-						<ul>
-							<li><a href="https://www.udemy.com/courses/development/" target="_blank">Udemy</a></li>
-							<li><a href="https://www.codewars.com/dashboard" target="_blank">Code Wars</a></li>
-							<li><a href="https://www.freecodecamp.com/fcc14bbcefa" target="_blank">Freecodecamp</a></li>
-							<li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
-							<li><a href="https://www.codeschool.com/" target="_blank">Code School</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Cheat Sheets ▾ </a>
-						<ul>
-							<li><a href="http://overapi.com/html" target="_blank">HTML</a></li>
-							<li><a href="http://overapi.com/css" target="_blank">CSS</a></li>
-							<li><a href="http://overapi.com/javascript" target="_blank">Javascript</a></li>
-							<li><a href="https://oscarotero.com/jquery/" target="_blank">JQuery</a></li>
-						</ul>
-					</li>
-					<li><a href="#">DevMountain  ▾ </a>
-						<ul>
-							<li><a href="https://devmountain.com/" target="_blank">DevMountain.com</a></li>
-							<li><a href="http://class.devmountain.com/#/" target="_blank">Class@DM</a></li>
-							<li><a href="https://devmountain.com/login?bounce=q&redirect_uri=http%3A%2F%2Fq.devmountain.com%2Fauth%2Fdevmtn%2Fcallback&client_id=vYpmsIxJtMNW7626QntOklg9hk7IBxiGFUY2Sf6vYWNhcgLPgDg7FZb8PlueGO0" target="_blank">Q@DM</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Assessments ▾ </a>
-						<ul>
-							<li><a ui-sref="assessments">HTML/CSS</a></li>
-							<li><a ui-sref="assessments">Javascript</a></li>
-							<li><a ui-sref="assessments">Angular</a></li>
-							<li><a ui-sref="assessments">Node</a></li>
-							<li><a ui-sref="assessments">SQL</a></li>
-						</ul>
-					</li>
-				</ul>
+				<div><img class="profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
+				<div class="welcome">Welcome {{user.display_name}}!</div>
+				<div class="badges">Badges Completed: <span class="profile-text">{{finalCountHome}}</span></div>
+				<div class="email">Email: <span class="profile-text">{{user.ghemail}}</span></div>
+				<div class="joined">Date Joined: <span class="profile-text">{{user.joindate | date:'MM/dd/yyyy'}}</span></div>
 			</div>
-		</div>
-		
-		<div class="disc-box">
-			<div class="cal-header">
-				<div class="cal-text">
-					<div class="home-title-text">Chat</div>
+			<div class="cal-box">
+				<div class="cal-header">
+					<div class="cal-text">
+						<div class="home-title-text">Calendar</div>
+					</div>
 				</div>
+				<div id='calendar1'></div>
 			</div>
-			<div class="hm-lg-chat">
-				<div class="hm-chat-col">
-					<div class="hm-chat-text" ng-repeat="message in messages | orderBy: 'time_stamp'">
-						<div class="hm-sm-chat">
-							<div class="hm-chat-info">
-								<div class="hm-sm-profile-img-pos"><img class="hm-sm-profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
-								<div class="hm-name-pos">
-									<div class="hm-name">{{message.user_name}}</div>
-								</div>
-								<div class="date-pos">
-									<div class="hm-date">{{message.time_stamp | date:"MM/dd '@' h:mma"}}</div>
-								</div>
-							</div>
-							<div class="hm-message-box">
-								<div>{{message.message}}</div>
-							</div>
+			<div class="forecast-box">
+				<div class="cal-header">
+					<div class="cal-text">
+						<div class="home-title-text">Today's Forecast</div>
+					</div>
+				</div>
+				<div class="weather-box">
+					<div class="weather-info-box">
+						<div>
+							<span class="weather-title">Date:</span> {{weather.date.weekday}} {{weather.date.month}}/{{weather.date.day}}/{{weather.date.year}}
+						</div>
+						<span class="weather-title">High:</span>
+						<span> {{weather.high.fahrenheit}}°F   ,</span>
+						<span class="weather-title">Low:</span>
+						<span> {{weather.low.fahrenheit}}°F </span>
+						<br>
+						<div>
+							<span class="weather-title">Average Wind Speed:</span> {{weather.avewind.dir}} {{weather.avewind.mph}} mph
 						</div>
 					</div>
 				</div>
+				<div class="weather-img-box">
+					<div class="weather-title">
+						{{weather.conditions}}
+					</div>
+					<img class="weather-img" ng-Src="{{weather.icon_url}}" alt = "weather icon" />
+				</div>
 			</div>
 		</div>
-		
-		<div class="forecast-box">
-			<div class="cal-header">
-				<div class="cal-text">
-					<div class="home-title-text">Today's Forecast</div>
+		<div class="col-right">
+			<div class="badges-box">
+				<div class="cal-header">
+					<div class="cal-text">
+						<div class="home-title-text">Badges</div>
+					</div>
+				</div>
+				<div class="badge-row">
+					<div class="mini-badge-box">
+						<div class="img1"></div>
+						<div >HTML/CSS</div>
+					</div>
+					<div class="mini-badge-box">
+						<div class="img2"></div>
+						<div class="badge-text">Basic Javascript</div>
+					</div>
+					<div class="mini-badge-box">
+						<div class="img3"></div>
+						<div class="badge-text">Intermediate Javascript</div>
+					</div>
+					<div class="mini-badge-box">
+						<div class="img4"></div>
+						<div class="badge-text">Angular</div>
+					</div>
+				</div>
+				<div class="badge-row">
+					<div class="mini-badge-box">
+						<div class="img5"></div>
+						<div class="badge-text">Node JS</div>
+					</div>
+					<div class="mini-badge-box">
+						<div class="img6"></div>
+						<div class="badge-text">SQL</div>
+					</div>
+					<div class="mini-badge-box">
+						<div class="img7"></div>
+						<div class="badge-text">Personal Project</div>
+					</div>
+					<div class="mini-badge-box">
+						<div class="img8"></div>
+						<div class="badge-text">Group Project</div>
+					</div>
 				</div>
 			</div>
-			<div class="weather-box">
-				<div>
-					<span class="weather-title">Date:</span> {{weather.date.weekday}} {{weather.date.month}}/{{weather.date.day}}/{{weather.date.year}}
-				</div>
-				<span class="weather-title">High:</span>
-				<span> {{weather.high.fahrenheit}}°F   ,</span>
-				<span class="weather-title">Low:</span>
-				<span> {{weather.low.fahrenheit}}°F </span>
-				<br>
-				<div>
-					<span class="weather-title">Average Wind Speed:</span> {{weather.avewind.dir}} {{weather.avewind.mph}} mph
+			<div class="assess-box">
+				<div class="cal-header">
+					<div class="cal-text">
+						<div class="home-title-text">Resources</div>
+						</div>
+					</div>
+				<div class="text flex-column">
+					<ul class="main-navigation">
+						<li><a href="#">Developer Tools ▾ </a>
+							<ul>
+								<li><a href="http://www.w3schools.com/" target="_blank">w3schools</a></li>
+								<li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a></li>
+								<li><a href="http://stackoverflow.com/" target="_blank">Stack Overflow</a></li>
+								<li><a href="https://repl.it/languages/javascript" target="_blank">Repl.it</a></li>
+								<li><a href="https://github.com/" target="_blank">Github</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Learn ▾ </a>
+							<ul>
+								<li><a href="https://www.udemy.com/courses/development/" target="_blank">Udemy</a></li>
+								<li><a href="https://www.codewars.com/dashboard" target="_blank">Code Wars</a></li>
+								<li><a href="https://www.freecodecamp.com/fcc14bbcefa" target="_blank">Freecodecamp</a></li>
+								<li><a href="https://www.codecademy.com/" target="_blank">Codecademy</a></li>
+								<li><a href="https://www.codeschool.com/" target="_blank">Code School</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Cheat Sheets ▾ </a>
+							<ul>
+								<li><a href="http://overapi.com/html" target="_blank">HTML</a></li>
+								<li><a href="http://overapi.com/css" target="_blank">CSS</a></li>
+								<li><a href="http://overapi.com/javascript" target="_blank">Javascript</a></li>
+								<li><a href="https://oscarotero.com/jquery/" target="_blank">JQuery</a></li>
+							</ul>
+						</li>
+						<li><a href="#">DevMountain  ▾ </a>
+							<ul>
+								<li><a href="https://devmountain.com/" target="_blank">DevMountain.com</a></li>
+								<li><a href="http://class.devmountain.com/#/" target="_blank">Class@DM</a></li>
+								<li><a href="https://devmountain.com/login?bounce=q&redirect_uri=http%3A%2F%2Fq.devmountain.com%2Fauth%2Fdevmtn%2Fcallback&client_id=vYpmsIxJtMNW7626QntOklg9hk7IBxiGFUY2Sf6vYWNhcgLPgDg7FZb8PlueGO0" target="_blank">Q@DM</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Assessments ▾ </a>
+							<ul>
+								<li><a ui-sref="assessments">HTML/CSS</a></li>
+								<li><a ui-sref="assessments">Javascript</a></li>
+								<li><a ui-sref="assessments">Angular</a></li>
+								<li><a ui-sref="assessments">Node</a></li>
+								<li><a ui-sref="assessments">SQL</a></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<div class="img-pos">
-				<div class="weather-title">
-					{{weather.conditions}}
+			<div class="disc-box">
+				<div class="cal-header">
+					<div class="cal-text">
+						<div class="home-title-text">Chat</div>
+					</div>
 				</div>
-				<div>
-					<img class="weather-img" ng-Src="{{weather.icon_url}}" alt = "weather icon">
+				<div class="hm-lg-chat">
+					<div class="hm-chat-col">
+						<div class="hm-chat-text" ng-repeat="message in messages | orderBy: 'time_stamp'">
+							<div class="hm-sm-chat">
+								<div class="hm-chat-info">
+									<div class="hm-name-pos">
+										<div class="hm-name">{{message.user_name}}</div>
+									</div>
+									<div class="date-pos">
+										<div class="hm-date">{{message.time_stamp | date:"MM/dd '@' h:mma"}}</div>
+									</div>
+								</div>
+								<div class="hm-message-box">
+									<div>{{message.message}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

@@ -10,43 +10,14 @@
 		}
 	
 	.profile-img {
-		width: 30%;
+		/*width: 30%;*/
 		height: 50%;
 		}
-	
-	.img2 {
-		left: 32%;
-		}
-	
-	.img3 {
-		right: 34%;
-		}
-	
-	.img6 {
-		left: 32%;
-		}
-	
-	.img7 {
-		right: 34%;
-		}
-	
+
 	.home-badge-text {
 		font-size: 12px;
 		}
-	
-	.hm-chat-info {
-		width: 33vw;
-		}
-	
-	.hm-message-box {
-		width: 50vw;
-		}
-	
-	.hm-sm-chat {
-		width: 83vw;
-		height: 9vh;
-		}
-	
+
 	ul li a {
 		font-size: 9.49px;
 		}
@@ -75,35 +46,7 @@
 		top: 54%;
 		font-size: 12px;
 		}
-	
-	.cal-box {
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		height: 57vh;
-		}
-	
-	.forecast-box {
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		}
-	
-	.badges-box {
-		width: 95%;
-		height: 45vh;
-		}
-	
-	.profile-box{
-		width: 95%;
-		}
-	
-	.disc-box{
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		}
-	
-	.assess-box {
-		width: 95%;
-		}
+  
 	}
 
 /* Extra Small Devices, Phones */
@@ -118,43 +61,14 @@
 		}
 	
 	.profile-img {
-		width: 30%;
+		/*width: 30%;*/
 		height: 50%;
 		}
-	
-	.img2 {
-		left: 32%;
-		}
-	
-	.img3 {
-		right: 34%;
-		}
-	
-	.img6 {
-		left: 32%;
-		}
-	
-	.img7 {
-		right: 34%;
-		}
-	
+
 	.home-badge-text {
 		font-size: 12px;
 		}
-	
-	.hm-chat-info {
-		width: 13vw;
-		}
-	
-	.hm-message-box {
-		width: 50vw;
-		}
-	
-	.hm-sm-chat {
-		width: 83vw;
-		height: 9vh;
-		}
-	
+
 	ul li a {
 		font-size: 7.49px;
 		}
@@ -183,35 +97,7 @@
 		top: 54%;
 		font-size: 12px;
 		}
-	
-	.cal-box {
-		margin: 0 1vw 0 3vw;
-		width: 95%;
-		height: 50vh;
-		}
-	
-	.forecast-box {
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		height: 40vh;
-		}
-	
-	.badges-box {
-		width: 95%;
-		}
-	
-	.profile-box{
-		width: 95%;
-		}
-	
-	.disc-box{
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		}
-	
-	.assess-box {
-		width: 95%;
-		}
+  
 	}
 
 /* Small Devices, Tablets */
@@ -230,39 +116,10 @@
 		height: 60%;
 		}
 	
-	.img2 {
-		left: 32%;
-		}
-	
-	.img3 {
-		right: 34%;
-		}
-	
-	.img6 {
-		left: 32%;
-		}
-	
-	.img7 {
-		right: 34%;
-		}
-	
 	.home-badge-text {
 		font-size: 14px;
 		}
-	
-	.hm-chat-info {
-		width: 13vw;
-		}
-	
-	.hm-message-box {
-		width: 50vw;
-		}
-	
-	.hm-sm-chat {
-		width: 83vw;
-		height: 9vh;
-		}
-	
+
 	ul li a {
 		font-size: 7.49px;
 		}
@@ -292,34 +149,6 @@
 		font-size: 12px;
 		}
 	
-	.cal-box {
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		height: 62vh;
-		}
-	
-	.forecast-box {
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		}
-	
-	.badges-box {
-		width: 95%;
-		height: 30vh;
-		}
-	
-	.profile-box{
-		width: 95%;
-		}
-	
-	.disc-box{
-		margin: 0 1vw 2vh 1vw;
-		width: 95%;
-		}
-	
-	.assess-box {
-		width: 95%;
-		}
 	}
 
 /* Medium Devices, Desktops */
@@ -337,40 +166,11 @@
 		width: 30%;
 		height: 60%;
 		}
-	
-	.img2 {
-		left: 34%;
-		}
-	
-	.img3 {
-		right: 35%;
-		}
-	
-	.img6 {
-		left: 34%;
-		}
-	
-	.img7 {
-		right: 35%;
-		}
-	
+
 	.home-badge-text {
 		font-size: 14px;
 		}
-	
-	.hm-chat-info {
-		width: 13vw;
-		}
-	
-	.hm-message-box {
-		width: 19vw;
-		}
-	
-	.hm-sm-chat {
-		width: 48.5vw;
-		height: 5.8vh;
-		}
-	
+
 	ul li a {
 		font-size: 14px;
 		}
@@ -399,35 +199,7 @@
 		top: 54%;
 		font-size: 16px;
 		}
-	
-	.cal-box {
-		margin: 0 1vw 0 1vw;
-		width: 35%;
-		height: 50vh;
-		}
-	
-	.forecast-box {
-		margin: -17.5vh 1vw 2vh 1vw;
-		width: 35%;
-		}
-	
-	.badges-box {
-		width: 35%;
-		height: 30vh;
-		}
-	
-	.profile-box{
-		width: 35%;
-		}
-	
-	.disc-box{
-		margin: 0 1vw 2vh 1vw;
-		width: 35%;
-		}
-	
-	.assess-box {
-		width: 35%;
-		}
+  
 	}
 
 /* Large Devices, Wide Screens */
@@ -445,40 +217,11 @@
 		width: 30%;
 		height: 60%;
 		}
-	
-	.img2 {
-		left: 34%;
-		}
-	
-	.img3 {
-		right: 35%;
-		}
-	
-	.img6 {
-		left: 34%;
-		}
-	
-	.img7 {
-		right: 35%;
-		}
-	
+
 	.home-badge-text {
 		font-size: 14px;
 		}
-	
-	.hm-chat-info {
-		width: 13vw;
-		}
-	
-	.hm-message-box {
-		width: 19vw;
-		}
-	
-	.hm-sm-chat {
-		width: 33vw;
-		height: 5.8vh;
-		}
-	
+
 	ul li a {
 		font-size: 14px;
 		}
@@ -507,53 +250,41 @@
 		top: 54%;
 		font-size: 16px;
 		}
-	
-	.cal-box {
-		margin: 0 1vw 0 1vw;
-		width: 35%;
-		height: auto;
-		padding-bottom: 15px;
-		}
-	
-	.forecast-box {
-		margin: -30vh 1vw 2vh 1vw;
-		width: 35%;
-		}
-	
-	.badges-box {
-		width: 35%;
-		height: 30vh;
-		}
-	
-	.profile-box{
-		width: 35%;
-		}
-	
-	.disc-box{
-		margin: 2vh 1vw 0 1vw;
-		width: 35%;
-		}
-	
-	.assess-box {
-		width: 35%;
-		}
+  
 	}
 
+.home-container {
+	margin: 0 auto;
+	width: 70%;
+	padding-top: 50px;
+	}
 
-/*CSS*/
+.col-left {
+	float: left;
+	width: 48%;
+	margin: 1%;
+	}
+
+.col-right {
+	float: left;
+	width: 48%;
+	margin: 1%;
+	}
+
 .text {
 	font-size: 12px;
 	}
 
 .background {
-	position: fixed;
+	position: absolute;
 	background: url('../../images/backgrounds/K2,_Mount_Godwin_Austen,_Chogori,_Savage_Mountain.jpg') center no-repeat;
 	background-size: cover;
 	top: 6vh;
 	left:0;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	opacity: .8;
+	z-index: -1;
 	}
 
 .cal-header {
@@ -563,12 +294,14 @@
 	background-size: contain;
 	border-radius: 5px;
 	}
-
+ 
+/*Calendar Box*/
 .cal-box {
 	border: 1px black solid;
-	position: relative;
+	width: auto;
 	border-radius: 5px;
 	background-color: white;
+	margin-bottom: 2vh;
 	}
 
 .cal-text {
@@ -583,8 +316,9 @@
 	}
 
 .forecast-box {
+	clear: both;
 	border: 1px black solid;
-	position: relative;
+	width: 100%;
 	height: 250px;
 	border-radius: 5px;
 	background-color: white;
@@ -596,59 +330,44 @@
 	}
 
 .home-badge-text{
+	position: absolute;
 	text-align: center;
 	font-weight: 800;
 	margin-top: 52px;
 	}
 
-.flex-column-one {
-	position: relative;
-	top: 10vh;
-	display: flex;
-	justify-content: center;
-	flex-flow: wrap;
-	}
-
-.flex-column-two {
-	position: relative;
-	top: 10vh;
-	display: flex;
-	justify-content: center;
-	flex-flow: wrap;
-	}
-
 /*Badge box*/
 .badges-box {
-	margin: 0 1vw 2vh 1vw;
 	border: 1px black solid;
-	position: relative;
-
+	width: auto;
+	height: 330px;
 	border-radius: 5px;
 	background-color: white;
+	margin-bottom: 2vh;
 	}
 
 .profile-box{
-	margin: 0 1vw 2vh 1vw;
+	margin-bottom: 2vh;
 	border: 1px black solid;
-	position: relative;
-	height: 30vh;
+	width: auto;
+	height: 26vh;
 	border-radius: 5px;
 	background-color: white;
 	}
 
 .disc-box{
 	border: 1px black solid;
-	position: relative;
+	width: auto;
 	height: 450px;
 	border-radius: 5px;
 	background-color: white;
-	margin-bottom: 3vh;
+	margin-bottom: 2vh;
 	}
 
 .assess-box {
-	margin: 0 1vw 2vh 1vw;
+	margin-bottom: 2vh;
 	border: 1px black solid;
-	position: relative;
+	width: auto;
 	height: 25vh;
 	border-radius: 5px;
 	background-color: white;
@@ -656,10 +375,9 @@
 
 /*Profile Box*/
 .profile-img {
-	position: absolute;
-	top: 26%;
-	left: 5%;
-	/*background: url('../../images/profile Img.png') center no-repeat;*/
+	width: 150px;
+	margin: 20px 20px 10px 20px;
+	height: 150px;
 	background-size: contain;
 	border-radius: 20px;
 	border: 1px solid black;
@@ -667,26 +385,26 @@
 
 .welcome,.email,.joined,.badges {
 	position: absolute;
-	left: 40%;
+	left: 27%;
 	}
 
 .welcome {
-	top: 28%;
+	top: 14vh;
 	font-weight: bolder;
 	}
 
 .email {
-	top: 47%;
+	top: 19vh;
 	font-weight: bolder;
 	}
 
 .badges {
-	top: 61%;
+	top: 22vh;
 	font-weight: bolder;
 	}
 
 .joined {
-	top: 54%;
+	top: 25vh;
 	font-weight: bolder;
 	}
 
@@ -694,91 +412,96 @@
 	font-weight: normal;
 	}
 
+.badge-text {
+	text-align: center;
+	}
+
+.mini-badge-box {
+	width: 105px;
+	display: flex;
+	min-height: 105px;
+	flex-direction: column;
+	}
+
+.badge-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	margin: 15px 0 0 25px;
+	}
+
 /*Badge Box*/
 .img1 {
-	top: 27%;
-	left: 13%;
+	background: url("../../images/HTML:CSS/html5.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img2 {
-	top: 27%;
+	background: url("../../images/JavaScript/Javascript-Logo-50px.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img3 {
-	top: 27%;
+	background: url("../../images/JavaScript/javascript-50px.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img4 {
-	top: 27%;
-	right: 13%;
+	background: url("../../images/Angular/angularjs-50px.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img5 {
-	top:63%;
-	left: 13%;
+	background: url("../../images/Node/nodejs-logo-50px.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img6 {
-	top:63%;
+	background: url("../../images/SQL/sql-database-50px.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img7 {
-	top:63%;
+	background: url("../../images/project1/stars-icon-50px.png") center no-repeat;
+	background-size: contain;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 .img8 {
-	top:63%;
-	right: 13%;
-	}
-
-
-#cf {
-	position:absolute;
-	height:50px;
-	width:50px;
-	margin:0 auto;
+	background: url("../../images/group-project/crown-50px.png") center no-repeat;
 	background-size: contain;
-	}
-
-#cf img {
-	position:absolute;
-	left:0;
-	-webkit-transition: opacity .5s ease-in-out;
-	-moz-transition: opacity .5s ease-in-out;
-	-o-transition: opacity .5s ease-in-out;
-	transition: opacity .5s ease-in-out;
-	}
-
-@keyframes cf3FadeInOut {
-	0% {
-		opacity:1;
-		}
-	45% {
-		opacity:1;
-		}
-	55% {
-		opacity:0;
-		}
-	100% {
-		opacity:0;
-		}
-	}
-
-#cf img.top {
-	animation-name: cf3FadeInOut;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	animation-duration: 5s;
-	animation-direction: alternate;
+	width: 60px;
+	height: 60px;
+	margin: 5px 10px 5px 10px;
 	}
 
 /*Calender*/
 #calendar1 {
-	width: 90%;
+	width: 96%;
 	margin: 0 auto;
-	padding: 5px;
+	padding: 10px;
 	font-size: 14px;
-	margin-top: 15px;
 	}
 
 /*Weather*/
@@ -790,13 +513,21 @@
 	margin: 40px 0 10px 20px;
 	line-height: 25px;
 	font-size: 14px;
+	width: auto;
 	}
 
-.img-pos {
-	position: absolute;
-	top: 10vh;
-	right: 5vh;
-	font-size: 14px;
+.weather-info-box {
+	float: left;
+	margin: 2%;
+	width: 64%;
+	height: 100%;
+	}
+
+.weather-img-box {
+	width: 20%;
+	margin: 0px;
+	height: auto;
+	float: left;
 	}
 
 .clearfix:after {
@@ -931,39 +662,43 @@
 	}
 
 .hm-lg-chat {
-	position: absolute;
-	top: 6vh;
-	width: 33.3vw;
-	height: 36vh;
+	width: auto;
+	height: 37vh;
 	background: rgba(255, 255, 255, 0.86);
 	display: flex;
-	justify-content: flex-start;
-	padding: 10px;
+	justify-content: center;
+	padding: 18px;
 	}
 
 .hm-sm-chat {
 	background-color: #F1F1F1;
 	padding: 5px;
+	width: auto;
+	height: 50px;
 	}
 
 .hm-chat-col {
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
+	width: 100%;
 	}
 
 .hm-chat-info {
 	position: relative;
 	float: left;
 	height: 100%;
+	width: 25%;
+	padding: 1% 2%;
 	}
-
 
 .hm-message-box {
 	position: relative;
 	display: inline-block;
 	float: right;
-	height: 100%;
+	height: 90%;
+	width: 62%;
+	padding: 1% 2%;
 	}
 
 .hm-sm-profile-img {

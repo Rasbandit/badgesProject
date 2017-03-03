@@ -1,13 +1,9 @@
 
-html, body {
-	height: 100%; }
 
 /**************
 ## Container ##
 **************/
 .pure-container {
-	position: relative;
-	height: 20vh;
 	-webkit-overflow-scrolling: touch; }
 
 /************
