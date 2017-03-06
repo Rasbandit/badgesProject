@@ -1,10 +1,15 @@
 angular.module('badgeApp', ['ui.router']).config(function($stateProvider, $urlRouterProvider) {
 	
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/login');
 	
 	$stateProvider
+	.state('login', {
+		url: '/login',
+		templateUrl: './pages/login/login.html',
+		controller: 'loginCtrl'
+	})
 	.state('home', {
-		url: '/',
+		url: '/home',
 		templateUrl: './pages/home/home.html',
 		controller: 'homeCtrl'
 	})
@@ -27,11 +32,6 @@ angular.module('badgeApp', ['ui.router']).config(function($stateProvider, $urlRo
 		url: '/discussion',
 		templateUrl: './pages/discussion/discussion.html',
 		controller: 'discussionCtrl'
-	})
-	.state('login', {
-		url: '/login',
-		templateUrl: './pages/login/login.html',
-		controller: 'loginCtrl'
 	})
 	.state('admin', {
 		url: '/admin',

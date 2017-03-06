@@ -78,7 +78,7 @@
 		}
 	
 	.text-link {
-		font-size: 18px;
+		font-size: 13px;
 		line-height: 23px;
 		}
 	
@@ -295,6 +295,7 @@ ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	width: auto;
 	background: white;
 	border: 1px solid black;
 	}

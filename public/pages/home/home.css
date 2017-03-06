@@ -1,5 +1,11 @@
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
+	.home-container {
+		width: 96%;
+		margin: 0 2%;
+		padding-top: 85px;
+		}
+
 	.weather-img {
 		height: 80px;
 		width: 80px;
@@ -13,8 +19,8 @@
 		/*width: 30%;*/
 		height: 50%;
 		}
-
-	.home-badge-text {
+	
+	.badge-text {
 		font-size: 12px;
 		}
 
@@ -46,11 +52,56 @@
 		top: 54%;
 		font-size: 12px;
 		}
-  
+	
+	.img1 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img2 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img3 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img4 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img5 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img6 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img7 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img8 {
+		width: 50px;
+		height: 50px;
+		}
 	}
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width : 480px) {
+	.home-container {
+		width: 96%;
+		margin: 0 2%;
+		padding-top: 85px;
+		}
+	
 	.weather-img {
 		height: 80px;
 		width: 80px;
@@ -64,8 +115,8 @@
 		/*width: 30%;*/
 		height: 50%;
 		}
-
-	.home-badge-text {
+	
+	.badge-text {
 		font-size: 12px;
 		}
 
@@ -97,11 +148,56 @@
 		top: 54%;
 		font-size: 12px;
 		}
-  
+	
+	.img1 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img2 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img3 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img4 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img5 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img6 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img7 {
+		width: 50px;
+		height: 50px;
+		}
+	
+	.img8 {
+		width: 50px;
+		height: 50px;
+		}
 	}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	.home-container {
+		width: 96%;
+		margin: 0 2%;
+		padding-top: 85px;
+		}
+	
 	.weather-img {
 		height: 100px;
 		width: 100px;
@@ -116,12 +212,12 @@
 		height: 60%;
 		}
 	
-	.home-badge-text {
-		font-size: 14px;
+	.badge-text {
+		font-size: 13px;
 		}
 
 	ul li a {
-		font-size: 7.49px;
+		font-size: 18px;
 		}
 	
 	.home-title-text {
@@ -149,10 +245,67 @@
 		font-size: 12px;
 		}
 	
+	.img1 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img2 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img3 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img4 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img5 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img6 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img7 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img8 {
+		width: 60px;
+		height: 60px;
+		}
 	}
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) {
+	
+	.home-container {
+		margin: 0 auto;
+		width: 70%;
+		padding-top: 85px;
+		}
+	
+	.col-left {
+		float: left;
+		width: 48%;
+		margin: 1%;
+		}
+	
+	.col-right {
+		float: left;
+		width: 48%;
+		margin: 1%;
+		}
 	.weather-img {
 		height: 100px;
 		width: 100px;
@@ -166,13 +319,13 @@
 		width: 30%;
 		height: 60%;
 		}
-
-	.home-badge-text {
+	
+	.badge-text {
 		font-size: 14px;
 		}
 
 	ul li a {
-		font-size: 14px;
+		font-size: 7px;
 		}
 	
 	.home-title-text {
@@ -199,11 +352,69 @@
 		top: 54%;
 		font-size: 16px;
 		}
-  
+	
+	.img1 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img2 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img3 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img4 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img5 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img6 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img7 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img8 {
+		width: 60px;
+		height: 60px;
+		}
 	}
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
+	
+	.home-container {
+		padding-top: 85px;
+		margin: 0 auto;
+		width: 70%;
+		}
+	
+	.col-left {
+		float: left;
+		width: 48%;
+		margin: 1%;
+		}
+	
+	.col-right {
+		float: left;
+		width: 48%;
+		margin: 1%;
+		}
+	
 	.weather-img {
 		height: 100px;
 		width: 100px;
@@ -216,10 +427,6 @@
 	.profile-img {
 		width: 30%;
 		height: 60%;
-		}
-
-	.home-badge-text {
-		font-size: 14px;
 		}
 
 	ul li a {
@@ -250,39 +457,74 @@
 		top: 54%;
 		font-size: 16px;
 		}
+	
+	.img1 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img2 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img3 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img4 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img5 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img6 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img7 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.img8 {
+		width: 60px;
+		height: 60px;
+		}
+	
+	.badge-text {
+		font-size: 14px;
+		}
   
 	}
 
-.home-container {
-	margin: 0 auto;
-	width: 70%;
-	padding-top: 50px;
-	}
 
-.col-left {
-	float: left;
-	width: 48%;
-	margin: 1%;
-	}
 
-.col-right {
-	float: left;
-	width: 48%;
-	margin: 1%;
-	}
+
+
+/*//////////
+// General CSS
+/////////*/
+
 
 .text {
 	font-size: 12px;
 	}
 
 .background {
-	position: absolute;
+	position: fixed;
 	background: url('../../images/backgrounds/K2,_Mount_Godwin_Austen,_Chogori,_Savage_Mountain.jpg') center no-repeat;
 	background-size: cover;
 	top: 6vh;
 	left:0;
 	width: 100%;
-	height: auto;
+	height: 100vh;
 	opacity: .8;
 	z-index: -1;
 	}
@@ -315,12 +557,13 @@
 	border-radius: 5px;
 	}
 
+/*Forecast Box*/
 .forecast-box {
-	clear: both;
 	border: 1px black solid;
-	width: 100%;
-	height: 250px;
+	width: auto;
+	height: 25vh;
 	border-radius: 5px;
+	margin-bottom: 2vh;
 	background-color: white;
 	}
 
@@ -340,12 +583,13 @@
 .badges-box {
 	border: 1px black solid;
 	width: auto;
-	height: 330px;
+	height: auto;
 	border-radius: 5px;
 	background-color: white;
 	margin-bottom: 2vh;
 	}
 
+/*Profile Box*/
 .profile-box{
 	margin-bottom: 2vh;
 	border: 1px black solid;
@@ -355,15 +599,17 @@
 	background-color: white;
 	}
 
+/*Chat Box*/
 .disc-box{
 	border: 1px black solid;
 	width: auto;
-	height: 450px;
+	height: auto;
 	border-radius: 5px;
 	background-color: white;
 	margin-bottom: 2vh;
 	}
 
+/*Assessment Box*/
 .assess-box {
 	margin-bottom: 2vh;
 	border: 1px black solid;
@@ -417,86 +663,78 @@
 	}
 
 .mini-badge-box {
-	width: 105px;
+	width: 100%;
 	display: flex;
-	min-height: 105px;
+	min-height: 95px;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 	}
 
-.badge-row {
+.badge-row-top {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	margin: 15px 0 0 25px;
+	padding: 15px 15px 15px 15px;
 	}
 
-/*Badge Box*/
+.badge-row-btm {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 15px 15px 15px;
+	}
+
 .img1 {
 	background: url("../../images/HTML:CSS/html5.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img2 {
 	background: url("../../images/JavaScript/Javascript-Logo-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img3 {
 	background: url("../../images/JavaScript/javascript-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img4 {
 	background: url("../../images/Angular/angularjs-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img5 {
 	background: url("../../images/Node/nodejs-logo-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img6 {
 	background: url("../../images/SQL/sql-database-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img7 {
 	background: url("../../images/project1/stars-icon-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
 .img8 {
 	background: url("../../images/group-project/crown-50px.png") center no-repeat;
 	background-size: contain;
-	width: 60px;
-	height: 60px;
 	margin: 5px 10px 5px 10px;
 	}
 
-/*Calender*/
 #calendar1 {
 	width: 96%;
 	margin: 0 auto;
@@ -504,7 +742,6 @@
 	font-size: 14px;
 	}
 
-/*Weather*/
 .weather-title {
 	font-weight: bold;
 	}
@@ -570,7 +807,6 @@
 .menu .arrow {
 	font-size: 14px;
 	line-height:0%;
-
 	}
 
 /*----- Top Level -----*/
@@ -639,7 +875,6 @@
 	margin-top: 2vh;
 	width: 50vw;
 	height: 87vh;
-	
 	background-color: #292C2F;
 	padding: 5px;
 	border-radius: 5px;
@@ -662,11 +897,6 @@
 	}
 
 .hm-lg-chat {
-	width: auto;
-	height: 37vh;
-	background: rgba(255, 255, 255, 0.86);
-	display: flex;
-	justify-content: center;
 	padding: 18px;
 	}
 

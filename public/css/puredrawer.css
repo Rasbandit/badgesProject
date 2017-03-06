@@ -18,11 +18,10 @@
 	color: #3BB3E4; }
 
 .pure-toggle-label {
-	display: none;
 	cursor: pointer;
 	display: block;
 	position: fixed;
-	top: 1.2%;
+	top: 10px;
 	z-index: 99;
 	color: #292C2F;
 
@@ -128,7 +127,7 @@
 	transition-duration: 500ms;
 	transition-timing-function: ease-out;
 	color: white;
-	width: 30%; }
+	width: 40%; }
 @media only screen and (min-width: 40.063em) {
 	.pure-drawer {
 		width: 200px; } }

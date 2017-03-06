@@ -1,7 +1,7 @@
 angular.module('badgeApp').controller('loginCtrl', function($scope, userService, loginService, $state, $stateParams) {
 	
 	if(!userService.currentUser){
-		$state.go('login')
+		$state.go('login');
 		return
 	}
 	
@@ -14,7 +14,6 @@ angular.module('badgeApp').controller('loginCtrl', function($scope, userService,
 	// 		else   $scope.user = 'Please login';
 	// 	})
 	// }
-
 	
 	
 	// $scope.loginLocal = function(username, password) {
