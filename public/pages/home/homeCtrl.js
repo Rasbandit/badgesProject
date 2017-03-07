@@ -11,6 +11,7 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 				return
 			}
 			userService.currentUser = r.data;
+			console.log(userService.currentUser);
 			$scope.user = userService.currentUser;
 			userService.in = false;
 			userService.out = true;

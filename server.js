@@ -13,7 +13,7 @@ const session = require('express-session');
 
 
 const app = module.exports = express();
-
+app.use(bodyParser.json());
  
 
 app.use(session({
@@ -66,9 +66,9 @@ db.init.createMessageTable([],(err, result) => {
 
 //GET and POST for chat app
 app.post('/postMsg', function(req, res) {
-	db.createNewMsg([req.body.id, req.body.name, req.body.message, req.body.time], function(err, result) {
+	db.createNewMsg([req.body.userId, req.body.name, req.body.message, req.body.time], (err, result) => {
 		res.send(result)
-	});
+	})
 });
 
 app.get('/getMsg', function(req, res) {
@@ -293,10 +293,14 @@ passport.use('github', new githubStrategy({
 			if (!user.length) {
 				console.log('Creating User');
 				let date = new Date();
-				db.createUserGithub([profile.displayName, profile.id, date], function(err, u) {
-					return done(err, u, {scope: 'all'});
+				console.log(profile._json);
+				db.createUserGithub([profile.displayName, profile.id, date, profile._json.avatar_url], function(err, user) {
+					db.createUserBadges([user[0].id], function(err) {
+					});
+					return done(err, user[0], {scope: 'all'});
 				});
 			} else {
+				console.log(profile);
 				return done(err, user[0]);
 			}
 		})

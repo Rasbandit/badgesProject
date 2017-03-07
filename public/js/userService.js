@@ -7,6 +7,4 @@ angular.module('badgeApp').service('userService', function($http){
 		})
 	};
 	
-	this.currentUser;
-	
 });

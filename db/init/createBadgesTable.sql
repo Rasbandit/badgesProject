@@ -9,5 +9,5 @@ create table if not exists badges (
   node_badge boolean,
   sql_badge boolean,
   pproj_badge boolean,
-  gproj_badge boolean 
+  gproj_badge boolean
 );
