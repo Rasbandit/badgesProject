@@ -294,7 +294,7 @@
 	background: url('../../images/backgrounds/mountain-sunrise-wallpaper-3.jpg') center no-repeat;
 	background-size: cover;
 	position: fixed;
-	top: 8vh;
+	top: 77px;
 	left:0;
 	width: 100%;
 	height: 100%;
@@ -506,6 +506,7 @@
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	background: rgb(28, 184, 65); /* this is a green */
 	margin-left: 10px;
+	min-width: 100px;
 	}
 
 .button-error{
@@ -514,6 +515,7 @@
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	background: rgb(202, 60, 60); /* this is a maroon */
 	margin-left: 10px;
+	min-width: 110px;
 	}
 
 .reload {
