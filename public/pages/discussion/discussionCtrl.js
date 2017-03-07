@@ -1,10 +1,10 @@
 angular.module('badgeApp').controller('discussionCtrl', function($scope,  userService, discussionService, $state) {
 	
 	$scope.user = userService.currentUser;
-
+	
 	
 	if(!userService.currentUser){
-		$state.go('login');
+		$state.go('login')
 		return
 	}
 	

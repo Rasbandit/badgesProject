@@ -3,6 +3,11 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	//Page always loads at the top
 	window.scrollTo(0, 0);
 	
+	if(!userService.currentUser){
+		$state.go('login')
+		return
+	}
+	
 	//Check if there is a user logged in
 	let isLoggedIn = () => {
 		userService.isLoggedIn().then((res) =>{

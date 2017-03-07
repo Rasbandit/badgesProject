@@ -10,8 +10,8 @@ angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userSe
 	$scope.stop6 = false;
 	
 	//If user is not logged in, redirect to login page
-	if(!user){
-		$state.go('login');
+	if(!userService.currentUser){
+		$state.go('login')
 		return
 	}
 	
@@ -64,37 +64,37 @@ angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userSe
 
 	$scope.htmlEndTime = () => {
 		let date = new Date();
-		assessmentService.htmlEndTime(user.id, date);
+		assessmentService.htmlEndTime($scope.user.id, date);
 		$scope.stop1 = false;
 	};
 	
 	$scope.basicEndTime = () => {
 		let date = new Date();
-		assessmentService.basicEndTime(user.id, date);
+		assessmentService.basicEndTime($scope.user.id, date);
 		$scope.stop2 = false;
 	};
 	
 	$scope.intEndTime = () => {
 		let date = new Date();
-		assessmentService.intEndTime(user.id, date);
+		assessmentService.intEndTime($scope.user.id, date);
 		$scope.stop3 = false;
 	};
 	
 	$scope.angularEndTime = () => {
 		let date = new Date();
-		assessmentService.angularEndTime(user.id, date);
+		assessmentService.angularEndTime($scope.user.id, date);
 		$scope.stop4 = false;
 	};
 	
 	$scope.nodeEndTime = () => {
 		let date = new Date();
-		assessmentService.nodeEndTime(user.id, date);
+		assessmentService.nodeEndTime($scope.user.id, date);
 		$scope.stop5 = false;
 	};
 	
 	$scope.sqlEndTime = () => {
 		let date = new Date();
-		assessmentService.sqlEndTime(user.id, date);
+		assessmentService.sqlEndTime($scope.user.id, date);
 		$scope.stop6 = false;
 	};
 	

@@ -4,8 +4,8 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 	const user = userService.currentUser;
 	
 	//If user is not logged in, redirect to login page
-	if(!user){
-		$state.go('login');
+	if(!userService.currentUser){
+		$state.go('login')
 		return
 	}
 	
