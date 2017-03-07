@@ -1,6 +1,7 @@
 angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userService, assessmentService, $state) {
 	
-	var user = userService.currentUser;
+	$scope.user = userService.currentUser;
+	
 	$scope.stop1 = false;
 	$scope.stop2 = false;
 	$scope.stop3 = false;
@@ -28,32 +29,32 @@ angular.module('badgeApp').controller('assessmentsCtrl', function($scope, userSe
 			() => {
 				let date = new Date();
 			if (lang === 'html') {
-				assessmentService.htmlStartTime(user.id, user.display_name, date);
+				assessmentService.htmlStartTime($scope.user.id, $scope.user.display_name, date);
 				window.open('https://github.com/DevMountain/html-css-assessment', '_blank');
 				$scope.stop1 = true;
 			}
 			else if (lang === 'jsb') {
-				assessmentService.basicStartTime(user.id, user.display_name, date);
+				assessmentService.basicStartTime($scope.user.id, $scope.user.display_name, date);
 				window.open('https://github.com/DevMountain/javascript-basic-assessment', '_blank');
 				$scope.stop2 = true;
 			}
 			else if (lang === 'jsi') {
-				assessmentService.intStartTime(user.id, user.display_name, date);
+				assessmentService.intStartTime($scope.user.id, $scope.user.display_name, date);
 				window.open('https://github.com/DevMountain/intermediate-javascript-assessment', '_blank');
 				$scope.stop3 = true;
 			}
 			else if (lang === 'ang') {
-				assessmentService.angularStartTime(user.id, user.display_name, date);
+				assessmentService.angularStartTime($scope.user.id, $scope.user.display_name, date);
 				window.open('https://github.com/DevMountain/angular-assessment', '_blank');
 				$scope.stop4 = true;
 			}
 			else if (lang === 'node') {
-				assessmentService.nodeStartTime(user.id, user.display_name, date);
+				assessmentService.nodeStartTime($scope.user.id, $scope.user.display_name, date);
 				window.open('https://github.com/DevMountain/node-assessment', '_blank');
 				$scope.stop5 = true;
 			}
 			else if (lang === 'sql') {
-				assessmentService.sqlStartTime(user.id, user.display_name, date);
+				assessmentService.sqlStartTime($scope.user.id, $scope.user.display_name, date);
 				window.open('https://github.com/DevMountain/sql-assessment', '_blank');
 				$scope.stop6 = true;
 			}
