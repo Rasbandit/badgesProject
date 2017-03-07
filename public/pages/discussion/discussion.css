@@ -258,6 +258,7 @@
 .chat-text {
 	margin: 3px 0;
 	color: black;
+	word-wrap: break-word;
 	}
 
 .lg-chat {

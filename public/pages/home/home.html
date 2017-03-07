@@ -9,11 +9,11 @@
 					</div>
 				</div>
 				<div class="image-container">
-					<img class="profile-img" ng-src="{{user.profileimg}}" alt="Description" />
+					<img class="profile-img" ng-src="{{user.profileimg}}" alt="Profile Image" />
 				</div>
 				<div class="info-container">
 					<div class="inner-info-container">
-						<div>Welcome {{user.display_name}}!</div>
+						<div class="profile-header">Welcome {{user.display_name}}!</div>
 						<div>Badges Completed: <span class="profile-text">{{finalCountHome}}</span></div>
 						<div>Email: <span class="profile-text">{{user.ghemail}}</span></div>
 						<div>Date Joined: <span class="profile-text">{{user.joindate | date:'MM/dd/yyyy'}}</span></div>
@@ -34,19 +34,17 @@
 						<div class="home-title-text">Today's Forecast</div>
 					</div>
 				</div>
-				<div class="weather-box">
-					<div class="weather-info-box">
-						<div>
-							<span class="weather-title">Date:</span> {{weather.date.weekday}} {{weather.date.month}}/{{weather.date.day}}/{{weather.date.year}}
-						</div>
-						<span class="weather-title">High:</span>
-						<span> {{weather.high.fahrenheit}}°F   ,</span>
-						<span class="weather-title">Low:</span>
-						<span> {{weather.low.fahrenheit}}°F </span>
-						<br>
-						<div>
-							<span class="weather-title">Average Wind Speed:</span> {{weather.avewind.dir}} {{weather.avewind.mph}} mph
-						</div>
+				<div class="weather-info-box">
+					<div>
+						<span class="weather-title">Date:</span> {{weather.date.weekday}} {{weather.date.month}}/{{weather.date.day}}/{{weather.date.year}}
+					</div>
+					<span class="weather-title">High:</span>
+					<span> {{weather.high.fahrenheit}}°F   ,</span>
+					<span class="weather-title">Low:</span>
+					<span> {{weather.low.fahrenheit}}°F </span>
+					<br>
+					<div>
+						<span class="weather-title">Average Wind Speed:</span> {{weather.avewind.dir}} {{weather.avewind.mph}} mph
 					</div>
 				</div>
 				<div class="weather-img-box">
