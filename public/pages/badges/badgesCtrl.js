@@ -114,6 +114,7 @@ angular.module('badgeApp').controller('badgesCtrl', function($scope, userService
 	//Check total number of badges user has completed
 	let displayBadges = (badges) => {
 		let count = 0;
+
 		for (let key in badges[0]) {
 			if (badges[0][key] === true) {
 				count++;

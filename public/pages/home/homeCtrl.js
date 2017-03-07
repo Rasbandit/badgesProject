@@ -5,30 +5,32 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	
 	//Check if there is a user logged in
 	let isLoggedIn = () => {
-		userService.isLoggedIn().then((r) =>{
-			if(!r.data) {
+		userService.isLoggedIn().then((res) =>{
+			if(!res.data) {
 				$state.go('login');
 				return
 			}
-			userService.currentUser = r.data;
+			userService.currentUser = res.data;
 			$scope.user = userService.currentUser;
 			userService.in = false;
 			userService.out = true;
+			getBadge($scope.user);
 		})
 	};
 	isLoggedIn();
 	
 	//GET users badge db info
-	let getBadge = () => {
-		if (userService.currentUser) {
-			homeService.getBadge(userService.currentUser.id)
+	let getBadge = (user) => {
+		if (user) {
+			console.log(userService.currentUser);
+			homeService.getBadge(user.id)
 			.then(function(response) {
 				$scope.badges = response.data;
 				displayBadge(response.data.badges);
 			})
 		}
 	};
-	getBadge();
+	
 	
 	//Count users completed badges
 	let displayBadge = (badges) => {
