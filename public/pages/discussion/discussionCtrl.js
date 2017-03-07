@@ -1,7 +1,7 @@
 angular.module('badgeApp').controller('discussionCtrl', function($scope,  userService, discussionService, $state) {
 	
 	$scope.user = userService.currentUser;
-	const user = userService.currentUser;
+
 	
 	if(!userService.currentUser){
 		$state.go('login');
@@ -20,7 +20,8 @@ angular.module('badgeApp').controller('discussionCtrl', function($scope,  userSe
 	
 	$scope.postMessage = (message) => {
 		let date = new Date();
-		discussionService.postMessage(user.id, user.display_name, message, date).then(function(res) {
+		console.log($scope.user);
+		discussionService.postMessage($scope.user.id, $scope.user.display_name, message, date).then(function(res) {
 			getMessages();
 		})
 	};
