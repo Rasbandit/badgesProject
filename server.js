@@ -307,7 +307,7 @@ passport.use('github', new githubStrategy({
 app.get('/auth/github', passport.authenticate('github'));
 
 app.get('/auth/github/callback',
-	passport.authenticate('github', { failureRedirect: '/#!/home'}),
+	passport.authenticate('github', { failureRedirect: '/#!/'}),
 	function(req, res) {
 		res.status(200).redirect('/#!/home');
 	});
