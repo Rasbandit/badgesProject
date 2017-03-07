@@ -15,11 +15,6 @@
 		font-size: 12px;
 		}
 	
-	.profile-img {
-		/*width: 30%;*/
-		height: 50%;
-		}
-	
 	.badge-text {
 		font-size: 12px;
 		}
@@ -31,26 +26,6 @@
 	.home-title-text {
 		font-size: 20px;
 		padding-top: 8px;
-		}
-	
-	.welcome {
-		top: 28%;
-		font-size: 19px;
-		}
-	
-	.email {
-		top: 47%;
-		font-size: 12px;
-		}
-	
-	.badges {
-		top: 61%;
-		font-size: 12px;
-		}
-	
-	.joined {
-		top: 54%;
-		font-size: 12px;
 		}
 	
 	.img1 {
@@ -92,6 +67,16 @@
 		width: 50px;
 		height: 50px;
 		}
+  
+  .profile-box {
+	  height: 220px;
+	  }
+	
+	.profile-img {
+		width: 100px;
+		height: 100px;
+		}
+
 	}
 
 /* Extra Small Devices, Phones */
@@ -110,12 +95,7 @@
 	.weather-title {
 		font-size: 12px;
 		}
-	
-	.profile-img {
-		/*width: 30%;*/
-		height: 50%;
-		}
-	
+
 	.badge-text {
 		font-size: 12px;
 		}
@@ -127,26 +107,6 @@
 	.home-title-text {
 		font-size: 20px;
 		padding-top: 8px;
-		}
-	
-	.welcome {
-		top: 28%;
-		font-size: 19px;
-		}
-	
-	.email {
-		top: 47%;
-		font-size: 12px;
-		}
-	
-	.badges {
-		top: 61%;
-		font-size: 12px;
-		}
-	
-	.joined {
-		top: 54%;
-		font-size: 12px;
 		}
 	
 	.img1 {
@@ -188,14 +148,37 @@
 		width: 50px;
 		height: 50px;
 		}
+	
+	.profile-box {
+		height: 220px;
+		}
+	
+	.profile-img {
+		width: 100px;
+		height: 100px;
+		}
+  
 	}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
+	
 	.home-container {
-		width: 96%;
-		margin: 0 2%;
 		padding-top: 85px;
+		margin: 0 auto;
+		width: 98%;
+		}
+	
+	.col-left {
+		float: left;
+		width: 48%;
+		margin: 1%;
+		}
+	
+	.col-right {
+		float: left;
+		width: 48%;
+		margin: 1%;
 		}
 	
 	.weather-img {
@@ -205,11 +188,6 @@
 	
 	.weather-title {
 		font-size: 16px;
-		}
-	
-	.profile-img {
-		width: 30%;
-		height: 60%;
 		}
 	
 	.badge-text {
@@ -225,26 +203,6 @@
 		padding-top: 8px;
 		}
 	
-	.welcome {
-		top: 28%;
-		font-size: 19px;
-		}
-	
-	.email {
-		top: 47%;
-		font-size: 12px;
-		}
-	
-	.badges {
-		top: 61%;
-		font-size: 12px;
-		}
-	
-	.joined {
-		top: 54%;
-		font-size: 12px;
-		}
-	
 	.img1 {
 		width: 60px;
 		height: 60px;
@@ -284,6 +242,16 @@
 		width: 60px;
 		height: 60px;
 		}
+	
+	.profile-box {
+		height: 240px;
+		}
+	
+	.profile-img {
+		width: 100px;
+		height: 100px;
+		}
+
 	}
 
 /* Medium Devices, Desktops */
@@ -291,7 +259,7 @@
 	
 	.home-container {
 		margin: 0 auto;
-		width: 70%;
+		width: 75%;
 		padding-top: 85px;
 		}
 	
@@ -306,6 +274,7 @@
 		width: 48%;
 		margin: 1%;
 		}
+	
 	.weather-img {
 		height: 100px;
 		width: 100px;
@@ -313,11 +282,6 @@
 	
 	.weather-title {
 		font-size: 16px;
-		}
-	
-	.profile-img {
-		width: 30%;
-		height: 60%;
 		}
 	
 	.badge-text {
@@ -333,26 +297,6 @@
 		padding-top: 14px;
 		}
 	
-	.welcome {
-		top: 28%;
-		font-size: 24px;
-		}
-	
-	.email {
-		top: 47%;
-		font-size: 16px;
-		}
-	
-	.badges {
-		top: 61%;
-		font-size: 16px;
-		}
-	
-	.joined {
-		top: 54%;
-		font-size: 16px;
-		}
-	
 	.img1 {
 		width: 60px;
 		height: 60px;
@@ -392,6 +336,16 @@
 		width: 60px;
 		height: 60px;
 		}
+	
+	.profile-box {
+		height: 240px;
+		}
+	
+	.profile-img {
+		width: 110px;
+		height: 110px;
+		}
+
 	}
 
 /* Large Devices, Wide Screens */
@@ -400,7 +354,7 @@
 	.home-container {
 		padding-top: 85px;
 		margin: 0 auto;
-		width: 70%;
+		width: 65%;
 		}
 	
 	.col-left {
@@ -423,11 +377,6 @@
 	.weather-title {
 		font-size: 16px;
 		}
-	
-	.profile-img {
-		width: 30%;
-		height: 60%;
-		}
 
 	ul li a {
 		font-size: 14px;
@@ -436,26 +385,6 @@
 	.home-title-text {
 		font-size: 26px;
 		padding-top: 14px;
-		}
-	
-	.welcome {
-		top: 28%;
-		font-size: 24px;
-		}
-	
-	.email {
-		top: 47%;
-		font-size: 16px;
-		}
-	
-	.badges {
-		top: 61%;
-		font-size: 16px;
-		}
-	
-	.joined {
-		top: 54%;
-		font-size: 16px;
 		}
 	
 	.img1 {
@@ -498,21 +427,31 @@
 		height: 60px;
 		}
 	
+	.profile-img {
+		width: 130px;
+		height: 130px;
+		}
+	
 	.badge-text {
 		font-size: 14px;
+		}
+	
+	.profile-box {
+		height: 240px;
+		}
+	
+	.profile-img {
+		width: 130px;
+		height: 130px;
 		}
   
 	}
 
 
 
-
-
 /*//////////
 // General CSS
 /////////*/
-
-
 .text {
 	font-size: 12px;
 	}
@@ -594,9 +533,53 @@
 	margin-bottom: 2vh;
 	border: 1px black solid;
 	width: auto;
-	height: 26vh;
 	border-radius: 5px;
 	background-color: white;
+	}
+
+.profile-img {
+	background-size: contain;
+	border-radius: 20px;
+	border: 1px solid black;
+	}
+
+.profile-text {
+	font-weight: normal;
+	}
+
+.image-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	float: left;
+	width: 40%;
+	height: 180px;
+	}
+
+.info-container {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	float: left;
+	width: 60%;
+	height: 180px;
+	}
+
+.inner-info-container {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	line-height: 2;
+	padding: 0 25px;
+	}
+
+.inner-info-container {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	line-height: 2;
+	padding: 0 5px;
+	font-size: 14px;
 	}
 
 /*Chat Box*/
@@ -619,45 +602,8 @@
 	background-color: white;
 	}
 
-/*Profile Box*/
-.profile-img {
-	width: 150px;
-	margin: 20px 20px 10px 20px;
-	height: 150px;
-	background-size: contain;
-	border-radius: 20px;
-	border: 1px solid black;
-	}
 
-.welcome,.email,.joined,.badges {
-	position: absolute;
-	left: 27%;
-	}
-
-.welcome {
-	top: 14vh;
-	font-weight: bolder;
-	}
-
-.email {
-	top: 19vh;
-	font-weight: bolder;
-	}
-
-.badges {
-	top: 22vh;
-	font-weight: bolder;
-	}
-
-.joined {
-	top: 25vh;
-	font-weight: bolder;
-	}
-
-.profile-text {
-	font-weight: normal;
-	}
-
+/*Badge Box*/
 .badge-text {
 	text-align: center;
 	}

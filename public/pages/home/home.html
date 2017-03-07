@@ -8,11 +8,17 @@
 						<div class="home-title-text">My Profile</div>
 					</div>
 				</div>
-				<div><img class="profile-img" ng-src="{{user.profileimg}}" alt="Description" /></div>
-				<div class="welcome">Welcome {{user.display_name}}!</div>
-				<div class="badges">Badges Completed: <span class="profile-text">{{finalCountHome}}</span></div>
-				<div class="email">Email: <span class="profile-text">{{user.ghemail}}</span></div>
-				<div class="joined">Date Joined: <span class="profile-text">{{user.joindate | date:'MM/dd/yyyy'}}</span></div>
+				<div class="image-container">
+					<img class="profile-img" ng-src="{{user.profileimg}}" alt="Description" />
+				</div>
+				<div class="info-container">
+					<div class="inner-info-container">
+						<div>Welcome {{user.display_name}}!</div>
+						<div>Badges Completed: <span class="profile-text">{{finalCountHome}}</span></div>
+						<div>Email: <span class="profile-text">{{user.ghemail}}</span></div>
+						<div>Date Joined: <span class="profile-text">{{user.joindate | date:'MM/dd/yyyy'}}</span></div>
+					</div>
+				</div>
 			</div>
 			<div class="cal-box">
 				<div class="cal-header">
