@@ -293,7 +293,7 @@ passport.use('github', new githubStrategy({
 			if (!user.length) {
 				console.log('Creating User');
 				let date = new Date();
-				db.createUserGithub([profile.displayName, profile.id, date, profile._json.email ,profile._json.avatar_url], function(err, user) {
+				db.createUserGithub([profile._json.name, profile.id, date, profile._json.email ,profile._json.avatar_url], function(err, user) {
 					db.createUserBadges([user[0].id, user[0].display_name], function(err) {
 					});
 					return done(err, user[0], {scope: 'all'});

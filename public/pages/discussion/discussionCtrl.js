@@ -21,7 +21,7 @@ angular.module('badgeApp').controller('discussionCtrl', function($scope,  userSe
 	$scope.postMessage = (message) => {
 		let date = new Date();
 		console.log($scope.user);
-		discussionService.postMessage($scope.user.id, $scope.user.display_name, message, date).then(function(res) {
+		discussionService.postMessage($scope.user.id, $scope.userservice.currentUser.display_name, message, date).then(function(res) {
 			getMessages();
 		})
 	};
