@@ -24,6 +24,7 @@
 	
 	.sm-chat {
 		height: 5.1vh;
+		width: 98.5%;
 		}
   
   .search {
@@ -63,6 +64,7 @@
 	
 	.sm-chat {
 		height: 5.1vh;
+		width: 100%;
 		}
 	
 	.search {
@@ -102,6 +104,7 @@
 	
 	.sm-chat {
 		height: 5.9vh;
+		width: 100%;
 		}
 	
 	.search {
@@ -141,6 +144,7 @@
 	
 	.sm-chat {
 		height: 5.8vh;
+		width: 100%;
 		}
 	
 	.search {
@@ -180,6 +184,7 @@
 	
 	.sm-chat {
 		height: 5.8vh;
+		width: 100%;
 		}
 	
 	.search {
@@ -260,7 +265,6 @@
 .sm-chat {
 	background-color: #F1F1F1;
 	padding: 5px;
-	width: 100%;
 	}
 
 .chat-col {

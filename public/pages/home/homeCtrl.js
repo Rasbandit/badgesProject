@@ -57,14 +57,14 @@ angular.module('badgeApp').controller('homeCtrl', function($scope, homeService, 
 	getMessages();
 	
 	//Api pull for weather info
-	// $scope.getWeather = homeService.getWeather();
-	// let getWeather = function() {
-	// 	homeService.getWeather().then(function(response) {
-	// 		$scope.weather = response.data.forecast.simpleforecast.forecastday[0];
-	// 		console.log($scope.weather);
-	// 	});
-	// };
-	// getWeather();
+	$scope.getWeather = homeService.getWeather();
+	let getWeather = function() {
+		homeService.getWeather().then(function(response) {
+			$scope.weather = response.data.forecast.simpleforecast.forecastday[0];
+			console.log($scope.weather);
+		});
+	};
+	getWeather();
 	
 	//Mini calendar on home page
 	$(document).ready(() => {
