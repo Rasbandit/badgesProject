@@ -294,7 +294,7 @@
 	background: url('../../images/backgrounds/mountain-sunrise-wallpaper-3.jpg') center no-repeat;
 	background-size: cover;
 	position: fixed;
-	top: 77px;
+	top: 57px;
 	left:0;
 	width: 100%;
 	height: 100%;
@@ -334,6 +334,7 @@
 	padding: 1vh 1vw;
 	border-radius: 5px;
 	margin: 2vh 0 0.5vh 0;
+	width: 98%;
 	}
 
 .badge-button-box2 {
@@ -343,6 +344,7 @@
 	padding: 1vh 1vw;
 	border-radius: 5px;
 	margin: 0 0 2vh 0;
+	width: 98%;
 	}
 
 .badge-img1,.badge-img2,.badge-img3,.badge-img4,.badge-img5,.badge-img6,.badge-img7,.badge-img8 {
